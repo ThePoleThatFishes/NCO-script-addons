@@ -5,11 +5,11 @@ The NC Extra Ingot Blocks aims to add via Content and CraftTweaker block forms o
 For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-overhaul NC, Manganese Oxide and Manganese Dioxide blocks are also added.
 
 ## What version should I get?
-NuclearCraft **2**.x.x => NCEIB-Underhaul.zip
+[NuclearCraft **2**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod) => NCEIB-Underhaul.zip
 
-NuclearCraft **2o**.x.x => NCEIB-Overhaul.zip 
+[NuclearCraft **2o**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled) => NCEIB-Overhaul.zip 
 
-Ad Astra Per Nucleon ModPack => NCEIB-AAPN.zip *Includes recipes for production of SiC-SiC Ceramic Matrix Composite ingots*
+[Ad Astra Per Nucleon Modpack](https://www.curseforge.com/minecraft/modpacks/ad-astra-per-nucleon) => NCEIB-AAPN.zip *Includes recipes for production of SiC-SiC Ceramic Matrix Composite ingots*
 
 
 ## How to install?
