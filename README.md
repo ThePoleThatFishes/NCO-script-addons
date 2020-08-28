@@ -13,7 +13,7 @@ For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-o
 [Ad Astra Per Nucleon Modpack](https://www.curseforge.com/minecraft/modpacks/ad-astra-per-nucleon) => NCEIB-AAPN.zip *Includes recipes for production of SiC-SiC Ceramic Matrix Composite ingots*
 
 
-## How to install?
+## How to install? (Underhaul Instructions)
 1. Download the release for your version of NuclearCraft.
 2. Place the ZenScript (.zs) files from the scripts folder in your instance's scripts folder.
 3. Open the resources/contenttweaker folder.
@@ -22,3 +22,8 @@ For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-o
 Note: If there is no en_US.lang file in your instance's folder, just copy the file and paste it.
 6. Go to the textures/blocks folder, and move all the .png files from the folder into your instance's blocks folder.
 7. Installation complete! Enjoy your alloy blocks :D
+
+## How to install? (Overhaul Instructions)
+1. Download NCEIB-Overhaul.zip
+2. Unzip and place NCEIB-Overhaul Folder in the resources/nuclearcraft/addons Folder.
+3. Installation complete! Enjoy your alloy blocks! :D
