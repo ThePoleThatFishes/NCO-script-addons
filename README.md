@@ -1,18 +1,19 @@
 # NC Extra Ingot Blocks!
-![img](https://cdn.discordapp.com/attachments/745257089357709402/745262554741473350/unknown.png)
+![img](https://cdn.discordapp.com/attachments/745257089357709402/749211651856924722/nceib.png)
 
 ## What is this?
 The NC Extra Ingot Blocks aims to add via Content and CraftTweaker block forms of ingots in NuclearCraft and NuclearCraft: Overhauled, that are missing from the base mod.
-For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-overhaul NC, Manganese Oxide and Manganese Dioxide blocks are also added.
+For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-overhaul NC, Manganese Oxide and Manganese Dioxide blocks are also added (which are missing
+from the base mod)
 
 ## What version should I get?
 [NuclearCraft **2**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod) => NCEIB-Underhaul.zip
 
 [NuclearCraft **2o**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled) => NCEIB-Overhaul.zip 
 
-[Ad Astra Per Nucleon Modpack](https://www.curseforge.com/minecraft/modpacks/ad-astra-per-nucleon) => NCEIB-AAPN.zip *Includes recipes for production of SiC-SiC Ceramic Matrix Composite ingots*
+[Ad Astra Per Nucleon Modpack](https://www.curseforge.com/minecraft/modpacks/ad-astra-per-nucleon) => NCEIB-AAPN.zip 
 
-
+*All versions include recipes for the SiC-SiC CMC ingots, which you can disable by editing the scripts!
 ## How to install? (Underhaul Instructions)
 1. Download the release for your version of NuclearCraft.
 2. Place the ZenScript (.zs) files from the scripts folder in your instance's scripts folder.
