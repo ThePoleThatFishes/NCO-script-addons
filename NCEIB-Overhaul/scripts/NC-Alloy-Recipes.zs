@@ -45,14 +45,14 @@ furnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>);
 furnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>);
 
 
-// SiC-SiC CMC Recipes, delete until the next comment to disable these recipes!
+// SiC-SiC CMC Recipes. Delete the first three recipes if you have NCOUTO installed, delete all five recipes to disable SiC-SiC CMC crafting.
 Enricher.addRecipe(<nuclearcraft:alloy:13>, <liquid:hydrogen>*1000, <liquid:sic_vapor>*1000);
 Infuser.addRecipe(<nuclearcraft:alloy:13>, <liquid:sic_vapor>*1000, <nuclearcraft:part:13>);
 Infuser.addRecipe(<nuclearcraft:part:13>, <liquid:sic_vapor>*1000, <nuclearcraft:alloy:14>);
 
 Enricher.addRecipe(<contenttweaker:sicblock>, <liquid:hydrogen>*9000, <liquid:sic_vapor>*9000, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<contenttweaker:sicblock>, <liquid:sic_vapor>*9000, <nuclearcraft:part:13>*9, 8.0, 1.0, 0.0);
-// Delete until here!!
+// SiC-SiC CMC Recipes end here!
 
 if (oreDict.contains("blockSteel")) {
 		AlloyFurnace.addRecipe(<ore:blockSteel>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0);
