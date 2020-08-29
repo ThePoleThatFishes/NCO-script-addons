@@ -59,8 +59,8 @@ if (oreDict.contains("blockSteel")) {
 		recipes.remove(<contenttweaker:steelblock>);
 		JEI.removeAndHide(<contenttweaker:steelblock>); }
 else {
-		AlloyFurnace.addRecipe(<ore:blockGraphite>*4, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
-		AlloyFurnace.addRecipe(<ore:blockCoal>*4, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
+		AlloyFurnace.addRecipe(<ore:blockGraphite>*2, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
+		AlloyFurnace.addRecipe(<ore:blockCoal>*2, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
 		AlloyFurnace.addRecipe(<contenttweaker:steelblock>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0);}
 		
 if (oreDict.contains("blockBronze")) {
