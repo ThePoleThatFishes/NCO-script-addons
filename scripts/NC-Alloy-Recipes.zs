@@ -45,6 +45,15 @@ infuser.addRecipe([<contenttweaker:mnoblock>, <liquid:oxygen>*9000, <contenttwea
 furnace.addRecipe(<contenttweaker:mnoblock>, <contenttweaker:mno2block>);
 furnace.addRecipe(<nuclearcraft:ingot_block:11>, <contenttweaker:mnoblock>);
 
+// SiC-SiC CMC Recipes, delete from this comment to the next comment to disable!
+infuser.addRecipe([<contenttweaker:sicblock>, <liquid:sic_vapor>*9000, <nuclearcraft:part:13>*9, 8.0, 1.0, 0.0]);
+dissolver.addRecipe([<contenttweaker:sicblock>, <liquid:helium>*9000, <liquid:sic_vapor>*9000, 8.0, 1.0, 0.0]);
+infuser.addRecipe([<nuclearcraft:part:13>, <liquid:sic_vapor>*1000, <nuclearcraft:alloy:14>]);
+
+infuser.addRecipe([<nuclearcraft:alloy:13>, <liquid:sic_vapor>*1000, <nuclearcraft:part:13>]);
+dissolver.addRecipe([<nuclearcraft:alloy:13>, <liquid:helium>*1000, <liquid:sic_vapor>*1000]);
+// Delete until here!!
+
 if (oreDict.contains("blockSteel")) {
 		alloy_furnace.addRecipe([<ore:blockSteel>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0]);
 		recipes.remove(<contenttweaker:steelblock>);
