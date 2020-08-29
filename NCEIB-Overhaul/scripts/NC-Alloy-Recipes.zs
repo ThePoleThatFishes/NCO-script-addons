@@ -38,8 +38,11 @@ AlloyFurnace.addRecipe(<ore:itemSilicon>*9, <ore:blockGraphite>, <contenttweaker
 Infuser.addRecipe(<contenttweaker:shibuichiblock>, <liquid:redstone>*2250, <ore:blockSignalum>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<contenttweaker:tinsilverblock>, <liquid:glowstone>*2250, <ore:blockLumium>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<contenttweaker:leadplatinumblock>, <liquid:ender>*2250, <ore:blockEnderium>, 8.0, 1.0, 0.0);
+
 Infuser.addRecipe(<ore:blockManganese>, <liquid:oxygen>*9000, <nuclearcraft:ingot_block:14>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<nuclearcraft:ingot_block:14>, <liquid:oxygen>*9000, <nuclearcraft:ingot_block:15>, 8.0, 1.0, 0.0);
+furnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>);
+furnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>);
 
 
 // SiC-SiC CMC Recipes, delete until the next comment to disable these recipes!
