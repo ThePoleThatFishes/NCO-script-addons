@@ -10,16 +10,18 @@ extr: [<contenttweaker:extremeblock>, <ore:ingotExtreme>], hsla: [<contenttweake
 sic: [<contenttweaker:sicblock>, <ore:ingotSiliconCarbide>], sicsiccmc: [<contenttweaker:sicsiccmcblock>, <ore:ingotSiCSiCCMC>],
 za: [<contenttweaker:zircaloyblock>, <ore:ingotZircaloy>], pbpt: [<contenttweaker:leadplatinumblock>, <ore:ingotLeadPlatinum>],
 snag: [<contenttweaker:tinsilverblock>, <ore:ingotTinSilver>], cuag: [<contenttweaker:shibuichiblock>, <ore:ingotShibuichi>],
-steel: [<contenttweaker:steelblock>, <ore:ingotSteel>], limno2: [<contenttweaker:limno2block>, <ore:ingotLithiumManganeseDioxide>],
-mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <ore:ingotBronze>]} as IIngredient[][string];
+steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contenttweaker:limno2block>, <ore:ingotLithiumManganeseDioxide>],
+mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>]} as IIngredient[][string];
 
 for name, ingredients in blocks {
-	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
-	[ingredients[1], ingredients[1], ingredients[1]],
-	[ingredients[1], ingredients[1], ingredients[1]],
-	[ingredients[1], ingredients[1], ingredients[1]]
-	]);
-	recipes.addShapeless(name ~ "_from_block", ingredients[1].items[0]*9, [ingredients[0]]); }
+	if ( ( (name == "bronze" && !oreDict.contains("blockBronze")) | (name == "steel" && !oreDict.contains("blockSteel") ) ) && true) {
+		recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
+		[ingredients[1], ingredients[1], ingredients[1]],
+		[ingredients[1], ingredients[1], ingredients[1]],
+		[ingredients[1], ingredients[1], ingredients[1]]
+		]);
+		recipes.addShapeless(name ~ "_from_block", ingredients[1].items[0]*9, [ingredients[0]]); }
+	}
 	
 
 AlloyFurnace.addRecipe(<ore:blockCopper>*3, <ore:blockSilver>, <contenttweaker:shibuichiblock>*4, 12.0, 0.5, 0.0);
@@ -27,7 +29,7 @@ AlloyFurnace.addRecipe(<ore:blockTin>*3, <ore:blockSilver>, <contenttweaker:tins
 AlloyFurnace.addRecipe(<ore:blockLead>*3, <ore:blockPlatinum>, <contenttweaker:leadplatinumblock>*4, 12.0, 0.5, 0.0);	
 AlloyFurnace.addRecipe(<contenttweaker:ferroboronblock>, <ore:blockLithium>, <contenttweaker:toughblock>*2, 8.0, 1.5, 0.0);
 AlloyFurnace.addRecipe(<ore:blockGraphite>*2, <ore:blockDiamond>, <contenttweaker:hardcarbonblock>*2, 8.0, 1.0, 0.0);
-AlloyFurnace.addRecipe(<contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>, <contenttweaker:extremeblock>*2, 16.0, 2.0, 0.0);
+AlloyFurnace.addRecipe(<contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>, <contenttweaker:extremeblock>, 16.0, 2.0, 0.0);
 AlloyFurnace.addRecipe(<contenttweaker:extremeblock>, <ore:gemBoronArsenide>*9, <contenttweaker:thermoconductingblock>*2, 12.0, 1.5, 0.0);
 AlloyFurnace.addRecipe(<ore:blockIron>*15, <ore:dustCarbonManganese>*9, <contenttweaker:hslasteelblock>*16, 64.0, 2.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockZirconium>*7, <ore:blockTin>, <contenttweaker:zircaloyblock>*8, 32.0, 1.0, 0.0);
@@ -44,20 +46,21 @@ Infuser.addRecipe(<nuclearcraft:ingot_block:14>, <liquid:oxygen>*9000, <nuclearc
 furnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>);
 furnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>);
 
-
-// SiC-SiC CMC Recipes. Delete the first three recipes if you have NCOUTO installed, delete all five recipes to disable SiC-SiC CMC crafting.
+// SiC-SiC CMC Recipes, delete until the next comment to disable these recipes!
 Enricher.addRecipe(<nuclearcraft:alloy:13>, <liquid:hydrogen>*1000, <liquid:sic_vapor>*1000);
 Infuser.addRecipe(<nuclearcraft:alloy:13>, <liquid:sic_vapor>*1000, <nuclearcraft:part:13>);
 Infuser.addRecipe(<nuclearcraft:part:13>, <liquid:sic_vapor>*1000, <nuclearcraft:alloy:14>);
 
 Enricher.addRecipe(<contenttweaker:sicblock>, <liquid:hydrogen>*9000, <liquid:sic_vapor>*9000, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<contenttweaker:sicblock>, <liquid:sic_vapor>*9000, <nuclearcraft:part:13>*9, 8.0, 1.0, 0.0);
-// SiC-SiC CMC Recipes end here!
+// Delete until here!!
 
 if (oreDict.contains("blockSteel")) {
 		AlloyFurnace.addRecipe(<ore:blockSteel>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0);
 		recipes.remove(<contenttweaker:steelblock>);
-		JEI.removeAndHide(<contenttweaker:steelblock>); }
+		JEI.removeAndHide(<contenttweaker:steelblock>);
+		recipes.remove(<nuclearcraft:alloy:5>);
+		JEI.removeAndHide(<nuclearcraft:alloy:5>);}
 else {
 		AlloyFurnace.addRecipe(<ore:blockGraphite>*2, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
 		AlloyFurnace.addRecipe(<ore:blockCoal>*2, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
@@ -65,7 +68,9 @@ else {
 		
 if (oreDict.contains("blockBronze")) {
 	recipes.remove(<contenttweaker:bronzeblock>);
-	JEI.removeAndHide(<contenttweaker:bronzeblock>); }
+	JEI.removeAndHide(<contenttweaker:bronzeblock>);
+	recipes.remove(<nuclearcraft:alloy:0>);
+	JEI.removeAndHide(<nuclearcraft:alloy:0>);}
 else {
 	AlloyFurnace.addRecipe(<ore:blockCopper>*3, <ore:blockTin>, <contenttweaker:bronzeblock>*4, 8.0, 1.0, 0.0); }
 	
