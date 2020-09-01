@@ -15,13 +15,12 @@ mgb2: [<contenttweaker:mgb2block>, <nuclearcraft:alloy:3>], bronze: [<contenttwe
 mno: [<contenttweaker:mnoblock>, <nuclearcraft:ingot_oxide:2>], mno2: [<contenttweaker:mno2block>, <nuclearcraft:ingot_oxide:3>]} as IItemStack[][string];
 
 for name, ingredients in blocks {
-	if ( ( (name == "bronze" && !oreDict.contains("blockBronze")) | (name == "steel" && !oreDict.contains("blockSteel") ) ) && true) {
 	recipes.addShaped(name ~ "_to_block", ingredients[0], [
 	[ingredients[1], ingredients[1], ingredients[1]],
 	[ingredients[1], ingredients[1], ingredients[1]],
 	[ingredients[1], ingredients[1], ingredients[1]]
 	]);
-	recipes.addShapeless(name ~ "_from_block", ingredients[1]*9, [ingredients[0]]); }
+	recipes.addShapeless(name ~ "_from_block", ingredients[1]*9, [ingredients[0]]); 
 	}
 
 alloy_furnace.addRecipe([<ore:blockCopper>*3, <ore:blockSilver>, <contenttweaker:shibuichiblock>*4, 12.0, 0.5, 0.0]);
