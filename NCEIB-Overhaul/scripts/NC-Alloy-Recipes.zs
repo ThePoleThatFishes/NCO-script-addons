@@ -14,16 +14,14 @@ steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contentt
 mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>]} as IIngredient[][string];
 
 for name, ingredients in blocks {
-	if ( ( (name == "bronze" && !oreDict.contains("blockBronze")) | (name == "steel" && !oreDict.contains("blockSteel") ) ) && true) {
-		recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
-		[ingredients[1], ingredients[1], ingredients[1]],
-		[ingredients[1], ingredients[1], ingredients[1]],
-		[ingredients[1], ingredients[1], ingredients[1]]
-		]);
-		recipes.addShapeless(name ~ "_from_block", ingredients[1].items[0]*9, [ingredients[0]]); }
+	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
+	[ingredients[1], ingredients[1], ingredients[1]],
+	[ingredients[1], ingredients[1], ingredients[1]],
+	[ingredients[1], ingredients[1], ingredients[1]]
+	]);
+	recipes.addShapeless(name ~ "_from_block", ingredients[1].items[0]*9, [ingredients[0]]); 
 	}
 	
-
 AlloyFurnace.addRecipe(<ore:blockCopper>*3, <ore:blockSilver>, <contenttweaker:shibuichiblock>*4, 12.0, 0.5, 0.0);
 AlloyFurnace.addRecipe(<ore:blockTin>*3, <ore:blockSilver>, <contenttweaker:tinsilverblock>*4, 12.0, 0.5, 0.0);
 AlloyFurnace.addRecipe(<ore:blockLead>*3, <ore:blockPlatinum>, <contenttweaker:leadplatinumblock>*4, 12.0, 0.5, 0.0);	
