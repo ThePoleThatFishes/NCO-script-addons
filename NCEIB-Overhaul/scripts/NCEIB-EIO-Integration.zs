@@ -13,6 +13,9 @@ AlloySmelter.addRecipe(<contenttweaker:limno2block>*2, [<ore:blockLithium>, <nuc
 AlloySmelter.addRecipe(<contenttweaker:mgb2block>*3, [<ore:blockMagnesium>, <ore:blockBoron>*2], 32000);
 AlloySmelter.addRecipe(<contenttweaker:sicblock>*2, [<ore:blockGraphite>, <ore:itemSilicon>*9], 128000);
 AlloySmelter.addRecipe(<nuclearcraft:alloy:13>*2, [<ore:ingotGraphite>, <ore:itemSilicon>], 16000);
+AlloySmelter.addRecipe(<nuclearcraft:alloy:16>*16, [<ore:ingotZirconium>, <ore:dustMolybdenum>*15], 64000);
+AlloySmelter.addRecipe(<nuclearcraft:alloy:16>*16, [<ore:ingotZirconium>, <contenttweaker:moingot>*15], 64000);
+AlloySmelter.addRecipe(<contenttweaker:zrmoblock>*16, [<ore:blockZirconium>, <contenttweaker:moblock>*15], 512000);
 
 AlloySmelter.addRecipe(<nuclearcraft:alloy:7>*4, [<ore:ingotCopper>*3, <ore:ingotSilver>], 3000);
 AlloySmelter.addRecipe(<nuclearcraft:alloy:8>*4, [<ore:ingotTin>*3, <ore:ingotSilver>], 3000);

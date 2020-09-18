@@ -2,6 +2,7 @@ import crafttweaker.item.IIngredient;
 import mods.nuclearcraft.AlloyFurnace;
 import mods.nuclearcraft.Infuser;
 import mods.nuclearcraft.Enricher;
+import mods.nuclearcraft.IngotFormer;
 import mods.jei.JEI;
 
 var blocks = {feb: [<contenttweaker:ferroboronblock>, <ore:ingotFerroboron>], tough: [<contenttweaker:toughblock>, <ore:ingotTough>],
@@ -11,7 +12,8 @@ sic: [<contenttweaker:sicblock>, <ore:ingotSiliconCarbide>], sicsiccmc: [<conten
 za: [<contenttweaker:zircaloyblock>, <ore:ingotZircaloy>], pbpt: [<contenttweaker:leadplatinumblock>, <ore:ingotLeadPlatinum>],
 snag: [<contenttweaker:tinsilverblock>, <ore:ingotTinSilver>], cuag: [<contenttweaker:shibuichiblock>, <ore:ingotShibuichi>],
 steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contenttweaker:limno2block>, <ore:ingotLithiumManganeseDioxide>],
-mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>]} as IIngredient[][string];
+mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>],
+zrmo: [<contenttweaker:zrmoblock>, <ore:ingotZirconiumMolybdenum>], mo: [<contenttweaker:moblock>, <contenttweaker:moingot>]} as IIngredient[][string];
 
 for name, ingredients in blocks {
 	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
@@ -34,6 +36,8 @@ AlloyFurnace.addRecipe(<ore:blockZirconium>*7, <ore:blockTin>, <contenttweaker:z
 AlloyFurnace.addRecipe(<ore:blockLithium>, <nuclearcraft:ingot_block:15>, <contenttweaker:limno2block>*2, 12.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockMagnesium>, <ore:blockBoron>*2, <contenttweaker:mgb2block>*3, 8.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:itemSilicon>*9, <ore:blockGraphite>, <contenttweaker:sicblock>*2, 16.0, 2.0, 0.0);
+AlloyFurnace.addRecipe(<ore:blockZirconium>, <contenttweaker:moblock>*15, <contenttweaker:zrmoblock>*16, 72.0, 2.0, 0.0);
+AlloyFurnace.addRecipe(<ore:ingotZirconium>, <contenttweaker:moingot>*15, <ore:ingotZirconiumMolybdenum>*16, 8.0, 2.0, 0.0);
 
 Infuser.addRecipe(<contenttweaker:shibuichiblock>, <liquid:redstone>*2250, <ore:blockSignalum>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<contenttweaker:tinsilverblock>, <liquid:glowstone>*2250, <ore:blockLumium>, 8.0, 1.0, 0.0);
@@ -43,6 +47,8 @@ Infuser.addRecipe(<ore:blockManganese>, <liquid:oxygen>*9000, <nuclearcraft:ingo
 Infuser.addRecipe(<nuclearcraft:ingot_block:14>, <liquid:oxygen>*9000, <nuclearcraft:ingot_block:15>, 8.0, 1.0, 0.0);
 furnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>);
 furnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>);
+furnace.addRecipe(<contenttweaker:moingot>, <nuclearcraft:fission_dust:6>);
+IngotFormer.addRecipe(<liquid:molybdenum>*144, <contenttweaker:moingot>);
 
 // SiC-SiC CMC Recipes, delete until the next comment to disable these recipes!
 Enricher.addRecipe(<nuclearcraft:alloy:13>, <liquid:hydrogen>*1000, <liquid:sic_vapor>*1000);

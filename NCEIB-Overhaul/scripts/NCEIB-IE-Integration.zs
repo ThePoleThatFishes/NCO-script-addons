@@ -15,6 +15,8 @@ ArcFurnace.addRecipe(<nuclearcraft:alloy:11>*2, <ore:ingotExtreme>, null, 100, 1
 ArcFurnace.addRecipe(<nuclearcraft:alloy:12>*2, <ore:ingotZirconium>*7, null, 100, 256, [<ore:ingotTin>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:13>*2, <ore:ingotGraphite>, null, 100, 256, [<ore:itemSilicon>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>*15, null, 200, 384, [<ore:dustCarbonManganese>]);
+ArcFurnace.addRecipe(<nuclearcraft:alloy:16>*16, <ore:dustMolybdenum>*15, null, 200, 384, [<ore:ingotZirconium>]);
+ArcFurnace.addRecipe(<nuclearcraft:alloy:16>*16, <contenttweaker:moingot>*15, null, 200, 384, [<ore:ingotZirconium>]);
 
 ArcFurnace.addRecipe(<contenttweaker:ferroboronblock>*2, <ore:blockSteel>, null, 800, 64, [<ore:blockBoron>]);
 ArcFurnace.addRecipe(<contenttweaker:toughblock>*2, <contenttweaker:ferroboronblock>, null, 800, 128, [<ore:blockLithium>]);
@@ -29,6 +31,7 @@ ArcFurnace.addRecipe(<contenttweaker:thermoconductingblock>*2, <contenttweaker:e
 ArcFurnace.addRecipe(<contenttweaker:zircaloyblock>*8, <ore:blockZirconium>*7, null, 800, 256, [<ore:blockTin>]);
 ArcFurnace.addRecipe(<contenttweaker:sicblock>*2, <ore:blockGraphite>, null, 800, 256, [<ore:itemSilicon>*9]);
 ArcFurnace.addRecipe(<contenttweaker:hslasteelblock>*16, <ore:blockIron>*15, null, 1600, 384, [<ore:dustCarbonManganese>*9]);
+ArcFurnace.addRecipe(<contenttweaker:zrmoblock>*16, <contenttweaker:moblock>*15, null, 1600, 384, [<ore:blockZirconium>]);
 
 if !(oreDict.contains("blockBronze")) {
 	ArcFurnace.addRecipe(<contenttweaker:bronzeblock>*4, <ore:blockCopper>*3, null, 800, 64, [<ore:blockTin>]);

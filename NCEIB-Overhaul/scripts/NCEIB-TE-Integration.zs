@@ -14,7 +14,8 @@ za: [<contenttweaker:zircaloyblock>, <nuclearcraft:alloy:12>], pbpt: [<contenttw
 snag: [<contenttweaker:tinsilverblock>, <nuclearcraft:alloy:8>], cuag: [<contenttweaker:shibuichiblock>, <nuclearcraft:alloy:7>],
 steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contenttweaker:limno2block>, <nuclearcraft:alloy:4>],
 mgb2: [<contenttweaker:mgb2block>, <nuclearcraft:alloy:3>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>],
-mno: [<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot:14>], mno2: [<nuclearcraft:ingot_block:15>, <nuclearcraft:ingot:15>]} as IItemStack[][string];
+mno: [<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot:14>], mno2: [<nuclearcraft:ingot_block:15>, <nuclearcraft:ingot:15>],
+zrmo: [<contenttweaker:zrmoblock>, <nuclearcraft:alloy:16>], mo: [<contenttweaker:moblock>, <contenttweaker:moingot>]} as IItemStack[][string];
 
 InductionSmelter.addRecipe(<contenttweaker:shibuichiblock>*4, <thermalfoundation:storage:0>*3, <thermalfoundation:storage:2>, 24000);
 InductionSmelter.addRecipe(<contenttweaker:tinsilverblock>*4, <thermalfoundation:storage:1>*3, <thermalfoundation:storage:2>, 24000);
@@ -29,6 +30,7 @@ InductionSmelter.addRecipe(<contenttweaker:zircaloyblock>*8, <nuclearcraft:ingot
 InductionSmelter.addRecipe(<contenttweaker:limno2block>*2, <nuclearcraft:ingot_block:6>, <nuclearcraft:ingot_block:15>, 48000);
 InductionSmelter.addRecipe(<contenttweaker:mgb2block>*3, <nuclearcraft:ingot_block:7>, <nuclearcraft:ingot_block:5>*2, 32000);
 InductionSmelter.addRecipe(<contenttweaker:sicblock>*2, <nuclearcraft:gem:6>*9, <nuclearcraft:ingot_block:8>, 128000);
+InductionSmelter.addRecipe(<contenttweaker:zrmoblock>*16, <contenttweaker:moblock>*15, <nuclearcraft:ingot_block:10>, 512000);
 
 InductionSmelter.addRecipe(<nuclearcraft:alloy:6>*2, <ore:ingotSteel>.firstItem, <ore:ingotBoron>.firstItem, 6000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:1>*2, <ore:ingotFerroboron>.firstItem, <ore:ingotLithium>.firstItem, 9000);
@@ -43,6 +45,8 @@ InductionSmelter.addRecipe(<nuclearcraft:alloy:11>*2, <ore:ingotExtreme>.firstIt
 InductionSmelter.addRecipe(<nuclearcraft:alloy:12>*2, <ore:ingotZirconium>.firstItem*7, <ore:ingotTin>.firstItem, 16000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:13>*2, <ore:ingotGraphite>.firstItem, <ore:itemSilicon>.firstItem, 16000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>.firstItem*15, <ore:dustCarbonManganese>.firstItem, 64000);
+InductionSmelter.addRecipe(<nuclearcraft:alloy:16>*16, <ore:ingotZirconium>.firstItem, <ore:dustMolybdenum>.firstItem*15, 64000);
+InductionSmelter.addRecipe(<nuclearcraft:alloy:16>*16, <ore:ingotZirconium>.firstItem, <contenttweaker:moingot>*15, 64000);
 
 Transposer.addFillRecipe(<ore:ingotSignalum>.firstItem, <ore:ingotShibuichi>.firstItem, <liquid:redstone>*250, 6000);
 Transposer.addFillRecipe(<ore:ingotLumium>.firstItem, <ore:ingotTinSilver>.firstItem, <liquid:glowstone>*250, 6000);
@@ -57,7 +61,7 @@ RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_blo
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>, 16000);
 
 for name, block in blocks {
-	if (name != "bronze" && name != "steel") {
+	if (name != "bronze" & name != "steel") {
 		Factorizer.addRecipeBoth(block[0], block[1]*9);
 		}
 	}
