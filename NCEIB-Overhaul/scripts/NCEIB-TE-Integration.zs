@@ -60,8 +60,3 @@ RedstoneFurnace.removeRecipe(<nuclearcraft:ingot_block:14>);
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>, 16000);
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>, 16000);
 
-for name, block in blocks {
-	if (name != "bronze" & name != "steel") {
-		Factorizer.addRecipeBoth(block[0], block[1]*9);
-		}
-	}

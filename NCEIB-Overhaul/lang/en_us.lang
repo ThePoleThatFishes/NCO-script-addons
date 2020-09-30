@@ -1,3 +1,4 @@
+// Base NCO alloy blocks
 tile.contenttweaker.ferroboronBlock.name=Ferroboron Alloy Block
 tile.contenttweaker.toughBlock.name=Tough Alloy Block
 tile.contenttweaker.hardCarbonBlock.name=Hard Carbon Alloy Block
@@ -14,3 +15,36 @@ tile.contenttweaker.steelBlock.name=Steel Block
 tile.contenttweaker.limno2Block.name=Lithium Manganese Dioxide Alloy Block
 tile.contenttweaker.mgb2Block.name=Magnesium Diboride Alloy Block
 tile.contenttweaker.bronzeBlock.name=Bronze Block
+tile.contenttweaker.zrmoBlock.name=Zirconium-Molybdenum Alloy Block
+item.contenttweaker.moingot.name=Molybdenum Ingot
+tile.contenttweaker.moBlock.name=Molybdenum Block
+
+// QMD Blocks
+tile.contenttweaker.cablock.name=Calcium Block
+tile.contenttweaker.crblock.name=Chromium Block
+tile.contenttweaker.hfblock.name=Hafnium Block
+tile.contenttweaker.ndblock.name=Neodymium Block
+tile.contenttweaker.nbblock.name=Niobium Block
+tile.contenttweaker.kblock.name=Potassium Block
+tile.contenttweaker.nablock.name=Sodium Block
+tile.contenttweaker.wblock.name=Tungsten Block
+tile.contenttweaker.yblock.name=Yttrium Block
+tile.contenttweaker.cfecrblock.name=Stainless Steel Block
+tile.contenttweaker.coblock.name=Cobalt Block
+tile.contenttweaker.irblock.name=Iridium Block
+tile.contenttweaker.niblock.name=Nickel Block
+tile.contenttweaker.nbsnblock.name=Niobium-Tin Block
+tile.contenttweaker.nbtiblock.name=Niobium-Titanium Block
+tile.contenttweaker.osblock.name=Osmium Block
+tile.contenttweaker.osirblock.name=Osmiridium Block
+tile.contenttweaker.ptblock.name=Platinum Block
+item.contenttweaker.sr90ingot.name=Strontium-90 Ingot
+tile.contenttweaker.tiblock.name=Titanium Block
+tile.contenttweaker.wcblock.name=Tungsten Carbide Block
+tile.contenttweaker.znblock.name=Zinc Block
+
+// Trinity Blocks
+tile.contenttweaker.bablock.name=Barium Block
+item.contenttweaker.baingot.name=Barium Ingot
+tile.contenttweaker.baoblock.name=Barium Oxide Block
+item.contenttweaker.baoingot.name=Barium Oxide Ingot

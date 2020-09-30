@@ -1,4 +1,6 @@
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 import mods.nuclearcraft.AlloyFurnace;
 import mods.nuclearcraft.Infuser;
 import mods.nuclearcraft.Enricher;
@@ -14,6 +16,33 @@ snag: [<contenttweaker:tinsilverblock>, <ore:ingotTinSilver>], cuag: [<contenttw
 steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contenttweaker:limno2block>, <ore:ingotLithiumManganeseDioxide>],
 mgb2: [<contenttweaker:mgb2block>, <ore:ingotMagnesiumDiboride>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>],
 zrmo: [<contenttweaker:zrmoblock>, <ore:ingotZirconiumMolybdenum>], mo: [<contenttweaker:moblock>, <contenttweaker:moingot>]} as IIngredient[][string];
+
+var oreEntries = ["blockFerroboron", "blockTough", "blockHardCarbon", "blockThermoconducting", "blockExtreme", "blockHSLASteel", "blockSiliconCarbide",
+"blockSiCSiCCMC", "blockZircaloy", "blockLeadPlatinum", "blockTinSilver", "blockShibuichi", "blockSteel", "blockLithiumManganeseDioxide",
+"blockMagnesiumDiboride", "blockBronze", "blockZirconiumMolybdenum", "blockMolybdenum"] as string[];
+
+var oreBlocks = { <ore:blockFerroboron>: <contenttweaker:ferroboronblock>, <ore:blockTough>: <contenttweaker:toughblock>,
+<ore:blockHardCarbon>: <contenttweaker:hardcarbonblock>, <ore:blockThermoconducting>: <contenttweaker:thermoconductingblock>, 
+<ore:blockExtreme>: <contenttweaker:extremeblock>, <ore:blockHSLASteel>: <contenttweaker:hslasteelblock>, <ore:blockSiliconCarbide>: <contenttweaker:sicblock>,
+<ore:blockSiCSiCCMC>: <contenttweaker:sicsiccmcblock>, <ore:blockZircaloy>: <contenttweaker:zircaloyblock>, <ore:blockLeadPlatinum>: <contenttweaker:leadplatinumblock>,
+<ore:blockTinSilver>: <contenttweaker:tinsilverblock>, <ore:blockShibuichi>: <contenttweaker:shibuichiblock>, <ore:blockSteel>: <contenttweaker:steelblock>,
+<ore:blockLithiumManganeseDioxide>: <contenttweaker:limno2block>, <ore:blockMagnesiumDiboride>: <contenttweaker:mgb2block>, <ore:blockBronze>: <contenttweaker:bronzeblock>,
+<ore:blockZirconiumMolybdenum>: <contenttweaker:zrmoblock>, <ore:blockMolybdenum>: <contenttweaker:moblock>} as IItemStack[IOreDictEntry];
+
+
+for entry in oreEntries {
+	oreDict.entry;
+	}
+	
+var steelFlag = <ore:blockSteel>.empty as bool;
+var bronzeFlag = <ore:blockBronze>.empty as bool;
+	
+for oreName, oreBlock in oreBlocks {
+	oreName.add(oreBlock);
+	}
+
+oreDict.ingotMolybdenum;
+<ore:ingotMolybdenum>.add(<contenttweaker:moingot>);
 
 for name, ingredients in blocks {
 	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
@@ -59,7 +88,7 @@ Enricher.addRecipe(<contenttweaker:sicblock>, <liquid:hydrogen>*9000, <liquid:si
 Infuser.addRecipe(<contenttweaker:sicblock>, <liquid:sic_vapor>*9000, <nuclearcraft:part:13>*9, 8.0, 1.0, 0.0);
 // Delete until here!!
 
-if (oreDict.contains("blockSteel")) {
+if (!steelFlag) {
 		AlloyFurnace.addRecipe(<ore:blockSteel>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0);
 		recipes.remove(<contenttweaker:steelblock>);
 		JEI.removeAndHide(<contenttweaker:steelblock>);
@@ -70,12 +99,11 @@ else {
 		AlloyFurnace.addRecipe(<ore:blockCoal>*2, <ore:blockIron>, <contenttweaker:steelblock>, 8.0, 1.0, 0.0);
 		AlloyFurnace.addRecipe(<contenttweaker:steelblock>, <ore:blockBoron>, <contenttweaker:ferroboronblock>*2, 8.0, 1.5, 0.0);}
 		
-if (oreDict.contains("blockBronze")) {
+if (!bronzeFlag) {
 	recipes.remove(<contenttweaker:bronzeblock>);
 	JEI.removeAndHide(<contenttweaker:bronzeblock>);
 	recipes.remove(<nuclearcraft:alloy:0>);
 	JEI.removeAndHide(<nuclearcraft:alloy:0>);}
 else {
 	AlloyFurnace.addRecipe(<ore:blockCopper>*3, <ore:blockTin>, <contenttweaker:bronzeblock>*4, 8.0, 1.0, 0.0); }
-	
 	
