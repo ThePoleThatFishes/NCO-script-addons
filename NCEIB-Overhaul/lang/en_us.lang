@@ -1,4 +1,4 @@
-// Base NCO alloy blocks
+// Base NCO ingot blocks
 tile.contenttweaker.ferroboronBlock.name=Ferroboron Alloy Block
 tile.contenttweaker.toughBlock.name=Tough Alloy Block
 tile.contenttweaker.hardCarbonBlock.name=Hard Carbon Alloy Block
@@ -18,6 +18,16 @@ tile.contenttweaker.bronzeBlock.name=Bronze Block
 tile.contenttweaker.zrmoBlock.name=Zirconium-Molybdenum Alloy Block
 item.contenttweaker.moingot.name=Molybdenum Ingot
 tile.contenttweaker.moBlock.name=Molybdenum Block
+tile.contenttweaker.sr90block.name=Strontium-90 Block
+
+// Base NCO Gem blocks
+tile.contenttweaker.basblock.name=Boron Arsenide Block
+tile.contenttweaker.bnblock.name=Boron Nitride Block
+tile.contenttweaker.carobblock.name=Carobbiite Block
+tile.contenttweaker.fluorblock.name=Fluorite Block
+tile.contenttweaker.siblock.name=Silicon Block
+tile.contenttweaker.rhodoblock.name=Rhodochrosite Block
+tile.contenttweaker.villiblock.name=Villiaumite Block
 
 // QMD Blocks
 tile.contenttweaker.cablock.name=Calcium Block

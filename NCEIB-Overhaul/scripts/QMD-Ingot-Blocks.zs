@@ -19,7 +19,4 @@ for material in materials {
 	material.register(); 
 }
 
-var sr90_ingot = VanillaFactory.createItem("sr90ingot");
-sr90_ingot.maxStackSize = 64;
-sr90_ingot.register();	
 
