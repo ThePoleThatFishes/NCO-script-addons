@@ -6,15 +6,10 @@ import mods.thermalexpansion.Transposer;
 import mods.thermalexpansion.RedstoneFurnace;
 import mods.thermalexpansion.Factorizer;
 
-val blocks = {feb: [<contenttweaker:ferroboronblock>, <nuclearcraft:alloy:6>], tough: [<contenttweaker:toughblock>, <nuclearcraft:alloy:1>],
-hc: [<contenttweaker:hardcarbonblock>, <nuclearcraft:alloy:2>], tc: [<contenttweaker:thermoconductingblock>, <nuclearcraft:alloy:11>],
-extr: [<contenttweaker:extremeblock>, <nuclearcraft:alloy:10>], hsla: [<contenttweaker:hslasteelblock>, <nuclearcraft:alloy:15>], 
-sic: [<contenttweaker:sicblock>, <nuclearcraft:alloy:13>], sicsiccmc: [<contenttweaker:sicsiccmcblock>, <nuclearcraft:alloy:14>],
-za: [<contenttweaker:zircaloyblock>, <nuclearcraft:alloy:12>], pbpt: [<contenttweaker:leadplatinumblock>, <nuclearcraft:alloy:9>],
-snag: [<contenttweaker:tinsilverblock>, <nuclearcraft:alloy:8>], cuag: [<contenttweaker:shibuichiblock>, <nuclearcraft:alloy:7>],
-steel: [<contenttweaker:steelblock>, <nuclearcraft:alloy:5>], limno2: [<contenttweaker:limno2block>, <nuclearcraft:alloy:4>],
-mgb2: [<contenttweaker:mgb2block>, <nuclearcraft:alloy:3>], bronze: [<contenttweaker:bronzeblock>, <nuclearcraft:alloy:0>],
-mno: [<contenttweaker:mnoblock>, <nuclearcraft:ingot_oxide:2>], mno2: [<contenttweaker:mno2block>, <nuclearcraft:ingot_oxide:3>]} as IItemStack[][string];
+val blocks = {bas: [<contenttweaker:basblock>, <nuclearcraft:gem:5>], bn: [<contenttweaker:bnblock>, <nuclearcraft:gem:1>], 
+fluor: [<contenttweaker:fluorblock>, <nuclearcraft:gem:2>], carob: [<contenttweaker:carobblock>, <nuclearcraft:gem:4>],
+rhodo: [<contenttweaker:rhodoblock>, <nuclearcraft:gem:0>], si: [<contenttweaker:siblock>, <nuclearcraft:gem:6>], 
+villi: [<contenttweaker:villiblock>, <nuclearcraft:gem:3>]} as IItemStack[][string];
 
 InductionSmelter.addRecipe(<contenttweaker:shibuichiblock>*4, <thermalfoundation:storage:0>*3, <thermalfoundation:storage:2>, 24000);
 InductionSmelter.addRecipe(<contenttweaker:tinsilverblock>*4, <thermalfoundation:storage:1>*3, <thermalfoundation:storage:2>, 24000);
@@ -23,12 +18,12 @@ InductionSmelter.addRecipe(<contenttweaker:ferroboronblock>*2, <thermalfoundatio
 InductionSmelter.addRecipe(<contenttweaker:toughblock>*2, <contenttweaker:ferroboronblock>, <nuclearcraft:ingot_block:6>, 72000);
 InductionSmelter.addRecipe(<contenttweaker:hardcarbonblock>*2, <nuclearcraft:ingot_block:8>*2, <minecraft:diamond_block>, 64000);
 InductionSmelter.addRecipe(<contenttweaker:extremeblock>, <contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>, 128000);
-InductionSmelter.addRecipe(<contenttweaker:thermoconductingblock>*2, <contenttweaker:extremeblock>, <nuclearcraft:gem:5>*9, 72000);
+InductionSmelter.addRecipe(<contenttweaker:thermoconductingblock>*2, <contenttweaker:extremeblock>, <contenttweaker:basblock>, 72000);
 InductionSmelter.addRecipe(<contenttweaker:hslasteelblock>*16, <minecraft:iron_block>*15, <nuclearcraft:compound:9>*9, 512000);
 InductionSmelter.addRecipe(<contenttweaker:zircaloyblock>*8, <nuclearcraft:ingot_block:10>*7, <thermalfoundation:storage:1>, 128000);
 InductionSmelter.addRecipe(<contenttweaker:limno2block>*2, <nuclearcraft:ingot_block:6>, <contenttweaker:mno2block>, 48000);
 InductionSmelter.addRecipe(<contenttweaker:mgb2block>*3, <nuclearcraft:ingot_block:7>, <nuclearcraft:ingot_block:5>*2, 32000);
-InductionSmelter.addRecipe(<contenttweaker:sicblock>*2, <nuclearcraft:gem:6>*9, <nuclearcraft:ingot_block:8>, 128000);
+InductionSmelter.addRecipe(<contenttweaker:sicblock>*2, <contenttweaker:siblock>, <nuclearcraft:ingot_block:8>, 128000);
 
 InductionSmelter.addRecipe(<nuclearcraft:alloy:6>*2, <ore:ingotSteel>.firstItem, <ore:ingotBoron>.firstItem, 6000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:1>*2, <ore:ingotFerroboron>.firstItem, <ore:ingotLithium>.firstItem, 9000);
@@ -53,11 +48,11 @@ Transposer.addFillRecipe(<thermalfoundation:storage_alloy:7>, <contenttweaker:le
 
 RedstoneFurnace.removeRecipe(<contenttweaker:mno2block>);
 RedstoneFurnace.removeRecipe(<contenttweaker:mnoblock>);
+RedstoneFurnace.removeRecipe(<contenttweaker:rhodoblock>);
+RedstoneFurnace.addRecipe(<contenttweaker:mnoblock>, <contenttweaker:rhodoblock>, 16000);
 RedstoneFurnace.addRecipe(<contenttweaker:mnoblock>, <contenttweaker:mno2block>, 16000);
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:11>, <contenttweaker:mnoblock>, 16000);
 
 for name, block in blocks {
-	if (name != "bronze" && name != "steel") {
-		Factorizer.addRecipeBoth(block[0], block[1]*9);
-		}
-	}
+	Factorizer.addRecipeBoth(block[0], block[1]*9);
+}
