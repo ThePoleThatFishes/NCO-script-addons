@@ -3,6 +3,7 @@
 import crafttweaker.item.IIngredient;
 import mods.nuclearcraft.Enricher;
 import mods.nuclearcraft.Infuser;
+import mods.nuclearcraft.DecayHastener;
 
 recipes.addShaped("ba_to_block", <contenttweaker:bablock>, [
 [<contenttweaker:baingot>, <contenttweaker:baingot>, <contenttweaker:baingot>],
@@ -32,4 +33,4 @@ Enricher.addRecipe(<ore:blockBariumOxide>, <liquid:nitric_acid>*9000, <liquid:ba
 Enricher.addRecipe(<ore:ingotBariumOxide>, <liquid:nitric_acid>*1000, <liquid:barium_nitrate_solution>*666);
 Infuser.addRecipe(<ore:blockBarium>, <liquid:oxygen>*9000, <ore:blockBariumOxide>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<ore:ingotBarium>, <liquid:oxygen>*1000, <ore:ingotBariumOxide>);
-
+DecayHastener.addRecipe(<ore:blockCaesium137>, <ore:blockBarium>, 1.125, 1.0, 33.0e-3);

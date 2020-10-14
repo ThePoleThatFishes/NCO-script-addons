@@ -15,8 +15,10 @@ ArcFurnace.addRecipe(<nuclearcraft:alloy:11>*2, <ore:ingotExtreme>, null, 100, 1
 ArcFurnace.addRecipe(<nuclearcraft:alloy:12>*2, <ore:ingotZirconium>*7, null, 100, 256, [<ore:ingotTin>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:13>*2, <ore:ingotGraphite>, null, 100, 256, [<ore:itemSilicon>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>*15, null, 200, 384, [<ore:dustCarbonManganese>]);
+ArcFurnace.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>*15, null, 200, 384, [<ore:ingotCarbonManganese>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:16>*16, <ore:dustMolybdenum>*15, null, 200, 384, [<ore:ingotZirconium>]);
 ArcFurnace.addRecipe(<nuclearcraft:alloy:16>*16, <contenttweaker:moingot>*15, null, 200, 384, [<ore:ingotZirconium>]);
+ArcFurnace.addRecipe(<contenttweaker:cmningot>*2, <ore:ingotGraphite>, null, 100, 64, [<ore:ingotManganese>]);
 
 ArcFurnace.addRecipe(<contenttweaker:ferroboronblock>*2, <ore:blockSteel>, null, 800, 64, [<ore:blockBoron>]);
 ArcFurnace.addRecipe(<contenttweaker:toughblock>*2, <ore:blockFerroboron>, null, 800, 128, [<ore:blockLithium>]);
@@ -30,9 +32,10 @@ ArcFurnace.addRecipe(<contenttweaker:extremeblock>, <ore:blockTough>, null, 800,
 ArcFurnace.addRecipe(<contenttweaker:thermoconductingblock>*2, <ore:blockExtreme>, null, 800, 128, [<ore:blockBoronArsenide>]);
 ArcFurnace.addRecipe(<contenttweaker:zircaloyblock>*8, <ore:blockZirconium>*7, null, 800, 256, [<ore:blockTin>]);
 ArcFurnace.addRecipe(<contenttweaker:sicblock>*2, <ore:blockGraphite>, null, 800, 256, [<ore:blockSilicon>]);
-ArcFurnace.addRecipe(<contenttweaker:hslasteelblock>*16, <ore:blockIron>*15, null, 1600, 384, [<ore:dustCarbonManganese>*9]);
+ArcFurnace.addRecipe(<contenttweaker:hslasteelblock>*16, <ore:blockIron>*15, null, 1600, 384, [<ore:blockCarbonManganese>]);
 ArcFurnace.addRecipe(<contenttweaker:zrmoblock>*16, <contenttweaker:moblock>*15, null, 1600, 384, [<ore:blockZirconium>]);
+ArcFurnace.addRecipe(<contenttweaker:cmnblock>*2, <ore:blockGraphite>, null, 800, 64, [<ore:blockManganese>]);
 
-if ((<ore:blockBronze>.firstItem).matches(<contenttweaker:steelblock>)) {
+if ((<ore:blockBronze>.firstItem).matches(<contenttweaker:bronzeblock>)) {
 	ArcFurnace.addRecipe(<contenttweaker:bronzeblock>*4, <ore:blockCopper>*3, null, 800, 64, [<ore:blockTin>]);
 	}

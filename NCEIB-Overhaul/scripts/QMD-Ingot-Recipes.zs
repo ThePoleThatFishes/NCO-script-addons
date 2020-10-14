@@ -9,6 +9,8 @@ import mods.nuclearcraft.IngotFormer;
 import mods.nuclearcraft.Melter;
 import mods.nuclearcraft.DecayHastener;
 import mods.nuclearcraft.Manufactory;
+import mods.nuclearcraft.Radiation;
+import mods.nuclearcraft.FissionIrradiator;
 
 var blocks = {ca: [<contenttweaker:cablock>, <ore:ingotCalcium>], cr: [<contenttweaker:crblock>, <ore:ingotChromium>],
 hf: [<contenttweaker:hfblock>, <ore:ingotHafnium>], nd: [<contenttweaker:ndblock>, <ore:ingotNeodymium>],
@@ -71,6 +73,9 @@ AlloyFurnace.addRecipe(<ore:blockOsmium>, <ore:blockIridium>, <contenttweaker:os
 Manufactory.addRecipe(<ore:blockSilicon>, <ore:bouleSilicon>, 8.0, 1.5, 0.0);
 Melter.addRecipe(<ore:blockSilicon>, <liquid:silicon>*1296, 8.0, 1.5, 0.0);
 
-mods.nuclearcraft.Radiation.setRadiationLevel(<ore:ingotStrontium90>, 34.44e-3);
-DecayHastener.addRecipe(<ore:blockStrontium90>, <ore:blockZirconium>, 9.0, 1.0, 310.0e-3);
+Radiation.setRadiationLevel(<ore:ingotStrontium90>, 34.44e-3);
+DecayHastener.addRecipe(<ore:blockStrontium90>, <ore:blockZirconium>, 9.0, 1.0, 34.4e-3);
+DecayHastener.addRecipe(<ore:blockPromethium147>, <ore:blockNeodymium>, 0.9, 1.0, 380.0e-3);
+FissionIrradiator.addRecipe(<ore:blockCobalt>, <ore:ingotCobalt60>*9, 17280000, 0.0, 0.0, 0.0);
+
 
