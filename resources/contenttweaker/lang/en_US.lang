@@ -23,3 +23,5 @@ tile.contenttweaker.fluorblock.name=Fluorite Block
 tile.contenttweaker.rhodoblock.name=Rhodochrosite Block
 tile.contenttweaker.siblock.name=Silicon Block
 tile.contenttweaker.villiblock.name=Villiaumite Block
+item.contenttweaker.cmningot.name=Carbon-Manganese Ingot
+tile.contenttweaker.cmnblock.name=Carbon-Manganese Block

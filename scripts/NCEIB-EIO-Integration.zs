@@ -7,7 +7,7 @@ AlloySmelter.addRecipe(<contenttweaker:toughblock>*2, [<ore:blockLithium>, <cont
 AlloySmelter.addRecipe(<contenttweaker:hardcarbonblock>*2, [<ore:blockGraphite>, <ore:blockDiamond>], 64000);
 AlloySmelter.addRecipe(<contenttweaker:extremeblock>, [<contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>], 128000);
 AlloySmelter.addRecipe(<contenttweaker:thermoconductingblock>*2, [<contenttweaker:extremeblock>, <contenttweaker:basblock>], 72000);
-AlloySmelter.addRecipe(<contenttweaker:hslasteelblock>*16, [<ore:blockIron>*15, <ore:dustCarbonManganese>*9], 512000);
+AlloySmelter.addRecipe(<contenttweaker:hslasteelblock>*16, [<ore:blockIron>*15, <ore:blockCarbonManganese>], 512000);
 AlloySmelter.addRecipe(<contenttweaker:zircaloyblock>*8, [<ore:blockZirconium>*7, <ore:blockTin>], 128000);
 AlloySmelter.addRecipe(<contenttweaker:limno2block>*2, [<ore:blockLithium>, <contenttweaker:mno2block>], 48000);
 AlloySmelter.addRecipe(<contenttweaker:mgb2block>*3, [<ore:blockMagnesium>, <ore:blockBoron>*2], 32000);

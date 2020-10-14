@@ -19,7 +19,7 @@ InductionSmelter.addRecipe(<contenttweaker:toughblock>*2, <contenttweaker:ferrob
 InductionSmelter.addRecipe(<contenttweaker:hardcarbonblock>*2, <nuclearcraft:ingot_block:8>*2, <minecraft:diamond_block>, 64000);
 InductionSmelter.addRecipe(<contenttweaker:extremeblock>, <contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>, 128000);
 InductionSmelter.addRecipe(<contenttweaker:thermoconductingblock>*2, <contenttweaker:extremeblock>, <contenttweaker:basblock>, 72000);
-InductionSmelter.addRecipe(<contenttweaker:hslasteelblock>*16, <minecraft:iron_block>*15, <nuclearcraft:compound:9>*9, 512000);
+InductionSmelter.addRecipe(<contenttweaker:hslasteelblock>*16, <minecraft:iron_block>*15, <contenttweaker:cmnblock>, 512000);
 InductionSmelter.addRecipe(<contenttweaker:zircaloyblock>*8, <nuclearcraft:ingot_block:10>*7, <thermalfoundation:storage:1>, 128000);
 InductionSmelter.addRecipe(<contenttweaker:limno2block>*2, <nuclearcraft:ingot_block:6>, <contenttweaker:mno2block>, 48000);
 InductionSmelter.addRecipe(<contenttweaker:mgb2block>*3, <nuclearcraft:ingot_block:7>, <nuclearcraft:ingot_block:5>*2, 32000);
@@ -38,6 +38,7 @@ InductionSmelter.addRecipe(<nuclearcraft:alloy:11>*2, <ore:ingotExtreme>.firstIt
 InductionSmelter.addRecipe(<nuclearcraft:alloy:12>*2, <ore:ingotZirconium>.firstItem*7, <ore:ingotTin>.firstItem, 16000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:13>*2, <ore:ingotGraphite>.firstItem, <ore:itemSilicon>.firstItem, 16000);
 InductionSmelter.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>.firstItem*15, <ore:dustCarbonManganese>.firstItem, 64000);
+InductionSmelter.addRecipe(<nuclearcraft:alloy:15>*16, <ore:ingotIron>.firstItem*15, <ore:ingotCarbonManganese>.firstItem, 64000);
 
 Transposer.addFillRecipe(<ore:ingotSignalum>.firstItem, <ore:ingotShibuichi>.firstItem, <liquid:redstone>*250, 6000);
 Transposer.addFillRecipe(<ore:ingotLumium>.firstItem, <ore:ingotTinSilver>.firstItem, <liquid:glowstone>*250, 6000);

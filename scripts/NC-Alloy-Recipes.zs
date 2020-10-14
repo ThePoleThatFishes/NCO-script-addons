@@ -19,12 +19,12 @@ mno: [<contenttweaker:mnoblock>, <nuclearcraft:ingot_oxide:2>], mno2: [<contentt
 bas: [<contenttweaker:basblock>, <nuclearcraft:gem:5>], bn: [<contenttweaker:bnblock>, <nuclearcraft:gem:1>], 
 fluor: [<contenttweaker:fluorblock>, <nuclearcraft:gem:2>], carob: [<contenttweaker:carobblock>, <nuclearcraft:gem:4>],
 rhodo: [<contenttweaker:rhodoblock>, <nuclearcraft:gem:0>], si: [<contenttweaker:siblock>, <nuclearcraft:gem:6>], 
-villi: [<contenttweaker:villiblock>, <nuclearcraft:gem:3>]} as IItemStack[][string];
+villi: [<contenttweaker:villiblock>, <nuclearcraft:gem:3>], cmn: [<contenttweaker:cmnblock>, <contenttweaker:cmningot>]} as IItemStack[][string];
 
 var oreEntries = ["blockFerroboron", "blockTough", "blockHardCarbon", "blockThermoconducting", "blockExtreme", "blockHSLASteel", "blockSiliconCarbide",
 "blockSiCSiCCMC", "blockZircaloy", "blockLeadPlatinum", "blockTinSilver", "blockShibuichi", "blockSteel", "blockLithiumManganeseDioxide",
 "blockMagnesiumDiboride", "blockBronze", "blockBoronArsenide", "blockBoronNitride", "blockCarobbiite",
-"blockFluorite", "blockSilicon", "blockRhodochrosite", "blockVilliaumite", "blockManganeseOxide", "blockManganeseDioxide"] as string[];
+"blockFluorite", "blockSilicon", "blockRhodochrosite", "blockVilliaumite", "blockManganeseOxide", "blockManganeseDioxide", "blockCarbonManganese"] as string[];
 
 var oreBlocks = { <ore:blockFerroboron>: <contenttweaker:ferroboronblock>, <ore:blockTough>: <contenttweaker:toughblock>,
 <ore:blockHardCarbon>: <contenttweaker:hardcarbonblock>, <ore:blockThermoconducting>: <contenttweaker:thermoconductingblock>, 
@@ -35,12 +35,14 @@ var oreBlocks = { <ore:blockFerroboron>: <contenttweaker:ferroboronblock>, <ore:
 <ore:blockBoronArsenide>: <contenttweaker:basblock>, <ore:blockBoronNitride>: <contenttweaker:bnblock>, <ore:blockCarobbiite>: <contenttweaker:carobblock>,
 <ore:blockFluorite>: <contenttweaker:fluorblock>, <ore:blockSilicon>: <contenttweaker:siblock>, <ore:blockRhodochrosite>: <contenttweaker:rhodoblock>,
 <ore:blockVilliaumite>: <contenttweaker:villiblock>, <ore:blockManganeseOxide>: <contenttweaker:mnoblock>, 
-<ore:blockManganeseDioxide>: <contenttweaker:mno2block>} as IItemStack[IOreDictEntry];
+<ore:blockManganeseDioxide>: <contenttweaker:mno2block>, <ore:blockCarbonManganese>: <contenttweaker:cmnblock>} as IItemStack[IOreDictEntry];
 
 
 for entry in oreEntries {
 	oreDict.entry;
 	}
+oreDict.ingotCarbonManganese;
+<ore:ingotCarbonManganese>.add(<contenttweaker:cmningot>);
 	
 var steelFlag = <ore:blockSteel>.empty as bool;
 var bronzeFlag = <ore:blockBronze>.empty as bool;
@@ -65,11 +67,14 @@ alloy_furnace.addRecipe([<contenttweaker:ferroboronblock>, <ore:blockLithium>, <
 alloy_furnace.addRecipe([<ore:blockGraphite>*2, <ore:blockDiamond>, <contenttweaker:hardcarbonblock>*2, 8.0, 2.0, 0.0]);
 alloy_furnace.addRecipe([<contenttweaker:toughblock>, <contenttweaker:hardcarbonblock>, <contenttweaker:extremeblock>, 16.0, 2.0, 0.0]);
 alloy_furnace.addRecipe([<contenttweaker:extremeblock>, <contenttweaker:basblock>, <contenttweaker:thermoconductingblock>*2, 12.0, 1.5, 0.0]);
-alloy_furnace.addRecipe([<ore:blockIron>*15, <ore:dustCarbonManganese>*9, <contenttweaker:hslasteelblock>*16, 64.0, 2.0, 0.0]);
+alloy_furnace.addRecipe([<ore:blockIron>*15, <ore:blockCarbonManganese>, <contenttweaker:hslasteelblock>*16, 64.0, 2.0, 0.0]);
 alloy_furnace.addRecipe([<ore:blockZirconium>*7, <ore:blockTin>, <contenttweaker:zircaloyblock>*8, 32.0, 1.0, 0.0]);
 alloy_furnace.addRecipe([<ore:blockLithium>, <contenttweaker:mno2block>, <contenttweaker:limno2block>*2, 12.0, 1.0, 0.0]);
 alloy_furnace.addRecipe([<ore:blockMagnesium>, <ore:blockBoron>*2, <contenttweaker:mgb2block>*3, 8.0, 1.0, 0.0]);
 alloy_furnace.addRecipe([<contenttweaker:siblock>, <ore:blockGraphite>, <contenttweaker:sicblock>*2, 16.0, 2.0, 0.0]);
+alloy_furnace.addRecipe([<ore:ingotGraphite>|<ore:dustGraphite>, <ore:ingotManganese>|<ore:dustManganese>, <ore:ingotCarbonManganese>*2, 1.0, 1.0, 0.0]);
+alloy_furnace.removeRecipeWithOutput([<ore:ingotHSLASteel>*16]);
+alloy_furnace.addRecipe([<ore:ingotCarbonManganese>|<ore:dustCarbonManganese>, <ore:ingotIron>*15, <ore:ingotHSLASteel>*16, 8.0, 2.0, 0.0]);
 
 infuser.addRecipe([<contenttweaker:shibuichiblock>, <liquid:redstone>*2250, <ore:blockSignalum>, 8.0, 1.0, 0.0]);
 infuser.addRecipe([<contenttweaker:tinsilverblock>, <liquid:glowstone>*2250, <ore:blockLumium>, 8.0, 1.0, 0.0]);
@@ -81,6 +86,7 @@ infuser.addRecipe([<contenttweaker:mnoblock>, <liquid:oxygen>*9000, <contenttwea
 furnace.addRecipe(<contenttweaker:mnoblock>, <contenttweaker:mno2block>);
 furnace.addRecipe(<nuclearcraft:ingot_block:11>, <contenttweaker:mnoblock>);
 furnace.addRecipe(<contenttweaker:mnoblock>, <contenttweaker:rhodoblock>);
+furnace.addRecipe(<contenttweaker:cmningot>, <ore:dustCarbonManganese>.firstItem);
 
 manufactory.addRecipe([<contenttweaker:bnblock>, <ore:dustBoronNitride>*9, 8.0, 1.0, 0.0]);
 manufactory.addRecipe([<contenttweaker:villiblock>, <ore:dustSodiumFluoride>*9, 8.0, 1.0, 0.0]);
