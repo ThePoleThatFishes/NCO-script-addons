@@ -107,7 +107,7 @@ AlloyFurnace.addRecipe(<ore:blockLithium>, <ore:blockManganeseDioxide>, <content
 AlloyFurnace.addRecipe(<ore:blockMagnesium>, <ore:blockBoron>*2, <contenttweaker:mgb2block>*3, 8.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockSilicon>, <ore:blockGraphite>, <contenttweaker:sicblock>*2, 16.0, 2.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockZirconium>, <ore:blockMolybdenum>*15, <contenttweaker:zrmoblock>*16, 64.0, 2.0, 0.0);
-AlloyFurnace.addRecipe(<ore:ingotZirconium>, <ore:ingotMolybdenum>*15, <contenttweaker:zrmoingot>*16, 8.0, 2.0, 0.0);
+AlloyFurnace.addRecipe(<ore:ingotZirconium>, <ore:ingotMolybdenum>*15, <ore:ingotZirconiumMolybdenum>*16, 8.0, 2.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockGraphite>, <ore:blockManganese>, <contenttweaker:cmnblock>*2, 8.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:ingotGraphite>|<ore:dustGraphite>, <ore:ingotManganese>|<ore:dustManganese>, <contenttweaker:cmningot>*2, 1.0, 1.0, 0.0);
 AlloyFurnace.removeRecipeWithOutput(<ore:ingotHSLASteel>*16);
