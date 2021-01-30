@@ -16,6 +16,11 @@ InductionSmelter.addRecipe(<contenttweaker:nbtiblock>*2, <ore:blockNiobium>.firs
 InductionSmelter.addRecipe(<ore:ingotNiobiumTitanium>.firstItem*2, <ore:ingotNiobium>.firstItem, <ore:ingotTitanium>.firstItem, 4000);
 InductionSmelter.addRecipe(<contenttweaker:osirblock>*2, <ore:blockOsmium>.firstItem, <ore:blockIridium>.firstItem, 32000);
 InductionSmelter.addRecipe(<ore:ingotOsmiridium>.firstItem*2, <ore:ingotOsmium>.firstItem, <ore:ingotIridium>.firstItem, 4000);
+InductionSmelter.addRecipe(<contenttweaker:nicrblock>*2, <ore:blockNickel>.firstItem, <ore:blockChromium>.firstItem, 32000);
+InductionSmelter.addRecipe(<ore:ingotNichrome>.firstItem*2, <ore:ingotNickel>.firstItem, <ore:ingotChromium>.firstItem, 4000);
+InductionSmelter.addRecipe(<contenttweaker:superalloyblock>*3, <ore:blockNichrome>.firstItem*2, <ore:blockNiobiumTitanium>.firstItem, 32000);
+InductionSmelter.addRecipe(<ore:ingotSuperAlloy>.firstItem*3, <ore:ingotNichrome>.firstItem*2, <ore:ingotNiobiumTitanium>.firstItem, 4000);
+
 
 
 

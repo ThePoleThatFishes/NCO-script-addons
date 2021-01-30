@@ -21,7 +21,8 @@ ir: [<contenttweaker:irblock>, <ore:ingotIridium>], nbsn: [<contenttweaker:nbsnb
 nbti: [<contenttweaker:nbtiblock>, <ore:ingotNiobiumTitanium>], ni: [<contenttweaker:niblock>, <ore:ingotNickel>],
 os: [<contenttweaker:osblock>, <ore:ingotOsmium>], osir: [<contenttweaker:osirblock>, <ore:ingotOsmiridium>], 
 pt: [<contenttweaker:ptblock>, <ore:ingotPlatinum>], ti: [<contenttweaker:tiblock>, <ore:ingotTitanium>], 
-wc: [<contenttweaker:wcblock>, <ore:ingotTungstenCarbide>], zn: [<contenttweaker:znblock>, <ore:ingotZinc>]} as IIngredient[][string];
+wc: [<contenttweaker:wcblock>, <ore:ingotTungstenCarbide>], zn: [<contenttweaker:znblock>, <ore:ingotZinc>],
+nicr: [<contenttweaker:nicrblock>, <ore:ingotNichrome>], superalloy: [<contenttweaker:superalloyblock>, <ore:ingotSuperAlloy>]} as IIngredient[][string];
 
 for name, ingredients in blocks {
 	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
@@ -46,7 +47,7 @@ for block, names in yeetblocks {
 
 var oreentries = ["blockCalcium", "blockChromium", "blockHafnium", "blockNeodymium", "blockNiobium", "blockPotassium", "blockSodium",
 "blockTungsten", "blockYttrium", "blockStainlessSteel", "blockCobalt", "blockIridium", "blockNiobiumTin", "blockNiobiumTitanium", "blockNickel",
-"blockOsmium", "blockOsmiridium", "blockPlatinum", "blockTitanium", "blockTungstenCarbide", "blockZinc"] as string[];
+"blockOsmium", "blockOsmiridium", "blockPlatinum", "blockTitanium", "blockTungstenCarbide", "blockZinc", "blockNichrome", "blockSuperAlloy"] as string[];
 
 for entry in oreentries {
 	oreDict.entry;
@@ -58,7 +59,8 @@ var oreblocks = { <ore:blockCalcium>: <contenttweaker:cablock>, <ore:blockChromi
 <ore:blockStainlessSteel>: <contenttweaker:cfecrblock>, <ore:blockCobalt>: <contenttweaker:coblock>, <ore:blockIridium>: <contenttweaker:irblock>,
 <ore:blockNiobiumTin>: <contenttweaker:nbsnblock>, <ore:blockNiobiumTitanium>: <contenttweaker:nbtiblock>, <ore:blockNickel>: <contenttweaker:niblock>,
 <ore:blockOsmium>: <contenttweaker:osblock>, <ore:blockOsmiridium>: <contenttweaker:osirblock>, <ore:blockPlatinum>: <contenttweaker:ptblock>,
-<ore:blockTitanium>: <contenttweaker:tiblock>, <ore:blockTungstenCarbide>: <contenttweaker:wcblock>, <ore:blockZinc>: <contenttweaker:znblock>} as IItemStack[IOreDictEntry];
+<ore:blockTitanium>: <contenttweaker:tiblock>, <ore:blockTungstenCarbide>: <contenttweaker:wcblock>, <ore:blockZinc>: <contenttweaker:znblock>,
+<ore:blockNichrome>: <contenttweaker:nicrblock>, <ore:blockSuperAlloy>: <contenttweaker:superalloyblock>} as IItemStack[IOreDictEntry];
 
 for oreName, oreEntry in oreblocks {
 	oreName.add(oreEntry);
@@ -69,6 +71,8 @@ AlloyFurnace.addRecipe(<ore:blockNiobium>*3, <ore:blockTin>, <contenttweaker:nbs
 AlloyFurnace.addRecipe(<ore:blockSteel>*5, <ore:blockChromium>, <contenttweaker:cfecrblock>*6, 8.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockTitanium>, <ore:blockNiobium>, <contenttweaker:nbtiblock>*2, 8.0, 1.0, 0.0);
 AlloyFurnace.addRecipe(<ore:blockOsmium>, <ore:blockIridium>, <contenttweaker:osirblock>*2, 8.0, 1.0, 0.0);
+AlloyFurnace.addRecipe(<ore:blockNickel>, <ore:blockChromium>, <contenttweaker:nicrblock>*2, 8.0, 1.0, 0.0);
+AlloyFurnace.addRecipe(<ore:blockNichrome>*2, <ore:blockNiobiumTitanium>, <contenttweaker:superalloyblock>*3, 8.0, 1.0, 0.0);
 
 Manufactory.addRecipe(<ore:blockSilicon>, <ore:bouleSilicon>, 8.0, 1.5, 0.0);
 Melter.addRecipe(<ore:blockSilicon>, <liquid:silicon>*1296, 8.0, 1.5, 0.0);

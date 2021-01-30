@@ -7,7 +7,7 @@ import crafttweaker.item.IIngredient;
 
 
 var materials = ["cablock", "crblock", "hfblock", "ndblock", "nbblock", "kblock", "nablock", "wblock", "yblock", "cfecrblock", "coblock", "irblock",
-"nbsnblock", "nbtiblock", "niblock", "osblock", "osirblock", "ptblock", "tiblock", "wcblock", "znblock"] as string[];
+"nbsnblock", "nbtiblock", "niblock", "osblock", "osirblock", "ptblock", "tiblock", "wcblock", "znblock", "nicrblock", "superalloyblock"] as string[];
 
 for material in materials {
 	var material = VanillaFactory.createBlock(material, <blockmaterial:iron>);

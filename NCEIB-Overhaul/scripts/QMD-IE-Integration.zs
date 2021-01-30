@@ -12,3 +12,7 @@ ArcFurnace.addRecipe(<contenttweaker:nbtiblock>*2, <ore:blockNiobium>, null, 800
 ArcFurnace.addRecipe(<ore:ingotNiobiumTitanium>.firstItem*2, <ore:ingotNiobium>, null, 100, 64, [<ore:ingotTitanium>]);
 ArcFurnace.addRecipe(<contenttweaker:osirblock>*2, <ore:blockOsmium>, null, 800, 64, [<ore:blockIridium>]);
 ArcFurnace.addRecipe(<ore:ingotOsmiridium>.firstItem*2, <ore:ingotOsmium>, null, 100, 64, [<ore:ingotIridium>]);
+ArcFurnace.addRecipe(<contenttweaker:nicrblock>*2, <ore:blockNickel>, null, 800, 64, [<ore:blockChromium>]);
+ArcFurnace.addRecipe(<ore:ingotNichrome>.firstItem*2, <ore:ingotNickel>, null, 100, 64, [<ore:ingotChromium>]);
+ArcFurnace.addRecipe(<contenttweaker:superalloyblock>*3, <ore:blockNichrome>*2, null, 800, 64, [<ore:blockNiobiumTitanium>]);
+ArcFurnace.addRecipe(<ore:ingotSuperAlloy>.firstItem*3, <ore:ingotNichrome>*2, null, 100, 64, [<ore:ingotNiobiumTitanium>]);

@@ -75,6 +75,8 @@ item.contenttweaker.sr90ingot.name=Strontium-90 Ingot
 tile.contenttweaker.tiblock.name=Titanium Block
 tile.contenttweaker.wcblock.name=Tungsten Carbide Block
 tile.contenttweaker.znblock.name=Zinc Block
+tile.contenttweaker.nicrblock.name=Nichrome Block
+tile.contenttweaker.superalloyblock.name=Superalloy Block
 
 // Trinity Blocks
 tile.contenttweaker.bablock.name=Barium Block
