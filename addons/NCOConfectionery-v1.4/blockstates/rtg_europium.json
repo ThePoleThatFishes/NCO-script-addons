@@ -1,0 +1,14 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model":"cube_column",
+		"textures": {
+			"end": "nuclearcraft:blocks/rtg_europium_top",
+			"side": "nuclearcraft:blocks/rtg_europium_side"
+		}
+	},
+	"variants": {
+		"inventory": [{}],
+		"normal": [{}]
+	}
+}

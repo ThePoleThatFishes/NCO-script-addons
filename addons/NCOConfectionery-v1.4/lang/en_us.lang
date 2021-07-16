@@ -1,0 +1,175 @@
+// Pancake Stuff
+tile.nuclearcraft.turbine_rotor_blade_steelcake.name=Steelcake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_extremecake.name=Extremecake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_sicsiccmcake.name=SiC-SiC Ceramic Matrix Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_hccake.name=Hard Carbon Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_tccake.name=Thermoconducting Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_toughcake.name=Tough Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_febcake.name=Ferroboron Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_limno2cake.name=Lithium Manganese Dioxide Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_mgb2cake.name=Magnesium Diboride Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_zircaloycake.name=Zircaloy Cake Turbine Rotor Blade
+
+// Heatsinks
+tile.nuclearcraft.solid_fission_sink_cracker.name=Graham Cracker Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_marshmallow.name=Marshmallow Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_chocolate.name=Chocolate Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_gold_smore.name=Golden S'more Fission S'meat S'mink
+tile.nuclearcraft.solid_fission_sink_pancake.name=Pancake Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_caramel.name=Caramel Fission Heat Sink
+
+nc.sf.cracker_sink0=%s Cracker sink
+nc.sf.cracker_sink1=%s Cracker sinks
+nc.sf.chocolate_sink0=%s Chocolate sink
+nc.sf.chocolate_sink1=%s Chocolate sinks
+nc.sf.marshmallow_sink0=%s Marshmallow sink
+nc.sf.marshmallow_sink1=%s Marshmallow sinks
+nc.sf.goldsmore_sink0=%s Golden S'more s'mink
+nc.sf.goldsmore_sink1=%s Golden S'more s'minks
+nc.sf.caramel_sink0=%s Caramel sink
+nc.sf.caramel_sink1=%s Caramel sinks
+nc.sf.pancake_sink0=%s Pancake sink
+nc.sf.pancake_sink1=%s Pancake sinks
+
+// Coils
+tile.nuclearcraft.turbine_dynamo_coil_cracker.name=Cracker Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_chocolate.name=Chocolate Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_marshmallow.name=Marshmallow Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_gold_smore.name=Golden S'more Turbine Dynamo S'moil
+tile.nuclearcraft.turbine_dynamo_coil_caramel.name=Caramel Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_pancake.name=Pancake Turbine Dynamo Coil
+
+nc.sf.cracker_coil0=%s Cracker dynamo coil
+nc.sf.cracker_coil1=%s Cracker dynamo coils
+nc.sf.chocolate_coil0=%s Chocolate dynamo coil
+nc.sf.chocolate_coil1=%s Chocolate dynamo coils
+nc.sf.marshmallow_coil0=%s Marshmallow dynamo coil
+nc.sf.marshmallow_coil1=%s Marshmallow dynamo coils
+nc.sf.gold_smore_coil0=%s Golden S'more dynamo s'moil
+nc.sf.gold_smore_coil1=%s Golden S'more dynamo s'moils
+nc.sf.caramel_coil0=%s Caramel dynamo coil
+nc.sf.caramel_coil1=%s Caramel dynamo coils
+nc.sf.pancake_coil0=%s Pancake dynamo coil
+nc.sf.pancake_coil1=%s Pancake dynamo coils
+
+// Heaters & Ports
+tile.nuclearcraft.salt_fission_heater_caramel.name=Caramel Coolant Heater
+tile.nuclearcraft.salt_fission_heater_chocolate.name=Chocolate Coolant Heater
+tile.nuclearcraft.salt_fission_heater_cracker.name=Cracker Coolant Heater
+tile.nuclearcraft.salt_fission_heater_gold_smore.name=Golden S'more Coolant S'meater
+tile.nuclearcraft.salt_fission_heater_marshmallow.name=Marshmallow Coolant Heater
+tile.nuclearcraft.salt_fission_heater_pancake.name=Pancake Coolant Heater
+
+nc.sf.cracker_heater0=%s Cracker heater
+nc.sf.cracker_heater1=%s Cracker heaters
+nc.sf.chocolate_heater0=%s Chocolate heater
+nc.sf.chocolate_heater1=%s Chocolate heaters
+nc.sf.marshmallow_heater0=%s Marshmallow heater
+nc.sf.marshmallow_heater1=%s Marshmallow heaters
+nc.sf.gold_smore_heater0=%s Golden S'more s'meater
+nc.sf.gold_smore_heater1=%s Golden S'more s'meaters
+nc.sf.caramel_heater0=%s Caramel heater
+nc.sf.caramel_heater1=%s Caramel heaters
+nc.sf.pancake_heater0=%s Pancake heater
+nc.sf.pancake_heater1=%s Pancake heaters
+
+tile.nuclearcraft.fission_heater_port_caramel.name=Caramel Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_chocolate.name=Chocolate Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_cracker.name=Cracker Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_gold_smore.name=Golden S'more Coolant S'meater Port
+tile.nuclearcraft.fission_heater_port_marshmallow.name=Marshmallow Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_pancake.name=Pancake Coolant Heater Port
+
+
+// Foods
+item.contenttweaker.smore_gold.name=Golden S'more
+item.contenttweaker.pancakes.name=Pancakes
+item.contenttweaker.thmore.name=Th'more
+item.contenttweaker.smore_caramel.name=Caramel S'more
+item.contenttweaker.caramel.name=Caramel
+
+
+// Crafting Pancake Rotors
+item.contenttweaker.blade_hc.name=Hard Carbon Alloy Turbine Rotor Blade
+item.contenttweaker.blade_tc.name=Thermoconducting Alloy Turbine Rotor Blade
+item.contenttweaker.blade_tough.name=Tough Alloy Turbine Rotor Blade
+item.contenttweaker.blade_feb.name=Ferroboron Alloy Turbine Rotor Blade
+item.contenttweaker.pancake_core.name=Pancake Turbine Rotor Blade Core
+item.contenttweaker.blade_limno2.name=Lithium Manganese Dioxide Turbine Rotor Blade
+item.contenttweaker.blade_mgb2.name=Magnesium Diboride Turbine Rotor Blade
+item.contenttweaker.blade_zircaloy.name=Zircaloy Turbine Rotor Blade
+
+
+// Fission Stuff
+item.contenttweaker.arsenic_canister.name=Arsenic Canister
+item.contenttweaker.so314.name=S'morium-314
+item.contenttweaker.so314ox.name=S'morium-314 Oxide
+item.contenttweaker.so314ni.name=S'morium-314 Nitride
+item.contenttweaker.so314za.name=S'morium-314-Zirconium Alloy
+item.contenttweaker.to316.name=Th'morium-316
+item.contenttweaker.to316ox.name=Th'morium-316 Oxide
+item.contenttweaker.to316ni.name=Th'morium-316 Nitride
+item.contenttweaker.to316za.name=Th'morium-316-Zirconium Alloy
+item.contenttweaker.to317.name=Th'morium-317
+item.contenttweaker.to317ox.name=Th'morium-317 Oxide
+item.contenttweaker.to317ni.name=Th'morium-317 Nitride
+item.contenttweaker.to317za.name=Th'morium-317-Zirconium Alloy
+item.contenttweaker.mix314.name=MIX-314 
+item.contenttweaker.mox314.name=MOX-314 Fuel Pellet
+item.contenttweaker.mni314.name=MNI-314 Fuel Pellet
+item.contenttweaker.mza314.name=MZA-314 Fuel Pellet
+item.contenttweaker.dmix314.name=Depleted MIX-314
+item.contenttweaker.dmox314.name=Depleted MOX-314 Fuel Pellet
+item.contenttweaker.dmni314.name=Depleted MNI-314 Fuel Pellet
+item.contenttweaker.dmza314.name=Depleted MZA-314 Fuel Pellet
+fluid.so314=Molten S'morium-314
+fluid.to316=Molten Th'morium-316
+fluid.to317=Molten Th'morium-317
+fluid.mix314=Molten MIX-314 Fuel
+fluid.mf4314=Molten MF4-314 Fuel
+fluid.mf4314flibe=Molten FLiBe Salt Solution of MF4-314 Fuel
+fluid.dmf4314flibe=Molten FLiBe Salt Solution of Depleted MF4-314 Fuel
+fluid.dmf4314=Molten Depleted MF4-314 Fuel
+fluid.dmix314=Molten Depleted MIX-314 Fuel
+fluid.caramel=Molten Caramel
+fluid.cracker=Molten Cracker
+fluid.gold_smore=Molten Golden S'more
+fluid.pancake=Molten Pancakes
+fluid.caramel_nak=Eutectic Caramel-NaK Mixture
+fluid.chocolate_nak=Eutectic Chocolate-NaK Mixture
+fluid.cracker_nak=Eutectic Cracker-NaK Mixture
+fluid.gold_smore_nak=S'meutectic Golden S'more-NaK S'mixture
+fluid.marshmallow_nak=Eutectic Marshmallow-NaK Mixture
+fluid.pancake_nak=Eutectic Pancake-NaK Mixture
+fluid.caramel_nak_hot=Hot Eutectic Caramel-NaK Mixture
+fluid.chocolate_nak_hot=Hot Eutectic Chocolate-NaK Mixture
+fluid.cracker_nak_hot=Hot Eutectic Cracker-NaK Mixture
+fluid.gold_smore_nak_hot=Hot S'meutectic Golden S'more-NaK S'mixture
+fluid.marshmallow_nak_hot=Hot Eutectic Marshmallow-NaK Mixture
+fluid.pancake_nak_hot=Hot Eutectic Pancake-NaK Mixture
+qmd.particle.arsenic_ion.name=Arsenic Ion
+qmd.particle.arsenic_ion.desc=The ion of Arsenic-75 is used to smash into a Pu-239 target in target chambers, to create the S'morium-314 isotope.
+
+// RTGs, Neutron Source, Batteries
+
+tile.nuclearcraft.rtg_thmorium.name=Th'morium RTG
+tile.nuclearcraft.rtg_tritium.name=Tritium Betavoltaic Device
+tile.nuclearcraft.rtg_ruthenium.name=Ruthenium Betavoltaic Device
+tile.nuclearcraft.rtg_caesium.name=Caesium Betavoltaic Device
+tile.nuclearcraft.rtg_promethium.name=Promethium Betavoltaic Device
+tile.nuclearcraft.rtg_europium.name=Europium Betavoltaic Device
+tile.nuclearcraft.fission_source_thmorium.name=Th'morium-317 Fission Neutron Source
+tile.nuclearcraft.battery_sodium.name=Sodium-ion Battery
+tile.nuclearcraft.battery_potassium.name=Potassium-Sulfur Battery
+item.contenttweaker.bvc.name=Betavoltaic Device Casing
+item.contenttweaker.cathode_na.name=Sodium Cathode
+item.contenttweaker.anode_na.name=Sodium Anode
+item.contenttweaker.casing_ec.name=Ethylene Carbonate-filled Battery Casing
+item.contenttweaker.casing_k.name=Potassium-filled Battery Casing
+item.contenttweaker.casing_k_s.name=Potassium-Sulfur-filled Battery Casing
+item.contenttweaker.beta_alumina.name=Beta-Alumina Solid Electrolyte
+item.contenttweaker.casing_battery.name=Empty Battery Casing
+fluid.etheneoxide=Ethylene Oxide
+fluid.ethenecarbonate=Ethylene Carbonate
+fluid.sodiumanode=Sodium Anode Mixture
+fluid.sodiumcathode=Sodium Cathode Mixture
