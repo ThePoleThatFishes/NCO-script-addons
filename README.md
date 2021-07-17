@@ -1,30 +1,26 @@
-# NC Extra Ingot Blocks!
+# FishingPole's NuclearCraft: Overhauled Script Addons GitHub Repository
 ![img](https://cdn.discordapp.com/attachments/745257089357709402/764786934618128394/nceib.png)
 
 ## What is this?
-The NC Extra Ingot Blocks aims to add via Content and CraftTweaker block forms of ingots in NuclearCraft and NuclearCraft: Overhauled, that are missing from the base mod.
-For both NC versions, all 16 alloys receive a block form, and in underhaul/pre-overhaul NC, Manganese Oxide and Manganese Dioxide blocks are also added (which are missing
-from the base mod)
+This is a GitHub Repo of my script addons for NuclearCraft: Overhauled. Issues and Suggestions for the addons are tracked here.
+The addons aim to enhance your NCO experience by adding various blocks and multiblock components and other QOL stuff via the magic of CraftTweaker and ContentTweaker!
 
-## What version should I get?
-[NuclearCraft **2**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-mod) => NCEIB-Underhaul.zip
+## What do I need to run the addons?
+1) Latest version of NuclearCraft: Overhauled
+2) CraftTweaker, B.A.S.E., ContentTweaker, and any other dependencies these mods may have.
+3) My addons also provide additional content and mod integrations in case said mods are installed.
+These mods are, but not limited to: QMD, Trinity, Thermal series, Ender IO, Immersive Engineering, Tinkers' Construct and Pam's HarvestCraft.
+Feel free to suggest more integrations or help me improve existing integrations if I have missed them!
 
-[NuclearCraft **2o**.x.x](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled) => NCEIB-Overhaul.zip 
+__*WARNING:* Some mod integrations require additional library mods (eg. Thermal and TiC require ModTweaker, EIO requires EnderTweaker)__
 
-[Ad Astra Per Nucleon Modpack](https://www.curseforge.com/minecraft/modpacks/ad-astra-per-nucleon) => NCEIB-AAPN.zip 
+4) Once you have the above, get the addon .zip either from here or the CurseForge pages of each addon, drag it over to your Minecraft instance's /resources/nuclearcraft/addons folder, and then launch the game!
 
-*All versions include recipes for the SiC-SiC CMC ingots, which you can disable by editing the scripts!
-## How to install? (Underhaul Instructions)
-1. Download the release for your version of NuclearCraft.
-2. Place the ZenScript (.zs) files from the scripts folder in your instance's scripts folder.
-3. Open the resources/contenttweaker folder.
-4. Take all of the files in the blockstates folder, and move them in your instance's blockstates folder.
-5. Go to the lang folder, open the lang file and copy the text inside, then paste the contents in the en_US.lang file of your instance's lang folder.
-Note: If there is no en_US.lang file in your instance's folder, just copy the file and paste it.
-6. Go to the textures/blocks folder, and move all the .png files from the folder into your instance's blocks folder.
-7. Installation complete! Enjoy your alloy blocks :D
+## Useful Links
+(Insert NCEIB CF Page here)
 
-## How to install? (Overhaul Instructions)
-1. Download NCEIB-Overhaul.zip
-2. Unzip and place NCEIB-Overhaul Folder in the resources/nuclearcraft/addons Folder.
-3. Installation complete! Enjoy your alloy blocks! :D
+(Insert Confectionery CF Page here)
+
+(Insert NCO CF Page here)
+
+(Insert NC Discord link here)
