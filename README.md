@@ -1,5 +1,10 @@
 # FishingPole's NuclearCraft: Overhauled Script Addons GitHub Repository
-![img](https://cdn.discordapp.com/attachments/745257089357709402/764786934618128394/nceib.png)
+NuclearCraft Extra Ingot Blocks:
+
+![img](https://cdn.discordapp.com/attachments/745257089357709402/866073733075828756/unknown.png)
+
+NuclearCraft: Overhauled Confectionery:
+![img](https://cdn.discordapp.com/attachments/745257089357709402/866299517997154334/unknown.png)
 
 ## What is this?
 This is a GitHub Repo of my script addons for NuclearCraft: Overhauled. Issues and Suggestions for the addons are tracked here.
@@ -17,10 +22,10 @@ __*WARNING:* Some mod integrations require additional library mods (eg. Thermal 
 4) Once you have the above, get the addon .zip either from here or the CurseForge pages of each addon, drag it over to your Minecraft instance's /resources/nuclearcraft/addons folder, and then launch the game!
 
 ## Useful Links
-(Insert NCEIB CF Page here)
+[NCEIB on CF](https://www.curseforge.com/minecraft/customization/nuclearcraft-extra-ingot-blocks)
 
-(Insert Confectionery CF Page here)
+[NCO Confectionery on CF](https://www.curseforge.com/minecraft/customization/nco-confectionery)
 
-(Insert NCO CF Page here)
+[NuclearCraft: Overhauled on CF](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled)
 
-(Insert NC Discord link here)
+[NC Discord Server (You can find me there as FishingPole#3673)](https://discord.gg/KCPYgWw)
