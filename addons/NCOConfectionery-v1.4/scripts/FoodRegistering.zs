@@ -6,6 +6,9 @@ import crafttweaker.entity.IEntityLivingBase;
 import mods.contenttweaker.Item;
 import mods.contenttweaker.Fluid;
 
+val ncoconf_tab = VanillaFactory.createCreativeTab("ncoconf", <item:contenttweaker:smore_gold>);
+ncoconf_tab.register();
+
 var goldsmore = VanillaFactory.createItemFood("smore_gold", 8);
 
 goldsmore.saturation = 7.2;
@@ -19,6 +22,7 @@ goldsmore.onItemFoodEaten = function(stack, world, player) {
 		player.addRadiationResistance(1.25);
 		}
 	};
+goldsmore.creativeTab = <creativetab:ncoconf>;
 goldsmore.register();
 
 var pancakes = VanillaFactory.createItemFood("pancakes", 4);
@@ -38,6 +42,7 @@ thmore.onItemFoodEaten = function(stack, world, player) {
 		player.addRadiationResistance(-2.5);
 		}
 	};
+thmore.creativeTab = <creativetab:ncoconf>;
 thmore.register();
 
 var caramelsmore = VanillaFactory.createItemFood("smore_caramel", 10);
@@ -50,6 +55,7 @@ caramelsmore.onItemFoodEaten = function(stack, world, player) {
 		player.addPotionEffect(<potion:minecraft:absorption>.makePotionEffect(450, 1));
 		}
 	};
+caramelsmore.creativeTab = <creativetab:ncoconf>;
 caramelsmore.register();
 
 var caramel = VanillaFactory.createItemFood("caramel", 2);
@@ -61,6 +67,7 @@ caramel.onItemFoodEaten = function(stack, world, player) {
 		player.addPotionEffect(<potion:minecraft:speed>.makePotionEffect(60, 0));
 		}
 	};
+caramel.creativeTab = <creativetab:ncoconf>;
 caramel.register();
 
 	

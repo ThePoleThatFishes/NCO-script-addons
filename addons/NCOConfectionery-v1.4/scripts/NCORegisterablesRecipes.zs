@@ -9,10 +9,15 @@ import mods.nuclearcraft.Infuser;
 import mods.nuclearcraft.Crystallizer;
 import mods.nuclearcraft.IngotFormer;
 import mods.nuclearcraft.SaltMixer;
+import mods.nuclearcraft.FissionIrradiator;
+import mods.nuclearcraft.Extractor;
+import mods.nuclearcraft.Centrifuge;
 import mods.nuclearcraft.Melter;
 
-val materialdict = {cracker: <nuclearcraft:graham_cracker>, chocolate: <nuclearcraft:milk_chocolate>, gold_smore: <contenttweaker:smore_gold>,
-marshmallow: <nuclearcraft:marshmallow>, pancake: <contenttweaker:pancakes>, caramel: <contenttweaker:caramel>} as IIngredient[string];
+
+val materialdict = {cracker: <ore:foodCrackers>, chocolate: <ore:foodChocolatebar>, gold_smore: <contenttweaker:smore_gold>,
+marshmallow: <ore:foodMarshmellows>, pancake: <ore:foodPancakes>, caramel: <ore:foodCaramel>, buttermilk: <contenttweaker:buttermilk>,
+egg: <ore:listAllegg>, wheat: <minecraft:wheat>, sugar: <minecraft:sugar>, cake: <minecraft:cake>} as IIngredient[string];
 
 
 // Coils, Heatsinks, Ports and Heaters
@@ -39,17 +44,6 @@ for name, material in materialdict {
 	[null, material, null]]);
 	
 	}
-Melter.addRecipe(<contenttweaker:caramel>, <fluid:caramel>*144);
-Melter.addRecipe(<nuclearcraft:graham_cracker>, <fluid:cracker>*144);
-Melter.addRecipe(<contenttweaker:smore_gold>, <fluid:gold_smore>*144);
-Melter.addRecipe(<ore:pancakes>, <fluid:pancake>*16);
-
-val fluiddict = {<fluid:cracker>: <fluid:cracker_nak>, <fluid:milk_chocolate>: <fluid:chocolate_nak>, <fluid:gold_smore>: <fluid:gold_smore_nak>,
-<fluid:marshmallow>: <fluid:marshmallow_nak>, <fluid:pancake>: <fluid:pancake_nak>, <fluid:caramel>: <fluid:caramel_nak>} as IIngredient[IIngredient];
-
-for fluidname, fluidnak in fluiddict {
-SaltMixer.addRecipe(fluidname*144, <fluid:nak>*144, fluidnak*144);
-}
 
 // Pancake Blades
 
@@ -71,7 +65,7 @@ for blade in ttblades {
 
 
 Assembler.addRecipe(<nuclearcraft:turbine_rotor_blade_steel>*4, <nuclearcraft:turbine_rotor_blade_extreme>*4, <nuclearcraft:turbine_rotor_blade_sic_sic_cmc>*4,
-<ore:pancakes>*32, <contenttweaker:pancake_core>*4, 8.0, 4.0, 0.0);
+<ore:foodPancakes>*32, <contenttweaker:pancake_core>*4, 8.0, 4.0, 0.0);
 
 val pancake_blades = { "steel": "steelcake", "extreme": "extremecake", "sic_sic_cmc": "sicsiccmcake",
 "hc": "hccake", "tc": "tccake", "tough": "toughcake", "feb": "febcake", "limno2": "limno2cake", "mgb2": "mgb2cake", "zircaloy": "zircaloycake"} as string[string];
@@ -125,8 +119,7 @@ recipes.addShaped("ncoconfsourcethmorium", <nuclearcraft:fission_source_thmorium
 	[<ore:ingotThmorium317>, <ore:steelFrame>, <ore:ingotThmorium317>],
 	[<ore:plateBasic>, <ore:ingotThmorium317>, <ore:plateBasic>]
 	]);
-Radiation.setRadiationLevel(<nuclearcraft:fission_source_thmorium>, 1.05e-3);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_thmorium>, 62.5e-6);
+
 
 Assembler.addRecipe(<contenttweaker:bvc>, <ore:ingotThmorium316>, null, null, <nuclearcraft:rtg_thmorium>);
 recipes.addShaped("ncoconfbvccasing", <contenttweaker:bvc>, [
@@ -135,13 +128,29 @@ recipes.addShaped("ncoconfbvccasing", <contenttweaker:bvc>, [
 	[<ore:plateAdvanced>, <ore:ingotGraphite>, <ore:plateAdvanced>]
 	]);
 	
+// Tritium Breeding Recipes
+AlloyFurnace.addRecipe(<ore:ingotLithium>, <ore:itemSilicon>, <contenttweaker:li4sio4_ingot>*2, 3.0, 4.0, 0.0);
+recipes.addShaped(<contenttweaker:blanket_empty>, [[<ore:plateAdvanced>, <ore:ingotZirconium>, <ore:plateAdvanced>],
+[<contenttweaker:li4sio4_ingot>, <minecraft:bucket>, <contenttweaker:li4sio4_ingot>],
+[<ore:plateAdvanced>, <ore:ingotZirconium>, <ore:plateAdvanced>]]);
+Infuser.addRecipe(<contenttweaker:blanket_empty>, <liquid:lithium_6>*144, <contenttweaker:blanket_li>);
+FissionIrradiator.addRecipe(<contenttweaker:blanket_li>, <contenttweaker:blanket_tritium>, 24000, 0.0, 0.0, 84.0e-9);
+Extractor.addRecipe(<contenttweaker:blanket_tritium>, <contenttweaker:blanket_empty>, <liquid:bred_fluid>*2000, 1.0, 1.0, 84.0e-9);
+Centrifuge.addRecipe(<liquid:bred_fluid>*2000, <liquid:tritium>*1000, <liquid:helium>*1000, null, null, null, null);
+	
 Infuser.addRecipe(<contenttweaker:bvc>, <liquid:tritium>*1000, <nuclearcraft:rtg_tritium>);
 Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustRuthenium106>, null, null, <nuclearcraft:rtg_ruthenium>);
 Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustCaesium137>, null, null, <nuclearcraft:rtg_caesium>);
 Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustPromethium147>, null, null, <nuclearcraft:rtg_promethium>);
 Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustEuropium155>, null, null, <nuclearcraft:rtg_europium>);
 
+Radiation.setRadiationLevel(<nuclearcraft:fission_source_thmorium>, 1.05e-3);
+Radiation.setRadiationLevel(<nuclearcraft:rtg_thmorium>, 62.5e-6);
 Radiation.setRadiationLevel(<nuclearcraft:rtg_tritium>, 2.75e-6);
+Radiation.setRadiationLevel(<nuclearcraft:rtg_caesium>, 834.0e-6);
+Radiation.setRadiationLevel(<nuclearcraft:rtg_europium>, 18.4e-3);
+Radiation.setRadiationLevel(<nuclearcraft:rtg_promethium>, 20.1e-3);
+Radiation.setRadiationLevel(<nuclearcraft:rtg_ruthenium>, 6.3e-3);
 }
 
 // Battery Recipes
@@ -173,3 +182,5 @@ IngotFormer.addRecipe(<liquid:sodiumanode>*144, <contenttweaker:anode_na>);
 Infuser.addRecipe(<contenttweaker:casing_battery>, <liquid:ethenecarbonate>*500, <contenttweaker:casing_ec>);
 
 Assembler.addRecipe(<contenttweaker:casing_ec>, <contenttweaker:anode_na>, <contenttweaker:cathode_na>, null, <nuclearcraft:battery_sodium>);
+
+
