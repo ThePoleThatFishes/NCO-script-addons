@@ -77,9 +77,21 @@ tile.contenttweaker.wcblock.name=Tungsten Carbide Block
 tile.contenttweaker.znblock.name=Zinc Block
 tile.contenttweaker.nicrblock.name=Nichrome Block
 tile.contenttweaker.superalloyblock.name=Superalloy Block
+tile.contenttweaker.erblock.name=Erbium Block
+tile.contenttweaker.iblock.name=Iodine Block
+tile.contenttweaker.smblock.name=Samarium Block
+tile.contenttweaker.tbblock.name=Terbium Block
+tile.contenttweaker.ybblock.name=Ytterbium Block
+item.contenttweaker.eringot.name=Erbium Ingot
+item.contenttweaker.iingot.name=Iodine Ingot
+item.contenttweaker.smingot.name=Samarium Ingot
+item.contenttweaker.tbingot.name=Terbium Ingot
+item.contenttweaker.ybingot.name=Ytterbium Ingot
 
 // Trinity Blocks
 tile.contenttweaker.bablock.name=Barium Block
 item.contenttweaker.baingot.name=Barium Ingot
 tile.contenttweaker.baoblock.name=Barium Oxide Block
 item.contenttweaker.baoingot.name=Barium Oxide Ingot
+
+itemGroup.nceib=NC Extra Ingot Blocks

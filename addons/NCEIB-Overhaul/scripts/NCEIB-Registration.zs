@@ -3,7 +3,11 @@
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Block;
 import mods.contenttweaker.Item;
+import mods.contenttweaker.CreativeTab;
 import crafttweaker.item.IIngredient;
+
+val nceib_tab = VanillaFactory.createCreativeTab("nceib", <item:contenttweaker:toughblock>);
+nceib_tab.register();
 
 var material_blocks = ["ferroboronBlock", "toughBlock", "hardCarbonBlock", "thermoconductingBlock", "extremeBlock", "hslaSteelBlock", "sicBlock", "sicsiccmcBlock",
 "zircaloyBlock", "leadplatinumBlock", "tinsilverBlock", "shibuichiBlock", "steelBlock", "limno2Block", "mgb2Block", "bronzeBlock", "zrmoBlock",
@@ -17,6 +21,7 @@ for material in material_blocks {
 		material.setBlockResistance(30);
 		material.setToolClass("pickaxe");
 		material.setToolLevel(1);
+		material.setCreativeTab(<creativetab:nceib>);
 		material.register();
 }
 
@@ -25,6 +30,7 @@ var material_ingots = ["moingot", "sr90ingot", "biingot", "cs137ingot", "eu155in
 
 for material in material_ingots {
 	var material = VanillaFactory.createItem(material);
+	material.setCreativeTab(<creativetab:nceib>);
 	material.maxStackSize = 64;
 	material.register();
 }
