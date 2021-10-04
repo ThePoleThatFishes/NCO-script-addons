@@ -30,6 +30,7 @@ Infuser.addRecipe(<ore:blockSiliconCarbide>, <liquid:sic_vapor>*9000, <nuclearcr
 Melter.addRecipe(<ore:ingotStrontium90>, <liquid:strontium_90>*144);
 IngotFormer.addRecipe(<liquid:strontium_90>*144, <ore:ingotStrontium90>);
 DecayHastener.addRecipe(<ore:ingotStrontium90>, <ore:ingotZirconium>, 1.125, 1.0, 34.44e-3);
+Manufactory.addRecipe(<ore:ingotBismuth>, <ore:dustBismuth>);
 
 furnace.addRecipe(<ore:ingotBismuth>.firstItem, <ore:dustBismuth>.firstItem);
 furnace.addRecipe(<ore:ingotCaesium137>.firstItem, <ore:dustCaesium137>.firstItem);
