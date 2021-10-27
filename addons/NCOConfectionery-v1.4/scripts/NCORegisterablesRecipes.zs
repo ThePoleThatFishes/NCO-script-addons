@@ -112,7 +112,7 @@ Infuser.addRecipe(<contenttweaker:casing_k>, <liquid:sulfur>*5994, <contenttweak
 Assembler.addRecipe(<contenttweaker:casing_k_s>, <ore:dustMolybdenum>*3, <contenttweaker:beta_alumina>, null, <nuclearcraft:battery_potassium>);
 
 ChemicalReactor.addRecipe(<liquid:ethanol>*1000, <liquid:sulfuric_acid>*1000, <liquid:ethene>*1000, null);
-SaltMixer.addRecipe(<liquid:ethene>*1000, <liquid:oxygen>*500, <liquid:etheneoxide>*1000, null);
+SaltMixer.addRecipe(<liquid:ethene>*1000, <liquid:oxygen>*500, <liquid:etheneoxide>*1000);
 ChemicalReactor.addRecipe(<liquid:etheneoxide>*1000, <liquid:carbon_dioxide>*1000, <liquid:ethenecarbonate>*1000, null);
 
 
