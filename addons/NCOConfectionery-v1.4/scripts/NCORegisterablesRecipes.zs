@@ -88,46 +88,6 @@ for baseblade, pancakeblade in pancake_blades {
 	]);
 }
 
-
-// RTG and Neutron Source Recipes
-
-
-if (loadedMods has "qmd") {
-
-var thmoriums_rtg = [<contenttweaker:to316>, <contenttweaker:to316ni>, <contenttweaker:to316ox>, <contenttweaker:to316za>] as IItemStack[];
-var thmoriums_source = [<contenttweaker:to317>, <contenttweaker:to317ni>, <contenttweaker:to317ox>, <contenttweaker:to317za>] as IItemStack[];
-
-oreDict.ingotThmorium316;
-oreDict.ingotThmorium317;
-
-for thmorium in thmoriums_rtg {
-<ore:ingotThmorium316>.add(thmorium);
-}
-
-for thmorium in thmoriums_source {
-<ore:ingotThmorium317>.add(thmorium);
-}
-
-recipes.addShaped("ncoconfrtgthmorium", <nuclearcraft:rtg_thmorium>, [
-	[<ore:plateAdvanced>, <ore:ingotGraphite>, <ore:plateAdvanced>],
-	[<ore:ingotGraphite>, <ore:ingotThmorium316>, <ore:ingotGraphite>],
-	[<ore:plateAdvanced>, <ore:ingotGraphite>, <ore:plateAdvanced>]
-	]);
-	
-recipes.addShaped("ncoconfsourcethmorium", <nuclearcraft:fission_source_thmorium>*2, [
-	[<ore:plateBasic>, <ore:ingotThmorium317>, <ore:plateBasic>],
-	[<ore:ingotThmorium317>, <ore:steelFrame>, <ore:ingotThmorium317>],
-	[<ore:plateBasic>, <ore:ingotThmorium317>, <ore:plateBasic>]
-	]);
-
-
-Assembler.addRecipe(<contenttweaker:bvc>, <ore:ingotThmorium316>, null, null, <nuclearcraft:rtg_thmorium>);
-recipes.addShaped("ncoconfbvccasing", <contenttweaker:bvc>, [
-	[<ore:plateAdvanced>, <ore:ingotGraphite>, <ore:plateAdvanced>],
-	[<qmd:semiconductor:0>, null, <qmd:semiconductor:1>],
-	[<ore:plateAdvanced>, <ore:ingotGraphite>, <ore:plateAdvanced>]
-	]);
-	
 // Tritium Breeding Recipes
 AlloyFurnace.addRecipe(<ore:ingotLithium>, <ore:itemSilicon>, <contenttweaker:li4sio4_ingot>*2, 3.0, 4.0, 0.0);
 recipes.addShaped(<contenttweaker:blanket_empty>, [[<ore:plateAdvanced>, <ore:ingotZirconium>, <ore:plateAdvanced>],
@@ -137,21 +97,6 @@ Infuser.addRecipe(<contenttweaker:blanket_empty>, <liquid:lithium_6>*144, <conte
 FissionIrradiator.addRecipe(<contenttweaker:blanket_li>, <contenttweaker:blanket_tritium>, 24000, 0.0, 0.0, 84.0e-9);
 Extractor.addRecipe(<contenttweaker:blanket_tritium>, <contenttweaker:blanket_empty>, <liquid:bred_fluid>*2000, 1.0, 1.0, 84.0e-9);
 Centrifuge.addRecipe(<liquid:bred_fluid>*2000, <liquid:tritium>*1000, <liquid:helium>*1000, null, null, null, null);
-	
-Infuser.addRecipe(<contenttweaker:bvc>, <liquid:tritium>*1000, <nuclearcraft:rtg_tritium>);
-Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustRuthenium106>, null, null, <nuclearcraft:rtg_ruthenium>);
-Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustCaesium137>, null, null, <nuclearcraft:rtg_caesium>);
-Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustPromethium147>, null, null, <nuclearcraft:rtg_promethium>);
-Assembler.addRecipe(<contenttweaker:bvc>, <ore:dustEuropium155>, null, null, <nuclearcraft:rtg_europium>);
-
-Radiation.setRadiationLevel(<nuclearcraft:fission_source_thmorium>, 1.05e-3);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_thmorium>, 62.5e-6);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_tritium>, 2.75e-6);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_caesium>, 834.0e-6);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_europium>, 18.4e-3);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_promethium>, 20.1e-3);
-Radiation.setRadiationLevel(<nuclearcraft:rtg_ruthenium>, 6.3e-3);
-}
 
 // Battery Recipes
 
@@ -167,13 +112,9 @@ Infuser.addRecipe(<contenttweaker:casing_k>, <liquid:sulfur>*5994, <contenttweak
 Assembler.addRecipe(<contenttweaker:casing_k_s>, <ore:dustMolybdenum>*3, <contenttweaker:beta_alumina>, null, <nuclearcraft:battery_potassium>);
 
 ChemicalReactor.addRecipe(<liquid:ethanol>*1000, <liquid:sulfuric_acid>*1000, <liquid:ethene>*1000, null);
-ChemicalReactor.addRecipe(<liquid:ethene>*1000, <liquid:oxygen>*500, <liquid:etheneoxide>*1000, null);
+SaltMixer.addRecipe(<liquid:ethene>*1000, <liquid:oxygen>*500, <liquid:etheneoxide>*1000, null);
 ChemicalReactor.addRecipe(<liquid:etheneoxide>*1000, <liquid:carbon_dioxide>*1000, <liquid:ethenecarbonate>*1000, null);
 
-if (loadedMods has "qmd") {
-	AlloyFurnace.addRecipe(<ore:ingotSodium>, <ore:charcoal>, <contenttweaker:anode_na>, 2.0, 4.0, 0.0);
-	AlloyFurnace.addRecipe(<ore:ingotSodium>, <ore:ingotManganeseDioxide>, <contenttweaker:cathode_na>, 2.0, 6.0, 0.0);
-}
 
 SaltMixer.addRecipe(<liquid:sodium>*144, <liquid:manganese_dioxide>*144, <liquid:sodiumcathode>*144);
 SaltMixer.addRecipe(<liquid:sodium>*144, <liquid:coal>*100, <liquid:sodiumanode>*144);
