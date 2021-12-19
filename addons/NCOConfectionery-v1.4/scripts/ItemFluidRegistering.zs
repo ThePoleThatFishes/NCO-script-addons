@@ -8,10 +8,10 @@ import mods.nuclearcraft.ColorHelper;
 import mods.contenttweaker.Color;
 import mods.contenttweaker.CreativeTab;
 
-val items = ["blade_hc", "blade_tc", "blade_feb", "blade_tough", "blade_mgb2", "blade_limno2", "blade_zircaloy", "pancake_core", "mix314",
+val items = ["blade_hc", "blade_tc", "blade_feb", "blade_tough", "blade_mgb2", "blade_limno2", "blade_zircaloy", "blade_bronze", "blade_sic", "blade_hsla", "pancake_core", "mix314",
 "mza314", "mni314", "mox314", "dmix314", "dmza314", "dmni314", "dmox314", "so314", "so314ox", "so314ni", "so314za",
 "to316", "to316ox", "to316ni", "to316za", "to317", "to317ox", "to317ni", "to317za", "cathode_na", "anode_na", "beta_alumina",
-"casing_battery", "casing_ec", "casing_k", "casing_k_s", "bvc", "buttermilk"] as string[];
+"casing_battery", "casing_ec", "casing_k", "casing_k_s", "bvc", "buttermilk", "eggshells", "caco3_dust", "cao_dust"] as string[];
 
 for item in items {
 	var item = VanillaFactory.createItem(item);
@@ -42,7 +42,7 @@ ascanister.register();
 
 
 var fluids = {"so314": 10252553, "mix314": 10252553, "mf4314": ColorHelper.getFluorideColor(10252553), "mf4314flibe": ColorHelper.getFLIBEColor(10252553),
-"to316": 2960685, "to317": 2960950} as int[string];
+"to316": 2960685, "to317": 2960950, "cao": 0xffeedd, "hot_maple_syrup": 0xc15000, "hot_eggnog": 0xffeedd} as int[string];
 
 for fluid, color in fluids {
 	var fluid = VanillaFactory.createFluid(fluid, color);
@@ -69,15 +69,17 @@ for fluid in dfluids {
 	fluid.register();
 }
 
-var batteryfluids = {"etheneoxide": 123456, "ethenecarbonate": 128654, "sodiumcathode": 14385893, "sodiumanode": 12086977} as int[string];
+var batteryfluids = {"etheneoxide": 123456, "ethenecarbonate": 128654, "sodiumcathode": 14385893, "sodiumanode": 12086977, "eggmix": 0xffd59a, "eggnog": 0xffd59a,
+"maple_syrup": 0x9b4200} as int[string];
 
 for batteryfluid, color in batteryfluids {
 	var fluid = VanillaFactory.createFluid(batteryfluid, color);
 	fluid.register();
 }
 
-var fluidnames = ["caramel", "chocolate", "cracker", "gold_smore", "marshmallow", "pancake", "buttermilk", "wheat", "egg", "sugar", "cake"] as string[];
-var fluidcolours = [0xf1a70d, 0x581e0c, 0xb79023, 0xead13b, 0xd3d3d3, 0xfced92, 0xf7f7aa, 0xbfab31, 0xdfce9b, 0xffd59a, 0xb85d27, 0xf2c66f, 0x7a341f, 0xd8ab2f, 0xffe868, 0xeaeaea, 0xf9eda9, 0xffffaf, 0xe0c73a, 0xf9e7ae, 0xffe2ba, 0xdd7030] as int[];
+var fluidnames = ["caramel", "chocolate", "cracker", "gold_smore", "marshmallow", "pancake", "buttermilk", "wheat", "egg", "sugar", "cake", "pumpkin", "pumpkin_pie"] as string[];
+var fluidcolours = [0xf1a70d, 0x581e0c, 0xb79023, 0xead13b, 0xd3d3d3, 0xfced92, 0xf7f7aa, 0xbfab31, 0xdfce9b, 0xffd59a, 0xb85d27, 0xd85d00, 0xf78538,  
+					0xf2c66f, 0x7a341f, 0xd8ab2f, 0xffe868, 0xeaeaea, 0xf9eda9, 0xffffaf, 0xe0c73a, 0xf9e7ae, 0xffe2ba, 0xdd7030, 0xd67531, 0xf4a169] as int[];
 
 for i, fluid in fluidnames {
 	if (fluid != "chocolate" && fluid != "marshmallow" && fluid != "sugar") {
@@ -92,7 +94,7 @@ for i, fluid in fluidnames {
 	fluidnak.stillLocation = "nuclearcraft:blocks/fluids/molten_still";
 	fluidnak.flowingLocation = "nuclearcraft:blocks/fluids/molten_flow";
 	fluidnak.register();
-	var fluidnakhot = VanillaFactory.createFluid(fluid ~ "_nak_hot", ColorHelper.getNAKColor(fluidcolours[i+11]));
+	var fluidnakhot = VanillaFactory.createFluid(fluid ~ "_nak_hot", ColorHelper.getNAKColor(fluidcolours[i+13]));
 	fluidnakhot.setLuminosity(12);
 	fluidnakhot.setTemperature(900);
 	fluidnakhot.stillLocation = "nuclearcraft:blocks/fluids/molten_still";

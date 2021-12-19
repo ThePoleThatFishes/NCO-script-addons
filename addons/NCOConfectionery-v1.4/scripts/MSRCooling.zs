@@ -7,16 +7,18 @@ import mods.nuclearcraft.ChemicalReactor;
 import mods.nuclearcraft.Enricher;
 import crafttweaker.oredict.IOreDict;
 
-var cooling = [165, 85, 75, 350, 105, 140, 75, 55, 65, 80, 250] as int[];
+var cooling = [165, 85, 75, 350, 105, 140, 75, 55, 65, 80, 250, 80, 300] as int[];
 
 var crMatrix = [[cooling[0]*5, cooling[1]*5, cooling[2]*5, cooling[3]*5, cooling[4]*5, cooling[5]*5, cooling[6]*5, cooling[7]*5, cooling[8]*5, cooling[9]*5, cooling[10]*5],
 [cooling[0]*10, cooling[1]*10, cooling[2]*10, cooling[3]*10, cooling[4]*10, cooling[5]*10, cooling[6]*10, cooling[7]*10, cooling[8]*10, cooling[9]*10, cooling[10]*10],
 [cooling[0]*40, cooling[1]*40, cooling[2]*40, cooling[3]*40, cooling[4]*40, cooling[5]*40, cooling[6]*40, cooling[7]*40, cooling[8]*40, cooling[9]*40, cooling[10]*40],
 [cooling[0]*25, cooling[1]*25, cooling[2]*25, cooling[3]*25, cooling[4]*25, cooling[5]*25, cooling[6]*25, cooling[7]*25, cooling[8]*25, cooling[9]*25, cooling[10]*25]] as int[][];
 var coolantIn = [<fluid:caramel_nak_hot>, <fluid:chocolate_nak_hot>, <fluid:cracker_nak_hot>, <fluid:gold_smore_nak_hot>, <fluid:marshmallow_nak_hot>,
-<fluid:pancake_nak_hot>, <fluid:buttermilk_nak_hot>, <fluid:wheat_nak_hot>, <fluid:egg_nak_hot>, <fluid:sugar_nak_hot>, <fluid:cake_nak_hot>] as IIngredient[];
+<fluid:pancake_nak_hot>, <fluid:buttermilk_nak_hot>, <fluid:wheat_nak_hot>, <fluid:egg_nak_hot>, <fluid:sugar_nak_hot>, <fluid:cake_nak_hot>,
+<fluid:pumpkin_nak_hot>, <fluid:pumpkin_pie_nak_hot>] as IIngredient[];
 var coolantOut = [<fluid:caramel_nak>, <fluid:chocolate_nak>, <fluid:cracker_nak>, <fluid:gold_smore_nak>, <fluid:marshmallow_nak>,
-<fluid:pancake_nak>, <fluid:buttermilk_nak>, <fluid:wheat_nak>, <fluid:egg_nak>, <fluid:sugar_nak>, <fluid:cake_nak>] as IIngredient[];
+<fluid:pancake_nak>, <fluid:buttermilk_nak>, <fluid:wheat_nak>, <fluid:egg_nak>, <fluid:sugar_nak>, <fluid:cake_nak>,
+<fluid:pumpkin_nak_hot>, <fluid:pumpkin_pie_nak_hot>] as IIngredient[];
 var coolModifier = [144, 128, 12, 60] as int[];
 var transferIn = [<fluid:water>|<fluid:condensate_water>, <fluid:preheated_water>, <fluid:exhaust_steam>, <fluid:condensate_water>] as IIngredient[];
 var transferOut = [<fluid:high_pressure_steam>, <fluid:high_pressure_steam>, <fluid:low_pressure_steam>, <fluid:preheated_water>] as IIngredient[];

@@ -5,6 +5,7 @@ import mods.nuclearcraft.IngotFormer;
 import mods.nuclearcraft.SaltMixer;
 import mods.nuclearcraft.Infuser;
 import mods.nuclearcraft.Radiation;
+import mods.nuclearcraft.Extractor;
 import crafttweaker.item.IIngredient;
 import crafttweaker.oredict.IOreDictEntry;
 
@@ -35,16 +36,23 @@ oreDict.foodMarshmellows;
 oreDict.foodCrackers;
 <ore:foodCrackers>.add(<nuclearcraft:graham_cracker>);
 
+oreDict.foodEggnog;
+
+oreDict.cropMaplesyrup;
+
 recipes.addShapeless("goldsmore", <contenttweaker:smore_gold>, [<ore:ingotGold>, <ore:foodMarshmellows>, <ore:foodChocolatebar>, <ore:ingotGold>]);
 recipes.addShapeless("thmore", <contenttweaker:thmore>, [<ore:foodCrackers>, <ore:foodMarshmellows>, <ore:ingotThorium>, <ore:foodCrackers>]);
 recipes.addShapeless("caramelsmore", <contenttweaker:smore_caramel>, [<ore:foodCrackers>, <ore:foodCaramel>, <ore:foodMarshmellows>,
-<ore:ingotThorium>, <ore:foodCrackers>]);
+<ore:foodChocolatebar>, <ore:foodCrackers>]);
 
 Assembler.addRecipe(<ore:listAllegg>*2, <ore:listAllmilk>, <ore:dustWheat>, <ore:foodButter>, <contenttweaker:pancakes>*32);
 Manufactory.addRecipe(<minecraft:sugar>, <ore:foodCaramel>);
 Infuser.addRecipe(<ore:foodButter>, <fluid:milk>*250, <contenttweaker:buttermilk>);
 SaltMixer.addRecipe(<fluid:cocoa_butter>*144, <fluid:milk>*250, <fluid:buttermilk>*144);
 IngotFormer.addRecipe(<fluid:buttermilk>*144, <contenttweaker:buttermilk>);
+
+Extractor.addRecipe(<minecraft:egg>, <contenttweaker:eggshells>, <fluid:eggmix>*1000, 0.25, 1.0, 0.0);
+SaltMixer.addRecipe(<fluid:eggmix>*250, <fluid:ethanol>*500, <fluid:eggnog>*250, 0.25, 0.5, 0.0);
 
 Melter.addRecipe(<ore:foodCaramel>, <fluid:caramel>*144, 0.25, 0.5, 0.0);
 Melter.addRecipe(<ore:foodCrackers>, <fluid:cracker>*144, 0.25, 0.5, 0.0);
@@ -58,10 +66,15 @@ Melter.removeRecipeWithOutput(<fluid:milk_chocolate>*144);
 Melter.removeRecipeWithOutput(<fluid:marshmallow>*144);
 Melter.addRecipe(<ore:foodChocolatebar>, <fluid:milk_chocolate>*144, 0.25, 0.5, 0.0);
 Melter.addRecipe(<ore:foodMarshmellows>, <fluid:marshmallow>*144, 0.25, 0.5, 0.0);
+Melter.addRecipe(<minecraft:pumpkin>, <fluid:pumpkin>*144, 0.25, 0.5, 0.0);
+Melter.addRecipe(<minecraft:pumpkin_pie>, <fluid:pumpkin_pie>*144, 0.25, 0.5, 0.0);
+Melter.addRecipe(<ore:foodEggnog>, <fluid:eggnog>*250, 0.25, 0.5, 0.0);
+Melter.addRecipe(<ore:cropMaplesyrup>, <fluid:maple_syrup>*250, 0.25, 0.5, 0.0);
 
 val fluiddict = {<fluid:cracker>: <fluid:cracker_nak>, <fluid:milk_chocolate>: <fluid:chocolate_nak>, <fluid:gold_smore>: <fluid:gold_smore_nak>,
 <fluid:marshmallow>: <fluid:marshmallow_nak>, <fluid:pancake>: <fluid:pancake_nak>, <fluid:caramel>: <fluid:caramel_nak>, <fluid:buttermilk>: <fluid:buttermilk_nak>,
-<fluid:sugar>: <fluid:sugar_nak>, <fluid:egg>: <fluid:egg_nak>, <fluid:wheat>: <fluid:wheat_nak>, <fluid:cake>: <fluid:cake_nak>} as IIngredient[IIngredient];
+<fluid:sugar>: <fluid:sugar_nak>, <fluid:egg>: <fluid:egg_nak>, <fluid:wheat>: <fluid:wheat_nak>, <fluid:cake>: <fluid:cake_nak>, <fluid:pumpkin>: <fluid:pumpkin_nak>,
+<fluid:pumpkin_pie>: <fluid:pumpkin_pie_nak>} as IIngredient[IIngredient];
 
 for fluidname, fluidnak in fluiddict {
 SaltMixer.addRecipe(fluidname*144, <fluid:nak>*144, fluidnak*144);

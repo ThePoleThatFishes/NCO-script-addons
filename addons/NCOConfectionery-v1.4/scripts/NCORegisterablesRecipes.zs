@@ -13,11 +13,14 @@ import mods.nuclearcraft.FissionIrradiator;
 import mods.nuclearcraft.Extractor;
 import mods.nuclearcraft.Centrifuge;
 import mods.nuclearcraft.Melter;
+import mods.nuclearcraft.FissionHeating;
+import mods.nuclearcraft.Turbine;
 
 
 val materialdict = {cracker: <ore:foodCrackers>, chocolate: <ore:foodChocolatebar>, gold_smore: <contenttweaker:smore_gold>,
 marshmallow: <ore:foodMarshmellows>, pancake: <ore:foodPancakes>, caramel: <ore:foodCaramel>, buttermilk: <contenttweaker:buttermilk>,
-egg: <ore:listAllegg>, wheat: <minecraft:wheat>, sugar: <minecraft:sugar>, cake: <minecraft:cake>} as IIngredient[string];
+egg: <ore:listAllegg>, wheat: <minecraft:wheat>, sugar: <minecraft:sugar>, cake: <minecraft:cake>, pumpkin: <minecraft:pumpkin>,
+pumpkin_pie: <minecraft:pumpkin_pie>} as IIngredient[string];
 
 
 // Coils, Heatsinks, Ports and Heaters
@@ -48,7 +51,8 @@ for name, material in materialdict {
 // Pancake Blades
 
 val alloy_blades = {hc: <ore:ingotHardCarbon>, tc: <ore:ingotThermoconducting>, tough: <ore:ingotTough>, feb: <ore:ingotFerroboron>,
-mgb2: <ore:ingotMagnesiumDiboride>, zircaloy: <ore:ingotZircaloy>, limno2: <ore:ingotLithiumManganeseDioxide>} as IIngredient[string];
+mgb2: <ore:ingotMagnesiumDiboride>, zircaloy: <ore:ingotZircaloy>, limno2: <ore:ingotLithiumManganeseDioxide>, bronze: <ore:ingotBronze>,
+hsla: <ore:ingotHSLASteel>, sic: <ore:ingotSiliconCarbide>} as IIngredient[string];
 for blade, ingot in alloy_blades {
 	recipes.addShaped("ncoconf" ~ blade ~ "blade", itemUtils.getItem("contenttweaker:blade_"~ blade)*4, [
 	[ingot, <ore:ingotHSLASteel>, ingot],
@@ -58,7 +62,8 @@ for blade, ingot in alloy_blades {
 	}
 
 val ttblades = [<contenttweaker:pancake_core>, <contenttweaker:blade_hc>, <contenttweaker:blade_tc>, <contenttweaker:blade_feb>,
-<contenttweaker:blade_tough>, <contenttweaker:blade_zircaloy>, <contenttweaker:blade_mgb2>, <contenttweaker:blade_limno2>] as IIngredient[];
+<contenttweaker:blade_tough>, <contenttweaker:blade_zircaloy>, <contenttweaker:blade_mgb2>, <contenttweaker:blade_limno2>, <contenttweaker:blade_bronze>,
+<contenttweaker:blade_hsla>, <contenttweaker:blade_sic>] as IIngredient[];
 for blade in ttblades {
 	blade.addTooltip(format.italic("Crafting Ingredient."));
 	}
@@ -68,7 +73,8 @@ Assembler.addRecipe(<nuclearcraft:turbine_rotor_blade_steel>*4, <nuclearcraft:tu
 <ore:foodPancakes>*32, <contenttweaker:pancake_core>*4, 8.0, 4.0, 0.0);
 
 val pancake_blades = { "steel": "steelcake", "extreme": "extremecake", "sic_sic_cmc": "sicsiccmcake",
-"hc": "hccake", "tc": "tccake", "tough": "toughcake", "feb": "febcake", "limno2": "limno2cake", "mgb2": "mgb2cake", "zircaloy": "zircaloycake"} as string[string];
+"hc": "hccake", "tc": "tccake", "tough": "toughcake", "feb": "febcake", "limno2": "limno2cake", "mgb2": "mgb2cake", "zircaloy": "zircaloycake", "bronze": "bronzecake",
+"hsla": "hslacake", "sic": "siccake"} as string[string];
 
 var currentblade = <minecraft:iron_ingot> as IItemStack;
 var currentpancake = <minecraft:iron_ingot> as IItemStack;
@@ -125,3 +131,7 @@ Infuser.addRecipe(<contenttweaker:casing_battery>, <liquid:ethenecarbonate>*500,
 Assembler.addRecipe(<contenttweaker:casing_ec>, <contenttweaker:anode_na>, <contenttweaker:cathode_na>, null, <nuclearcraft:battery_sodium>);
 
 
+FissionHeating.addRecipe(<fluid:eggnog>, <fluid:hot_eggnog>, 16);
+FissionHeating.addRecipe(<fluid:maple_syrup>, <fluid:hot_maple_syrup>, 100);
+Turbine.addRecipe(<fluid:hot_eggnog>, <fluid:eggnog>, 18, 4.00, 1.00);
+Turbine.addRecipe(<fluid:hot_maple_syrup>, <fluid:maple_syrup>, 110, 6.00, 1.00);

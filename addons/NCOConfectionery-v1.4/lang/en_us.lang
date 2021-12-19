@@ -9,6 +9,9 @@ tile.nuclearcraft.turbine_rotor_blade_febcake.name=Ferroboron Cake Turbine Rotor
 tile.nuclearcraft.turbine_rotor_blade_limno2cake.name=Lithium Manganese Dioxide Cake Turbine Rotor Blade
 tile.nuclearcraft.turbine_rotor_blade_mgb2cake.name=Magnesium Diboride Cake Turbine Rotor Blade
 tile.nuclearcraft.turbine_rotor_blade_zircaloycake.name=Zircaloy Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_hslacake.name=HSLA Steel Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_siccake.name=Silicon Carbide Cake Turbine Rotor Blade
+tile.nuclearcraft.turbine_rotor_blade_bronzecake.name=Bronze Cake Turbine Rotor Blade
 
 // Heatsinks
 tile.nuclearcraft.solid_fission_sink_cracker.name=Graham Cracker Fission Heat Sink
@@ -22,6 +25,8 @@ tile.nuclearcraft.solid_fission_sink_cake.name=Cake Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_egg.name=Egg Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_sugar.name=Sugar Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_wheat.name=Wheat Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_pumpkin.name=Pumpkin Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_pumpkin_pie.name=Pumpkin Pie Fission Heat Sink
 
 nc.sf.cracker_sink0=%s Cracker sink
 nc.sf.cracker_sink1=%s Cracker sinks
@@ -45,6 +50,10 @@ nc.sf.sugar_sink0=%s Sugar sink
 nc.sf.sugar_sink1=%s Sugar sinks
 nc.sf.wheat_sink0=%s Wheat sink
 nc.sf.wheat_sink1=%s Wheat sinks
+nc.sf.pumpkin_sink0=%s Pumpkin sink
+nc.sf.pumpkin_sink1=%s Pumpkin sinks
+nc.sf.pumpkin_pie_sink0=%s Pumpkin Pie sink
+nc.sf.pumpkin_pie_sink1=%s Pumpkin Pie sinks
 
 // Coils
 tile.nuclearcraft.turbine_dynamo_coil_cracker.name=Cracker Turbine Dynamo Coil
@@ -58,6 +67,8 @@ tile.nuclearcraft.turbine_dynamo_coil_cake.name=Cake Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_egg.name=Egg Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_sugar.name=Sugar Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_wheat.name=Wheat Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_pumpkin.name=Pumpkin Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_pumpkin_pie.name=Pumpkin Pie Turbine Dynamo Coil
 
 
 nc.sf.cracker_coil0=%s Cracker dynamo coil
@@ -82,6 +93,10 @@ nc.sf.sugar_coil0=%s Sugar coil
 nc.sf.sugar_coil1=%s Sugar coils
 nc.sf.wheat_coil0=%s Wheat coil
 nc.sf.wheat_coil1=%s Wheat coils
+nc.sf.pumpkin_coil0=%s Pumpkin coil
+nc.sf.pumpkin_coil1=%s Pumpkin coils
+nc.sf.pumpkin_pie_coil0=%s Pumpkin Pie coil
+nc.sf.pumpkin_pie_coil1=%s Pumpkin Pie coils
 
 // Heaters & Ports
 tile.nuclearcraft.salt_fission_heater_caramel.name=Caramel Coolant Heater
@@ -95,6 +110,8 @@ tile.nuclearcraft.salt_fission_heater_cake.name=Cake Coolant Heater
 tile.nuclearcraft.salt_fission_heater_egg.name=Egg Coolant Heater
 tile.nuclearcraft.salt_fission_heater_sugar.name=Sugar Coolant Heater
 tile.nuclearcraft.salt_fission_heater_wheat.name=Wheat Coolant Heater
+tile.nuclearcraft.salt_fission_heater_pumpkin.name=Pumpkin Coolant Heater
+tile.nuclearcraft.salt_fission_heater_pumpkin_pie.name=Pumpkin Pie Coolant Heater
 
 nc.sf.cracker_heater0=%s Cracker heater
 nc.sf.cracker_heater1=%s Cracker heaters
@@ -118,6 +135,10 @@ nc.sf.sugar_heater0=%s Sugar heater
 nc.sf.sugar_heater1=%s Sugar heaters
 nc.sf.wheat_heater0=%s Wheat heater
 nc.sf.wheat_heater1=%s Wheat heaters
+nc.sf.pumpkin_heater0=%s Pumpkin Pie heater
+nc.sf.pumpkin_heater1=%s Pumpkin Pie heaters
+nc.sf.pumpkin_pie_heater0=%s Pumpkin Pie heater
+nc.sf.pumpkin_pie_heater1=%s Pumpkin Pie heaters
 
 tile.nuclearcraft.fission_heater_port_caramel.name=Caramel Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_chocolate.name=Chocolate Coolant Heater Port
@@ -130,6 +151,8 @@ tile.nuclearcraft.fission_heater_port_cake.name=Cake Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_egg.name=Egg Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_sugar.name=Sugar Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_wheat.name=Wheat Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_pumpkin.name=Pumpkin Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_pumpkin_pie.name=Pumpkin Pie Coolant Heater Port
 
 
 // Foods
@@ -139,6 +162,11 @@ item.contenttweaker.thmore.name=Th'more
 item.contenttweaker.smore_caramel.name=Caramel S'more
 item.contenttweaker.caramel.name=Caramel
 item.contenttweaker.buttermilk.name=Buttermilk
+item.contenttweaker.eggshells.name=Egg Shells
+item.contenttweaker.caco3_dust.name=Calcium Carbonate Dust
+item.contenttweaker.cao_dust.name=Calcium Oxide Dust
+fluid.eggmix=Egg Mixture
+fluid.cao=Molten Calcium Oxide
 
 
 // Crafting Pancake Rotors
@@ -150,6 +178,9 @@ item.contenttweaker.pancake_core.name=Pancake Turbine Rotor Blade Core
 item.contenttweaker.blade_limno2.name=Lithium Manganese Dioxide Turbine Rotor Blade
 item.contenttweaker.blade_mgb2.name=Magnesium Diboride Turbine Rotor Blade
 item.contenttweaker.blade_zircaloy.name=Zircaloy Turbine Rotor Blade
+item.contenttweaker.blade_hsla.name=HSLA Steel Turbine Rotor Blade
+item.contenttweaker.blade_bronze.name=Bronze Turbine Rotor Blade
+item.contenttweaker.blade_sic.name=Silicon Carbide Turbine Rotor Blade
 
 
 // Fission Stuff
@@ -183,6 +214,10 @@ fluid.mf4314flibe=Molten FLiBe Salt Solution of MF4-314 Fuel
 fluid.dmf4314flibe=Molten FLiBe Salt Solution of Depleted MF4-314 Fuel
 fluid.dmf4314=Molten Depleted MF4-314 Fuel
 fluid.dmix314=Molten Depleted MIX-314 Fuel
+fluid.eggnog=Liquid Eggnog
+fluid.hot_eggnog=Hot Eggnog
+fluid.maple_syrup=Maple Syrup
+fluid.hot_maple_syrup=Hot Maple Syrup
 fluid.caramel=Molten Caramel
 fluid.cracker=Molten Cracker
 fluid.gold_smore=S'molten Golden S'more
@@ -190,6 +225,8 @@ fluid.pancake=Molten Pancakes
 fluid.egg=Molten Egg
 fluid.wheat=Molten Wheat
 fluid.cake=Molten Cake
+fluid.pumpkin=Molten Pumpkin
+fluid.pumpkin_pie=Molten Pumpkin Pie
 fluid.buttermilk=Molten Buttermilk
 fluid.caramel_nak=Eutectic Caramel-NaK Mixture
 fluid.chocolate_nak=Eutectic Chocolate-NaK Mixture
@@ -202,6 +239,8 @@ fluid.cake_nak=Eutectic Cake-NaK Mixture
 fluid.egg_nak=Eutectic Egg-NaK Mixture
 fluid.sugar_nak=Eutectic Sugar-NaK Mixture
 fluid.wheat_nak=Eutectic Wheat-NaK Mixture
+fluid.pumpkin_nak=Eutectic Pumpkin-NaK Mixture
+fluid.pumpkin_pie_nak=Eutectic Pumpkin Pie-NaK Mixture
 fluid.caramel_nak_hot=Hot Eutectic Caramel-NaK Mixture
 fluid.chocolate_nak_hot=Hot Eutectic Chocolate-NaK Mixture
 fluid.cracker_nak_hot=Hot Eutectic Cracker-NaK Mixture
@@ -213,6 +252,8 @@ fluid.cake_nak_hot=Hot Eutectic Cake-NaK Mixture
 fluid.egg_nak_hot=Hot Eutectic Egg-NaK Mixture
 fluid.sugar_nak_hot=Hot Eutectic Sugar-NaK Mixture
 fluid.wheat_nak_hot=Hot Eutectic Wheat-NaK Mixture
+fluid.pumpkin_nak_hot=Hot Eutectic Pumpkin-NaK Mixture
+fluid.pumpkin_pie_nak_hot=Hot Eutectic Pumpkin Pie-NaK Mixture
 qmd.particle.arsenic_ion.name=Arsenic Ion
 qmd.particle.arsenic_ion.desc=The ion of Arsenic-75 is used to smash into a Pu-239 target in target chambers, to create the S'morium-314 isotope.
 

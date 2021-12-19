@@ -14,6 +14,8 @@ import mods.nuclearcraft.SaltMixer;
 import mods.nuclearcraft.FissionIrradiator;
 import mods.nuclearcraft.Extractor;
 import mods.nuclearcraft.Centrifuge;
+import mods.nuclearcraft.Manufactory;
+import mods.nuclearcraft.Electrolyzer;
 import mods.nuclearcraft.Melter;
 
 // RTG and Neutron Source Recipes
@@ -69,3 +71,8 @@ Radiation.setRadiationLevel(<nuclearcraft:rtg_ruthenium>, 6.3e-3);
 
 AlloyFurnace.addRecipe(<ore:ingotSodium>, <ore:charcoal>, <contenttweaker:anode_na>, 2.0, 4.0, 0.0);
 AlloyFurnace.addRecipe(<ore:ingotSodium>, <ore:ingotManganeseDioxide>, <contenttweaker:cathode_na>, 2.0, 6.0, 0.0);
+
+Manufactory.addRecipe(<contenttweaker:eggshells>*64, <contenttweaker:caco3_dust>);
+furnace.addRecipe(<contenttweaker:cao_dust>, <contenttweaker:caco3_dust>);
+Melter.addRecipe(<contenttweaker:cao_dust>, <fluid:cao>*144);
+Electrolyzer.addRecipe(<fluid:cao>*144, <fluid:calcium>*144, <fluid:oxygen>*1000, null, null);
