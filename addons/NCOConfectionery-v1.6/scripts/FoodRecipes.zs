@@ -44,6 +44,7 @@ recipes.addShapeless("goldsmore", <contenttweaker:smore_gold>, [<ore:ingotGold>,
 recipes.addShapeless("thmore", <contenttweaker:thmore>, [<ore:foodCrackers>, <ore:foodMarshmellows>, <ore:ingotThorium>, <ore:foodCrackers>]);
 recipes.addShapeless("caramelsmore", <contenttweaker:smore_caramel>, [<ore:foodCrackers>, <ore:foodCaramel>, <ore:foodMarshmellows>,
 <ore:foodChocolatebar>, <ore:foodCrackers>]);
+furnace.addRecipe(<contenttweaker:toasted_marshmallow>, <ore:foodMarshmellows>);
 
 Assembler.addRecipe(<ore:listAllegg>*2, <ore:listAllmilk>, <ore:dustWheat>, <ore:foodButter>, <contenttweaker:pancakes>*32);
 Manufactory.addRecipe(<minecraft:sugar>, <ore:foodCaramel>);
@@ -68,8 +69,11 @@ Melter.addRecipe(<ore:foodChocolatebar>, <fluid:milk_chocolate>*144, 0.25, 0.5, 
 Melter.addRecipe(<ore:foodMarshmellows>, <fluid:marshmallow>*144, 0.25, 0.5, 0.0);
 Melter.addRecipe(<minecraft:pumpkin>, <fluid:pumpkin>*144, 0.25, 0.5, 0.0);
 Melter.addRecipe(<minecraft:pumpkin_pie>, <fluid:pumpkin_pie>*144, 0.25, 0.5, 0.0);
-Melter.addRecipe(<ore:foodEggnog>, <fluid:eggnog>*250, 0.25, 0.5, 0.0);
-Melter.addRecipe(<ore:cropMaplesyrup>, <fluid:maple_syrup>*250, 0.25, 0.5, 0.0);
+
+if (loadedMods.contains("harvestcraft")) {
+	Melter.addRecipe(<ore:foodEggnog>, <fluid:eggnog>*250, 0.25, 0.5, 0.0);
+	Melter.addRecipe(<ore:cropMaplesyrup>, <fluid:maple_syrup>*250, 0.25, 0.5, 0.0);
+}
 
 val fluiddict = {<fluid:cracker>: <fluid:cracker_nak>, <fluid:milk_chocolate>: <fluid:chocolate_nak>, <fluid:gold_smore>: <fluid:gold_smore_nak>,
 <fluid:marshmallow>: <fluid:marshmallow_nak>, <fluid:pancake>: <fluid:pancake_nak>, <fluid:caramel>: <fluid:caramel_nak>, <fluid:buttermilk>: <fluid:buttermilk_nak>,

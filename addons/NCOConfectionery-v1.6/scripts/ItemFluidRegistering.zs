@@ -35,14 +35,8 @@ bredfluid.stillLocation = "nuclearcraft:blocks/fluids/gas";
 bredfluid.flowingLocation = "nuclearcraft:blocks/fluids/gas";
 bredfluid.register();
 
-var ascanister = VanillaFactory.createItem("arsenic_canister");
-ascanister.maxStackSize = 1;
-ascanister.creativeTab = <creativetab:ncoconf>;
-ascanister.register();
-
-
 var fluids = {"so314": 10252553, "mix314": 10252553, "mf4314": ColorHelper.getFluorideColor(10252553), "mf4314flibe": ColorHelper.getFLIBEColor(10252553),
-"to316": 2960685, "to317": 2960950, "cao": 0xffeedd, "hot_maple_syrup": 0xc15000, "hot_eggnog": 0xffeedd} as int[string];
+"to316": 2960685, "to317": 2960950, "cao": 0xffeedd, "hot_maple_syrup": 0xc15000, "hot_eggnog": 0xffeedd, "hot_gold_smore": 0xe8da8b} as int[string];
 
 for fluid, color in fluids {
 	var fluid = VanillaFactory.createFluid(fluid, color);

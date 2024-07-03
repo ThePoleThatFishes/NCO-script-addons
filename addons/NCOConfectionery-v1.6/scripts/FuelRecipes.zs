@@ -3,6 +3,7 @@
 import mods.qmd.particle;
 import mods.qmd.accelerator_source;
 import mods.qmd.target_chamber;
+import mods.qmd.item_source;
 import mods.nuclearcraft.Infuser;
 import mods.nuclearcraft.AlloyFurnace;
 import mods.nuclearcraft.Melter;
@@ -24,17 +25,15 @@ particle.addComponentParticle(<particle:arsenic_ion>, <particle:proton>*33);
 particle.addComponentParticle(<particle:arsenic_ion>, <particle:neutron>*42);
 particle.addComponentParticle(<particle:arsenic_ion>, <particle:electron>*32);
 
-Infuser.addRecipe(<qmd:canister>, <fluid:arsenic>*666, <contenttweaker:arsenic_canister>, 4.0, 1.0, 0.0);
+accelerator_source.addRecipe(<fluid:arsenic>*10, (<particle:arsenic_ion>*10000)~0.2);
 
-accelerator_source.addRecipe(<contenttweaker:arsenic_canister>, (<particle:arsenic_ion>*100)~0.2);
-
-target_chamber.addRecipe(<ore:ingotPlutonium239>, ((<particle:arsenic_ion>*120000)^6.4e3)~0.5, <contenttweaker:so314>, <particle:proton>,
+target_chamber.addRecipe(<ore:ingotPlutonium239>, ((<particle:arsenic_ion>*3000000)^6.4e3)~1.0, <contenttweaker:so314>, <particle:proton>,
 null, null, 45.0e3, 0.34);
-target_chamber.addRecipe(<ore:ingotPlutonium239Oxide>, ((<particle:arsenic_ion>*120000)^6.4e3)~0.5, <contenttweaker:so314ox>, <particle:proton>,
+target_chamber.addRecipe(<ore:ingotPlutonium239Oxide>, ((<particle:arsenic_ion>*3000000)^6.4e3)~1.0, <contenttweaker:so314ox>, <particle:proton>,
 null, null, 45.0e3, 0.34);
-target_chamber.addRecipe(<ore:ingotPlutonium239Nitride>, ((<particle:arsenic_ion>*120000)^6.4e3)~0.5, <contenttweaker:so314ni>, <particle:proton>,
+target_chamber.addRecipe(<ore:ingotPlutonium239Nitride>, ((<particle:arsenic_ion>*3000000)^6.4e3)~1.0, <contenttweaker:so314ni>, <particle:proton>,
 null, null, 45.0e3, 0.34);
-target_chamber.addRecipe(<ore:ingotPlutonium239ZA>, ((<particle:arsenic_ion>*120000)^6.4e3)~0.5, <contenttweaker:so314za>, <particle:proton>,
+target_chamber.addRecipe(<ore:ingotPlutonium239ZA>, ((<particle:arsenic_ion>*3000000)^6.4e3)~1.0, <contenttweaker:so314za>, <particle:proton>,
 null, null, 45.0e3, 0.34);
 
 

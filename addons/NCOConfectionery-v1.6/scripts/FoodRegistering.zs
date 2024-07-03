@@ -70,6 +70,17 @@ caramel.onItemFoodEaten = function(stack, world, player) {
 caramel.creativeTab = <creativetab:ncoconf>;
 caramel.register();
 
+var toastmallow = VanillaFactory.createItemFood("toasted_marshmallow", 1);
+
+toastmallow.saturation = 1.0;
+toastmallow.onItemFoodEaten = function(stack, world, player) {
+	if (!world.isRemote()) {
+		player.addPotionEffect(<potion:minecraft:speed>.makePotionEffect(400, 0));
+		}
+	};
+toastmallow.creativeTab = <creativetab:ncoconf>;
+toastmallow.register();
+
 	
 
 

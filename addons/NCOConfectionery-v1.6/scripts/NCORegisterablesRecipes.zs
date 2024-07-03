@@ -131,7 +131,7 @@ Infuser.addRecipe(<contenttweaker:casing_battery>, <liquid:ethenecarbonate>*500,
 Assembler.addRecipe(<contenttweaker:casing_ec>, <contenttweaker:anode_na>, <contenttweaker:cathode_na>, null, <nuclearcraft:battery_sodium>);
 
 
-FissionHeating.addRecipe(<fluid:eggnog>, <fluid:hot_eggnog>, 16);
-FissionHeating.addRecipe(<fluid:maple_syrup>, <fluid:hot_maple_syrup>, 100);
-Turbine.addRecipe(<fluid:hot_eggnog>, <fluid:eggnog>, 18, 4.00, 1.00);
-Turbine.addRecipe(<fluid:hot_maple_syrup>, <fluid:maple_syrup>, 110, 6.00, 1.00);
+FissionHeating.addRecipe(<fluid:eggnog>*3, <fluid:hot_eggnog>, 30);
+FissionHeating.addRecipe(<fluid:maple_syrup>*4, <fluid:hot_maple_syrup>, 400);
+Turbine.addRecipe(<fluid:hot_eggnog>, <fluid:eggnog>*3, 33, 3.00, 1.00);
+Turbine.addRecipe(<fluid:hot_maple_syrup>, <fluid:maple_syrup>*4, 480, 4.00, 1.00);

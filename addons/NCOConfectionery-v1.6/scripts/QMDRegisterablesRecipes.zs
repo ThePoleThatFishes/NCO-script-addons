@@ -17,6 +17,9 @@ import mods.nuclearcraft.Centrifuge;
 import mods.nuclearcraft.Manufactory;
 import mods.nuclearcraft.Electrolyzer;
 import mods.nuclearcraft.Melter;
+import mods.nuclearcraft.Turbine;
+import mods.nuclearcraft.FissionHeating;
+import mods.qmd.nucleosynthesis_chamber_heater;
 
 // RTG and Neutron Source Recipes
 
@@ -76,3 +79,28 @@ Manufactory.addRecipe(<contenttweaker:eggshells>*64, <contenttweaker:caco3_dust>
 furnace.addRecipe(<contenttweaker:cao_dust>, <contenttweaker:caco3_dust>);
 Melter.addRecipe(<contenttweaker:cao_dust>, <fluid:cao>*144);
 Electrolyzer.addRecipe(<fluid:cao>*144, <fluid:calcium>*144, <fluid:oxygen>*1000, null, null);
+
+// NSC Coolants & Cooler Recipes
+
+val materialdict = {cracker: <ore:foodCrackers>, chocolate: <ore:foodChocolatebar>, smore: <ore:ingotSmore>,
+marshmallow: <ore:foodMarshmellows>, pancake: <ore:foodPancakes>, caramel: <ore:foodCaramel>, buttermilk: <contenttweaker:buttermilk>} as IIngredient[string];
+
+for name, material in materialdict {
+	recipes.addShaped("ncoconf" ~ name ~ "cooler", itemUtils.getItem("qmd:accelerator_cooler_" ~ name),
+	[[material, material, material],
+	[material, <qmd:part:0>, material],
+	[material, material, material]]);
+	
+	if (name != "pancake" && name != "caramel" && name != "buttermilk") {
+		recipes.addShaped("ncoconf" ~ name ~ "nscheater", itemUtils.getItem("qmd:vacuum_chamber_heater_" ~ name),
+			[[material, <ore:ingotOsmiridium>, material],
+			[<ore:ingotOsmiridium>, <qmd:part>, <ore:ingotOsmiridium>],
+			[material, <ore:ingotOsmiridium>, material]]);
+	}
+		
+
+}
+
+nucleosynthesis_chamber_heater.addRecipe(<fluid:gold_smore>*6, <fluid:hot_gold_smore>, 1);
+Turbine.addRecipe(<fluid:hot_gold_smore>, <fluid:gold_smore>*6, 7065.6, 6.0, 1.0);
+FissionHeating.addRecipe(<fluid:gold_smore>*6, <fluid:hot_gold_smore>, 942);

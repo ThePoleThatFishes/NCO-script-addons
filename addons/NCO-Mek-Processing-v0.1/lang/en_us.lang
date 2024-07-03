@@ -1,0 +1,35 @@
+fluid.dirtyslurryiron=Iron Dirty Slurry
+fluid.dirtyslurrygold=Gold Dirty Slurry
+fluid.dirtyslurrycopper=Copper Dirty Slurry
+fluid.dirtyslurrytin=Tin Dirty Slurry
+fluid.dirtyslurryaluminum=Aluminum Dirty Slurry
+fluid.dirtyslurrysilver=Silver Dirty Slurry
+fluid.dirtyslurrylead=Lead Dirty Slurry
+fluid.dirtyslurrynickel=Nickel Dirty Slurry
+fluid.dirtyslurryplatinum=Platinum Dirty Slurry
+fluid.dirtyslurryiridium=Iridium Dirty Slurry
+fluid.dirtyslurrythorium=Thorium Dirty Slurry
+fluid.dirtyslurryuranium=Uranium Dirty Slurry
+fluid.dirtyslurrymagnesium=Magnesium Dirty Slurry
+fluid.dirtyslurrylithium=Lithium Dirty Slurry
+fluid.dirtyslurryboron=Boron Dirty Slurry
+
+fluid.cleanslurryiron=Iron Clean Slurry
+fluid.cleanslurrygold=Gold Clean Slurry
+fluid.cleanslurrycopper=Copper Clean Slurry
+fluid.cleanslurrytin=Tin Clean Slurry
+fluid.cleanslurryaluminum=Aluminum Clean Slurry
+fluid.cleanslurrysilver=Silver Clean Slurry
+fluid.cleanslurrylead=Lead Clean Slurry
+fluid.cleanslurrynickel=Nickel Clean Slurry
+fluid.cleanslurryplatinum=Platinum Clean Slurry
+fluid.cleanslurryiridium=Iridium Clean Slurry
+fluid.cleanslurrythorium=Thorium Clean Slurry
+fluid.cleanslurryuranium=Uranium Clean Slurry
+fluid.cleanslurrymagnesium=Magnesium Clean Slurry
+fluid.cleanslurrylithium=Lithium Clean Slurry
+fluid.cleanslurryboron=Boron Clean Slurry
+
+item.contenttweaker.sodium_chloride.name=Sodium Chloride
+
+contenttweaker.part.ionised_dust=Ionised %s Dust

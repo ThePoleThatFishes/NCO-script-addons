@@ -16,8 +16,8 @@ tile.nuclearcraft.turbine_rotor_blade_bronzecake.name=Bronze Cake Turbine Rotor 
 // Heatsinks
 tile.nuclearcraft.solid_fission_sink_cracker.name=Graham Cracker Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_marshmallow.name=Marshmallow Fission Heat Sink
-tile.nuclearcraft.solid_fission_sink_chocolate.name=Chocolate Fission Heat Sink
-tile.nuclearcraft.solid_fission_sink_gold_smore.name=Golden S'more Fission S'meat S'mink
+tile.nuclearcraft.solid_fission_sink_chocolate.name=Milk Chocolate Fission Heat Sink
+tile.nuclearcraft.solid_fission_sink_gold_smore.name=Golden S'more Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_pancake.name=Pancake Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_caramel.name=Caramel Fission Heat Sink
 tile.nuclearcraft.solid_fission_sink_buttermilk.name=Buttermilk Fission Heat Sink
@@ -30,12 +30,12 @@ tile.nuclearcraft.solid_fission_sink_pumpkin_pie.name=Pumpkin Pie Fission Heat S
 
 nc.sf.cracker_sink0=%s Cracker sink
 nc.sf.cracker_sink1=%s Cracker sinks
-nc.sf.chocolate_sink0=%s Chocolate sink
-nc.sf.chocolate_sink1=%s Chocolate sinks
+nc.sf.chocolate_sink0=%s Milk Chocolate sink
+nc.sf.chocolate_sink1=%s Milk Chocolate sinks
 nc.sf.marshmallow_sink0=%s Marshmallow sink
 nc.sf.marshmallow_sink1=%s Marshmallow sinks
-nc.sf.goldsmore_sink0=%s Golden S'more s'mink
-nc.sf.goldsmore_sink1=%s Golden S'more s'minks
+nc.sf.goldsmore_sink0=%s Golden S'more sink
+nc.sf.goldsmore_sink1=%s Golden S'more sinks
 nc.sf.caramel_sink0=%s Caramel sink
 nc.sf.caramel_sink1=%s Caramel sinks
 nc.sf.pancake_sink0=%s Pancake sink
@@ -57,9 +57,9 @@ nc.sf.pumpkin_pie_sink1=%s Pumpkin Pie sinks
 
 // Coils
 tile.nuclearcraft.turbine_dynamo_coil_cracker.name=Cracker Turbine Dynamo Coil
-tile.nuclearcraft.turbine_dynamo_coil_chocolate.name=Chocolate Turbine Dynamo Coil
+tile.nuclearcraft.turbine_dynamo_coil_chocolate.name=Milk Chocolate Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_marshmallow.name=Marshmallow Turbine Dynamo Coil
-tile.nuclearcraft.turbine_dynamo_coil_gold_smore.name=Golden S'more Turbine Dynamo S'moil
+tile.nuclearcraft.turbine_dynamo_coil_gold_smore.name=Golden S'more Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_caramel.name=Caramel Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_pancake.name=Pancake Turbine Dynamo Coil
 tile.nuclearcraft.turbine_dynamo_coil_buttermilk.name=Buttermilk Turbine Dynamo Coil
@@ -73,12 +73,12 @@ tile.nuclearcraft.turbine_dynamo_coil_pumpkin_pie.name=Pumpkin Pie Turbine Dynam
 
 nc.sf.cracker_coil0=%s Cracker dynamo coil
 nc.sf.cracker_coil1=%s Cracker dynamo coils
-nc.sf.chocolate_coil0=%s Chocolate dynamo coil
-nc.sf.chocolate_coil1=%s Chocolate dynamo coils
+nc.sf.chocolate_coil0=%s Milk Chocolate dynamo coil
+nc.sf.chocolate_coil1=%s Milk Chocolate dynamo coils
 nc.sf.marshmallow_coil0=%s Marshmallow dynamo coil
 nc.sf.marshmallow_coil1=%s Marshmallow dynamo coils
-nc.sf.gold_smore_coil0=%s Golden S'more dynamo s'moil
-nc.sf.gold_smore_coil1=%s Golden S'more dynamo s'moils
+nc.sf.gold_smore_coil0=%s Golden S'more dynamo coil
+nc.sf.gold_smore_coil1=%s Golden S'more dynamo coils
 nc.sf.caramel_coil0=%s Caramel dynamo coil
 nc.sf.caramel_coil1=%s Caramel dynamo coils
 nc.sf.pancake_coil0=%s Pancake dynamo coil
@@ -100,9 +100,9 @@ nc.sf.pumpkin_pie_coil1=%s Pumpkin Pie coils
 
 // Heaters & Ports
 tile.nuclearcraft.salt_fission_heater_caramel.name=Caramel Coolant Heater
-tile.nuclearcraft.salt_fission_heater_chocolate.name=Chocolate Coolant Heater
+tile.nuclearcraft.salt_fission_heater_chocolate.name=Milk Chocolate Coolant Heater
 tile.nuclearcraft.salt_fission_heater_cracker.name=Cracker Coolant Heater
-tile.nuclearcraft.salt_fission_heater_gold_smore.name=Golden S'more Coolant S'meater
+tile.nuclearcraft.salt_fission_heater_gold_smore.name=Golden S'more Coolant Heater
 tile.nuclearcraft.salt_fission_heater_marshmallow.name=Marshmallow Coolant Heater
 tile.nuclearcraft.salt_fission_heater_pancake.name=Pancake Coolant Heater
 tile.nuclearcraft.salt_fission_heater_buttermilk.name=Buttermilk Coolant Heater
@@ -115,12 +115,12 @@ tile.nuclearcraft.salt_fission_heater_pumpkin_pie.name=Pumpkin Pie Coolant Heate
 
 nc.sf.cracker_heater0=%s Cracker heater
 nc.sf.cracker_heater1=%s Cracker heaters
-nc.sf.chocolate_heater0=%s Chocolate heater
-nc.sf.chocolate_heater1=%s Chocolate heaters
+nc.sf.chocolate_heater0=%s Milk Chocolate heater
+nc.sf.chocolate_heater1=%s Milk Chocolate heaters
 nc.sf.marshmallow_heater0=%s Marshmallow heater
 nc.sf.marshmallow_heater1=%s Marshmallow heaters
-nc.sf.gold_smore_heater0=%s Golden S'more s'meater
-nc.sf.gold_smore_heater1=%s Golden S'more s'meaters
+nc.sf.gold_smore_heater0=%s Golden S'more heater
+nc.sf.gold_smore_heater1=%s Golden S'more heaters
 nc.sf.caramel_heater0=%s Caramel heater
 nc.sf.caramel_heater1=%s Caramel heaters
 nc.sf.pancake_heater0=%s Pancake heater
@@ -141,9 +141,9 @@ nc.sf.pumpkin_pie_heater0=%s Pumpkin Pie heater
 nc.sf.pumpkin_pie_heater1=%s Pumpkin Pie heaters
 
 tile.nuclearcraft.fission_heater_port_caramel.name=Caramel Coolant Heater Port
-tile.nuclearcraft.fission_heater_port_chocolate.name=Chocolate Coolant Heater Port
+tile.nuclearcraft.fission_heater_port_chocolate.name=Milk Chocolate Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_cracker.name=Cracker Coolant Heater Port
-tile.nuclearcraft.fission_heater_port_gold_smore.name=Golden S'more Coolant S'meater Port
+tile.nuclearcraft.fission_heater_port_gold_smore.name=Golden S'more Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_marshmallow.name=Marshmallow Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_pancake.name=Pancake Coolant Heater Port
 tile.nuclearcraft.fission_heater_port_buttermilk.name=Buttermilk Coolant Heater Port
@@ -165,6 +165,7 @@ item.contenttweaker.buttermilk.name=Buttermilk
 item.contenttweaker.eggshells.name=Egg Shells
 item.contenttweaker.caco3_dust.name=Calcium Carbonate Dust
 item.contenttweaker.cao_dust.name=Calcium Oxide Dust
+item.contenttweaker.toasted_marshmallow.name=Toasted Marshmallow
 fluid.eggmix=Egg Mixture
 fluid.cao=Molten Calcium Oxide
 
@@ -184,7 +185,6 @@ item.contenttweaker.blade_sic.name=Silicon Carbide Turbine Rotor Blade
 
 
 // Fission Stuff
-item.contenttweaker.arsenic_canister.name=Arsenic Canister
 item.contenttweaker.so314.name=S'morium-314
 item.contenttweaker.so314ox.name=S'morium-314 Oxide
 item.contenttweaker.so314ni.name=S'morium-314 Nitride
@@ -205,6 +205,7 @@ item.contenttweaker.dmix314.name=Depleted MIX-314
 item.contenttweaker.dmox314.name=Depleted MOX-314 Fuel Pellet
 item.contenttweaker.dmni314.name=Depleted MNI-314 Fuel Pellet
 item.contenttweaker.dmza314.name=Depleted MZA-314 Fuel Pellet
+
 fluid.so314=Molten S'morium-314
 fluid.to316=Molten Th'morium-316
 fluid.to317=Molten Th'morium-317
@@ -221,6 +222,7 @@ fluid.hot_maple_syrup=Hot Maple Syrup
 fluid.caramel=Molten Caramel
 fluid.cracker=Molten Cracker
 fluid.gold_smore=S'molten Golden S'more
+fluid.hot_gold_smore=Hot S'molten Golden S'more
 fluid.pancake=Molten Pancakes
 fluid.egg=Molten Egg
 fluid.wheat=Molten Wheat
@@ -229,9 +231,9 @@ fluid.pumpkin=Molten Pumpkin
 fluid.pumpkin_pie=Molten Pumpkin Pie
 fluid.buttermilk=Molten Buttermilk
 fluid.caramel_nak=Eutectic Caramel-NaK Mixture
-fluid.chocolate_nak=Eutectic Chocolate-NaK Mixture
+fluid.chocolate_nak=Eutectic Milk Chocolate-NaK Mixture
 fluid.cracker_nak=Eutectic Cracker-NaK Mixture
-fluid.gold_smore_nak=S'meutectic Golden S'more-NaK S'mixture
+fluid.gold_smore_nak=S'meutectic Golden S'more-NaK Mixture
 fluid.marshmallow_nak=Eutectic Marshmallow-NaK Mixture
 fluid.pancake_nak=Eutectic Pancake-NaK Mixture
 fluid.buttermilk_nak=Eutectic Buttermilk-NaK Mixture
@@ -242,9 +244,9 @@ fluid.wheat_nak=Eutectic Wheat-NaK Mixture
 fluid.pumpkin_nak=Eutectic Pumpkin-NaK Mixture
 fluid.pumpkin_pie_nak=Eutectic Pumpkin Pie-NaK Mixture
 fluid.caramel_nak_hot=Hot Eutectic Caramel-NaK Mixture
-fluid.chocolate_nak_hot=Hot Eutectic Chocolate-NaK Mixture
+fluid.chocolate_nak_hot=Hot Eutectic Milk Chocolate-NaK Mixture
 fluid.cracker_nak_hot=Hot Eutectic Cracker-NaK Mixture
-fluid.gold_smore_nak_hot=Hot S'meutectic Golden S'more-NaK S'mixture
+fluid.gold_smore_nak_hot=Hot S'meutectic Golden S'more-NaK Mixture
 fluid.marshmallow_nak_hot=Hot Eutectic Marshmallow-NaK Mixture
 fluid.pancake_nak_hot=Hot Eutectic Pancake-NaK Mixture
 fluid.buttermilk_nak_hot=Hot Eutectic Buttermilk-NaK Mixture
@@ -254,10 +256,12 @@ fluid.sugar_nak_hot=Hot Eutectic Sugar-NaK Mixture
 fluid.wheat_nak_hot=Hot Eutectic Wheat-NaK Mixture
 fluid.pumpkin_nak_hot=Hot Eutectic Pumpkin-NaK Mixture
 fluid.pumpkin_pie_nak_hot=Hot Eutectic Pumpkin Pie-NaK Mixture
+
+item.qmd.arsenic_canister.name=Arsenic Canister
 qmd.particle.arsenic_ion.name=Arsenic Ion
 qmd.particle.arsenic_ion.desc=The ion of Arsenic-75 is used to smash into a Pu-239 target in target chambers, to create the S'morium-314 isotope.
 
-// RTGs, Neutron Source, Batteries
+// QMD stuff
 
 tile.nuclearcraft.rtg_thmorium.name=Th'morium RTG
 tile.nuclearcraft.rtg_tritium.name=Tritium Betavoltaic Device
@@ -286,3 +290,31 @@ fluid.etheneoxide=Ethylene Oxide
 fluid.ethenecarbonate=Ethylene Carbonate
 fluid.sodiumanode=Sodium Anode Mixture
 fluid.sodiumcathode=Sodium Cathode Mixture
+
+tile.qmd.accelerator_cooler_cracker.name=Graham Cracker Accelerator Cooler
+tile.qmd.accelerator_cooler_chocolate.name=Milk Chocolate Accelerator Cooler
+tile.qmd.accelerator_cooler_marshmallow.name=Marshmallow Accelerator Cooler
+tile.qmd.accelerator_cooler_smore.name=S'more S'mingot Accelerator Cooler
+tile.qmd.accelerator_cooler_caramel.name=Caramel Accelerator Cooler
+tile.qmd.accelerator_cooler_pancake.name=Pancake Accelerator Cooler
+tile.qmd.accelerator_cooler_buttermilk.name=Buttermilk Accelerator Cooler
+
+nc.sf.cracker_cooler0=%s Graham Cracker Accelerator Cooler
+nc.sf.cracker_cooler1=%s Graham Cracker Accelerator Coolers
+nc.sf.chocolate_cooler0=%s Milk Chocolate Accelerator Cooler
+nc.sf.chocolate_cooler1=%s Milk Chocolate Accelerator Coolers
+nc.sf.marshmallow_cooler0=%s Marshmallow Accelerator Cooler
+nc.sf.marshmallow_cooler1=%s Marshmallow Accelerator Coolers
+nc.sf.smore_cooler0=%s S'more Accelerator Cooler
+nc.sf.smore_cooler1=%s S'more Accelerator Coolers
+nc.sf.caramel_cooler0=%s Caramel Accelerator Cooler
+nc.sf.caramel_cooler1=%s Caramel Accelerator Coolers
+nc.sf.pancake_cooler0=%s Pancake Accelerator Cooler
+nc.sf.pancake_cooler1=%s Pancake Accelerator Coolers
+nc.sf.buttermilk_cooler0=%s Buttermilk Accelerator Cooler
+nc.sf.buttermilk_cooler1=%s Buttermilk Accelerator Coolers
+
+tile.qmd.vacuum_chamber_heater_chocolate.name=Chocolate Vacuum Chamber Heater
+tile.qmd.vacuum_chamber_heater_cracker.name=Cracker Vacuum Chamber Heater
+tile.qmd.vacuum_chamber_heater_marshmallow.name=Marshmallow Vacuum Chamber Heater
+tile.qmd.vacuum_chamber_heater_smore.name=S'more Vacuum Chamber Heater
