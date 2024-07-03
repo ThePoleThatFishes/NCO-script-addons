@@ -26,6 +26,8 @@ __*WARNING:* Some mod integrations require additional library mods (eg. Thermal 
 
 [NCO Confectionery on CF](https://www.curseforge.com/minecraft/customization/nco-confectionery)
 
+[NCO Mekanism Ore Processing on CF](https://legacy.curseforge.com/minecraft/customization/nco-mekanism-ore-processing)
+
 [NuclearCraft: Overhauled on CF](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled)
 
 [NC Discord Server (You can find me there as FishingPole#3673)](https://discord.gg/KCPYgWw)
