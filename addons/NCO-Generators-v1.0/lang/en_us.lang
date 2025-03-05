@@ -1,0 +1,44 @@
+item.contenttweaker.bvc.name=Betavoltaic Device Casing
+tile.nuclearcraft.rtg_tritium.name=Tritium Betavoltaic Device
+tile.nuclearcraft.rtg_ruthenium.name=Ruthenium Betavoltaic Device
+tile.nuclearcraft.rtg_caesium.name=Caesium Betavoltaic Device
+tile.nuclearcraft.rtg_promethium.name=Promethium Betavoltaic Device
+tile.nuclearcraft.rtg_europium.name=Europium Betavoltaic Device
+
+fluid.etheneoxide=Ethylene Oxide
+fluid.ethenecarbonate=Ethylene Carbonate
+tile.nuclearcraft.battery_sodium.name=Sodium-ion Battery
+tile.nuclearcraft.battery_potassium.name=Potassium-Sulfur Battery
+
+item.contenttweaker.cathode_na.name=Sodium Cathode
+item.contenttweaker.anode_na.name=Sodium Anode
+item.contenttweaker.casing_ec.name=Ethylene Carbonate-filled Battery Casing
+item.contenttweaker.casing_k.name=Potassium-filled Battery Casing
+item.contenttweaker.casing_k_s.name=Potassium-Sulfur-filled Battery Casing
+item.contenttweaker.beta_alumina.name=Beta-Alumina Solid Electrolyte
+item.contenttweaker.casing_battery.name=Empty Battery Casing
+
+item.contenttweaker.blanket_empty.name=Breeding Blanket (Empty)
+item.contenttweaker.blanket_li.name=Breeding Blanket (Lithium)
+item.contenttweaker.blanket_tritium.name=Breeding Blanket (Bred)
+item.contenttweaker.li4sio4_ingot.name=Lithium Orthosilicate Ingot
+fluid.bred_fluid=Bred Fluid
+
+tile.nuclearcraft.fluid_pressurizer.name=Fluid Pressurizer
+tile.nuclearcraft.heat_exchanger_machine.name=Heat Exchanger Block
+tile.nuclearcraft.solid_fuel_generator.name=Solid Fuel Generator
+tile.nuclearcraft.fluid_fuel_generator.name=Fluid Fuel Generator
+tile.nuclearcraft.alkaline_fuel_cell.name=Alkaline Fuel Cell
+tile.nuclearcraft.pem_fuel_cell.name=PEM Fuel Cell
+tile.nuclearcraft.molten_carbonate_fuel_cell.name=Molten Carbonate Fuel Cell
+tile.nuclearcraft.solid_oxide_fuel_cell.name=Solid Oxide Fuel Cell
+tile.nuclearcraft.turbine_machine.name=Turbine Block
+tile.nuclearcraft.atmosphere_collector.name=Atmosphere Collector
+fluid.flue_gas=Flue Gas
+fluid.cold_flue_gas=Cold Flue Gas
+fluid.methane=Methane
+fluid.sodium_carbonate=Molten Sodium Carbonate
+fluid.potassium_carbonate=Molten Potassium Carbonate
+fluid.carbonate_electrolyte=Molten Carbonate Mixture
+fluid.compressed_air=Compressed Air
+
