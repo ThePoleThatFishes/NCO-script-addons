@@ -22,12 +22,18 @@ var yttria = MaterialSystem.getMaterialBuilder().setName("Yttria").setColor(0xAD
 var lanthanum = MaterialSystem.getMaterialBuilder().setName("Lanthanum").setColor(0x99210C).build() as Material;
 var lsm = MaterialSystem.getMaterialBuilder().setName("LSM").setColor(0xD44310).build() as Material;
 var ni_ysz = MaterialSystem.getMaterialBuilder().setName("NiYSZ").setColor(0xF0EDDB).build() as Material;
+var transition = MaterialSystem.getMaterialBuilder().setName("Transition Metals").setColor(0x9040F1).build() as Material;
+var rare_earths = MaterialSystem.getMaterialBuilder().setName("Rare Earths").setColor(0x40A485).build() as Material;
+var cerium = MaterialSystem.getMaterialBuilder().setName("Cerium").setColor(0xDEDEDE).build() as Material;
 
 ysz.registerParts(["dust", "block"] as string[]);
 yttria.registerPart("dust");
 lanthanum.registerPart("dust");
 lsm.registerPart("dust");
 ni_ysz.registerPart("dust");
+transition.registerPart("dust");
+rare_earths.registerPart("dust");
+cerium.registerPart("dust");
 
 
 for item in items {
@@ -57,9 +63,6 @@ bredfluid.flowingLocation = "nuclearcraft:blocks/fluids/gas";
 bredfluid.register();
 
 if !(loadedMods has "qmd") {
-var sodium = MaterialSystem.getMaterialBuilder().setName("Sodium").setColor(0xB37D69).build() as Material;
-sodium.registerParts(["block","ingot"] as string[]);
-
 val compressed_air = VanillaFactory.createFluid("compressed_air", 0xE8E8E8);
 compressed_air.setGaseous(true);
 compressed_air.register();
