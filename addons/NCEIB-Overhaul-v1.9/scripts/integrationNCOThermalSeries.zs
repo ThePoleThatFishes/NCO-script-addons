@@ -6,6 +6,7 @@ import mods.thermalexpansion.InductionSmelter;
 import mods.thermalexpansion.Transposer;
 import mods.thermalexpansion.RedstoneFurnace;
 import mods.thermalexpansion.Factorizer;
+import mods.nuclearcraft.Infuser;
 
 val blocks = {bas: [<materialpart:boron_arsenide:block>, <ore:gemBoronArsenide>.firstItem], bn: [<materialpart:boron_nitride:block>, <ore:gemBoronNitride>.firstItem], 
 carob: [<materialpart:carobbiite:block>, <ore:gemCarobbiite>.firstItem], fluor: [<materialpart:fluorite:block>, <ore:gemFluorite>.firstItem],
@@ -60,4 +61,8 @@ Transposer.addFillRecipe(<thermalfoundation:storage_alloy:7>, <materialpart:lead
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:14>, <nuclearcraft:ingot_block:15>, 16000);
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:11>, <nuclearcraft:ingot_block:14>, 16000);
 RedstoneFurnace.addRecipe(<nuclearcraft:ingot_block:14>, <materialpart:rhodochrosite:block>, 16000);
+
+Infuser.addRecipe(<materialpart:shibuichi:block>, <liquid:redstone>*2250, <ore:blockSignalum>, 8.0, 1.0, 0.0);
+Infuser.addRecipe(<materialpart:tin_silver:block>, <liquid:glowstone>*2250, <ore:blockLumium>, 8.0, 1.0, 0.0);
+Infuser.addRecipe(<materialpart:lead_platinum:block>, <liquid:ender>*2250, <ore:blockEnderium>, 8.0, 1.0, 0.0);
 

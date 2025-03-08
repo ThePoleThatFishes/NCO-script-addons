@@ -39,10 +39,6 @@ for name, ingredients in blocks {
 	recipes.addShapeless(name ~ "_from_block", ingredients[1].items[0]*9, [ingredients[0]]); 
 	}
 
-Infuser.addRecipe(<materialpart:shibuichi:block>, <liquid:redstone>*2250, <ore:blockSignalum>, 8.0, 1.0, 0.0);
-Infuser.addRecipe(<materialpart:tin_silver:block>, <liquid:glowstone>*2250, <ore:blockLumium>, 8.0, 1.0, 0.0);
-Infuser.addRecipe(<materialpart:lead_platinum:block>, <liquid:ender>*2250, <ore:blockEnderium>, 8.0, 1.0, 0.0);
-
 Infuser.addRecipe(<ore:blockManganese>, <liquid:oxygen>*9000, <nuclearcraft:ingot_block:14>, 8.0, 1.0, 0.0);
 Infuser.addRecipe(<ore:blockManganeseOxide>, <liquid:oxygen>*9000, <nuclearcraft:ingot_block:15>, 8.0, 1.0, 0.0);
 furnace.addRecipe(<ore:blockManganese>.firstItem, <ore:blockManganeseOxide>);
