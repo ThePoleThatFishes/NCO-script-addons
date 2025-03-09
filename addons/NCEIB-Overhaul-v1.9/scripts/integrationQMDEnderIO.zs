@@ -16,4 +16,6 @@ AlloySmelter.addRecipe(<ore:ingotNichrome>.items[0]*2, [<ore:ingotNickel>, <ore:
 AlloySmelter.addRecipe(<materialpart:nichrome:block>*2, [<ore:blockNickel>, <ore:blockChromium>], 32000);
 AlloySmelter.addRecipe(<ore:ingotSuperAlloy>.items[0]*3, [<ore:ingotNichrome>*2, <ore:ingotNiobiumTitanium>], 4000);
 AlloySmelter.addRecipe(<materialpart:super_alloy:block>*3, [<ore:blockNichrome>*2, <ore:blockNiobiumTitanium>], 32000);
+AlloySmelter.addRecipe(<ore:ingotHastelloy>.firstItem*4, [<ore:ingotNichrome>*3, <ore:ingotMolybdenum>], 4000);
+AlloySmelter.addRecipe(<materialpart:hastelloy:block>*4, [<materialpart:nichrome:block>*3, <ore:blockMolybdenum>], 32000);
 

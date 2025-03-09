@@ -20,6 +20,9 @@ InductionSmelter.addRecipe(<materialpart:nichrome:block>*2, <ore:blockNickel>.fi
 InductionSmelter.addRecipe(<ore:ingotNichrome>.firstItem*2, <ore:ingotNickel>.firstItem, <ore:ingotChromium>.firstItem, 4000);
 InductionSmelter.addRecipe(<materialpart:super_alloy:block>*3, <ore:blockNichrome>.firstItem*2, <ore:blockNiobiumTitanium>.firstItem, 32000);
 InductionSmelter.addRecipe(<ore:ingotSuperAlloy>.firstItem*3, <ore:ingotNichrome>.firstItem*2, <ore:ingotNiobiumTitanium>.firstItem, 4000);
+InductionSmelter.addRecipe(<materialpart:hastelloy:block>*4, <ore:blockNichrome>.firstItem*3, <ore:blockMolybdenum>.firstItem, 32000);
+InductionSmelter.addRecipe(<ore:ingotHastelloy>.firstItem*4, <ore:ingotNichrome>.firstItem*3, <ore:ingotMolybdenum>.firstItem, 4000);
+
 
 
 

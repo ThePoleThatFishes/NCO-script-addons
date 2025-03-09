@@ -16,3 +16,5 @@ ArcFurnace.addRecipe(<materialpart:nichrome:block>*2, <ore:blockNickel>, null, 8
 ArcFurnace.addRecipe(<ore:ingotNichrome>.firstItem*2, <ore:ingotNickel>, null, 100, 64, [<ore:ingotChromium>]);
 ArcFurnace.addRecipe(<materialpart:super_alloy:block>*3, <ore:blockNichrome>*2, null, 800, 64, [<ore:blockNiobiumTitanium>]);
 ArcFurnace.addRecipe(<ore:ingotSuperAlloy>.firstItem*3, <ore:ingotNichrome>*2, null, 100, 64, [<ore:ingotNiobiumTitanium>]);
+ArcFurnace.addRecipe(<materialpart:hastelloy:block>*4, <materialpart:nichrome:block>*3, null, 800, 64, [<ore:blockMolybdenum>]);
+ArcFurnace.addRecipe(<ore:ingotHastelloy>.firstItem*4, <ore:ingotNichrome>*3, null, 100, 64, [<ore:ingotMolybdenum>]);
