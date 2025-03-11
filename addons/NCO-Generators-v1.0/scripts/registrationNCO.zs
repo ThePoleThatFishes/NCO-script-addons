@@ -83,6 +83,7 @@ UpgradableEnergyProcessorBuilder("turbine_machine")
     .setOutputTankCapacity(128000)
     .setDefaultProcessTime(1.0)
     .setDefaultProcessPower(1.0)
+	.setIsGenerator(true)
 	.setProgressBarGuiXYWHUV(77, 32, 29, 22, 176, 3)
 	.setJeiBackgroundXYWH(55, 30, 82, 26)
     .buildAndRegister();

@@ -1,6 +1,7 @@
 #priority 2
 
 import mods.nuclearcraft.BasicRecipeHandler;
+import mods.nuclearcraft.Turbine;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.IIngredient;
@@ -48,9 +49,8 @@ static FuelList as [fuel] =	[
 fuel("acetylene", 75000.0, null, <fluid:ethyne>*100, false, true, false, false, false, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 0.0),
 fuel("ammonia", 37500.0, null, <fluid:ammonia>*100, false, true, false, false, false, true, <fluid:nitrogen>, <fluid:nitrogen>, 0.0),
 fuel("benzene", 225000.0, null, <fluid:benzene>*100, false, true, false, false, false, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 0.0),
-fuel("blaze_rod", 96000.0, <ore:rodBlaze>, null, true, false, false, false, false, false, <fluid:sulfur_trioxide>, null, 0.0),
+fuel("blaze_rod", 96000.0, <minecraft:blaze_rod>, null, true, false, false, false, false, false, <fluid:sulfur_trioxide>, null, 0.0),
 fuel("charcoal", 64000.0, <ore:charcoal>, null, true, false, false, false, true, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 0.0),
-fuel("charcoal_block", 640000.0, <ore:blockCharcoal>, null, true, false, false, false, true, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 0.0),
 fuel("coal", 64000.0, <ore:coal>, null, true, false, false, false, true, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 431.0e-9),
 fuel("coal_block", 640000.0, <ore:blockCoal>, null, true, false, false, false, true, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 3.8e-6),
 fuel("ethanol", 50000.0, null, <fluid:ethanol>*100, false, true, false, false, true, true, <fluid:flue_gas>, <fluid:carbon_dioxide>, 0.0),
@@ -98,10 +98,10 @@ function createRecipes (fuel_list as fuel[]) {
 		}
 		if (combustible.mcfcFuel) {
 			if (combustible.solidFuel) {
-			moltenCarbonateFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.2/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.2/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
+			moltenCarbonateFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.15/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.15/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
 			}
 			if (combustible.fluidFuel) {
-			moltenCarbonateFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.2/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.2/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
+			moltenCarbonateFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.15/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.15/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
 			}
 		}
 		if (combustible.sofcFuel) {
@@ -122,3 +122,13 @@ turbineMachine.addRecipe([<fluid:flue_gas>*10, <fluid:cold_flue_gas>*20, 1.0, 16
 turbineMachine.addRecipe([<fluid:low_pressure_steam>*10, <fluid:low_quality_steam>*20, 1.0, 32.0, 0.0]);
 
 heatExchangerMachine.addRecipe([<fluid:flue_gas>*20, <fluid:water>*5, <fluid:cold_flue_gas>*20, <fluid:low_pressure_steam>*10]);
+Turbine.addRecipe(<fluid:flue_gas>, <fluid:cold_flue_gas>*2, 2.0, 2.0, 1.0);
+
+<nuclearcraft:solid_fuel_generator>.addTooltip(format.aqua("Power Production: 20 RF/t\nValid Fuels: Furnace Fuels\nExtra: 2 mB/t Flue Gas"));
+<nuclearcraft:fluid_fuel_generator>.addTooltip(format.aqua("Power Production: 40 RF/t\nValid Fuels: Hot/Combustible Fluids\nExtra: 2.5 mB/t Flue Gas"));
+<nuclearcraft:alkaline_fuel_cell>.addTooltip(format.aqua("Power Production: 50 RF/t\nValid Fuels: Hydrogen\nValid Electrolytes: NaOH, KOH"));
+<nuclearcraft:pem_fuel_cell>.addTooltip(format.aqua("Power Production: 75 RF/t\nValid Fuels: Hydrogen\nExtra: 0.46875 mB/t Preheated Water"));
+<nuclearcraft:molten_carbonate_fuel_cell>.addTooltip(format.aqua("Power Production: 100 RF/t\nValid Fuels: Hydrogen, Carbon-based solids and fluids.\nExtra: 5 mB/t of LPS."));
+<nuclearcraft:solid_oxide_fuel_cell>.addTooltip(format.aqua("Power Production: 200 RF/t\nValid Fuels: Hydrogen, most furnace fuels and combustible fluids.\nExtra: 3.125 mB/t of HPS."));
+<nuclearcraft:turbine_machine>.addTooltip(format.aqua("Produces energy from flue gases and LPS, at 80% efficiency compared to a multiblock turbine."));
+
