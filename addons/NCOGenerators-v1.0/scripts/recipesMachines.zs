@@ -38,9 +38,9 @@ Assembler.addRecipe(<contenttweaker:casing_k_s>, <ore:dustMolybdenum>*3, <conten
 
 // Generator Crafting Recipes
 recipes.addShaped("solid_fuel_generator", <nuclearcraft:solid_fuel_generator>, [
-	[<ore:plateBasic>, <ore:dustRedstone>, <ore:plateBasic>],
+	[<ore:ingotLead>, <ore:dustRedstone>, <ore:ingotLead>],
 	[<ore:ingotCopper>, <minecraft:furnace>, <ore:ingotCopper>],
-	[<ore:plateBasic>, <ore:dustRedstone>, <ore:plateBasic>]
+	[<ore:ingotLead>, <ore:dustRedstone>, <ore:ingotLead>]
 	]);
 
 recipes.addShaped("fluid_fuel_generator", <nuclearcraft:fluid_fuel_generator>, [

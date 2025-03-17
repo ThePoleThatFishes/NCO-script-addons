@@ -15,7 +15,8 @@ val energytech_tab = VanillaFactory.createCreativeTab("energy_tech", <item:nucle
 energytech_tab.register();
 
 val items = ["cathode_na", "anode_na", "beta_alumina", "casing_battery", "casing_ec", "casing_k", "casing_k_s", "bvc", "blanket_empty", "blanket_li", "blanket_tritium", "li4sio4_ingot"] as string[];
-val fluids = {"etheneoxide": 123456, "ethenecarbonate": 128654, "methane": 0x5B2F05, "flue_gas": 0xBFBFBF, "cold_flue_gas": 0xCECECE, "sodium_carbonate": 0xB2988E, "potassium_carbonate": 0xC6CE69, "carbonate_electrolyte": 0xE3D0AC} as int[string];
+val fluids = {"etheneoxide": 123456, "ethenecarbonate": 128654, "methane": 0x5B2F05, "flue_gas": 0xBFBFBF, "cold_flue_gas": 0xCECECE, "sodium_carbonate": 0xB2988E, "potassium_carbonate": 0xC6CE69, 
+"carbonate_electrolyte": 0xE3D0AC, "super_compressed_air": 0xFFF4F9} as int[string];
 
 var ysz = MaterialSystem.getMaterialBuilder().setName("YSZ").setColor(0xFCA99C).build() as Material;
 var yttria = MaterialSystem.getMaterialBuilder().setName("Yttria").setColor(0xADAD9A).build() as Material;

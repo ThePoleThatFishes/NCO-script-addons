@@ -41,4 +41,5 @@ fluid.sodium_carbonate=Molten Sodium Carbonate
 fluid.potassium_carbonate=Molten Potassium Carbonate
 fluid.carbonate_electrolyte=Molten Carbonate Mixture
 fluid.compressed_air=Compressed Air
+fluid.super_compressed_air=Super Compressed Air
 

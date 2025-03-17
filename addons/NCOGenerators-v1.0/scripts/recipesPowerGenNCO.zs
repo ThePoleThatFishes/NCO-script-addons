@@ -8,7 +8,6 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.util.Math;
 
 
-
 zenClass fuel {
 
 	var name as string;
@@ -87,48 +86,54 @@ function createRecipes (fuel_list as fuel[]) {
 			solidFuelGenerator.addRecipe([combustible.fuelStackItem, combustible.exhaustCombustion*Math.floor(combustible.powerDensity*0.05/2.0), combustible.powerDensity*0.25/20.0, 1.0, combustible.spice]);
 		}
 		if (combustible.fluidFuel) {
-			fluidFuelGenerator.addRecipe([combustible.fuelStackFluid, combustible.exhaustCombustion*Math.floor(combustible.powerDensity*0.05/2.0), combustible.powerDensity*0.4/40.0, 1.0, combustible.spice]);
+			fluidFuelGenerator.addRecipe([combustible.fuelStackFluid, combustible.exhaustCombustion*Math.floor(combustible.powerDensity*0.05/2.0), combustible.powerDensity*0.40/40.0, 1.0, combustible.spice]);
 		}
 		if (combustible.afcFuel) {
-			alkalineFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:potassium_hydroxide_solution>, null, combustible.exhaustFuelCell*100, combustible.powerDensity*0.5/50.0, 1.0, 0.0]);
-			alkalineFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:sodium_hydroxide_solution>, null, combustible.exhaustFuelCell*100, combustible.powerDensity*0.5/50.0, 0.9, 0.0]);
+			alkalineFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:potassium_hydroxide_solution>, null, combustible.exhaustFuelCell*100, combustible.powerDensity*0.50/50.0, 1.0, 0.0]);
+			alkalineFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:sodium_hydroxide_solution>, null, combustible.exhaustFuelCell*100, combustible.powerDensity*0.50/50.0, 0.9, 0.0]);
 		}
 		if (combustible.pemfcFuel) {
-			pemFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.1/32.0), null, combustible.exhaustFuelCell*100, <fluid:preheated_water>*Math.floor(combustible.powerDensity*0.1/32.0), combustible.powerDensity*0.5/75.0, 1.0, 0.0]);
+			pemFuelCell.addRecipe([combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.08/32.0), null, combustible.exhaustFuelCell*100, <fluid:preheated_water>*Math.floor(combustible.powerDensity*0.08/32.0), combustible.powerDensity*0.50/100.0, 1.0, 0.0]);
 		}
 		if (combustible.mcfcFuel) {
 			if (combustible.solidFuel) {
-			moltenCarbonateFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.15/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.15/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
+			moltenCarbonateFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.20/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.20/4.0), combustible.powerDensity*0.60/150.0, 1.0, 0.0]);
 			}
 			if (combustible.fluidFuel) {
-			moltenCarbonateFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.15/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.15/4.0), combustible.powerDensity*0.75/100.0, 1.0, 0.0]);
+			moltenCarbonateFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.20/8.0), null, combustible.exhaustFuelCell*100, <fluid:low_pressure_steam>*(combustible.powerDensity*0.20/4.0), combustible.powerDensity*0.60/150.0, 1.0, 0.0]);
 			}
 		}
 		if (combustible.sofcFuel) {
 			if (combustible.solidFuel) {
-			solidOxideFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.25/64.0), null, combustible.exhaustFuelCell*100, <fluid:high_pressure_steam>*(combustible.powerDensity*0.25/16.0), combustible.powerDensity/200.0, 1.0, 0.0]);
+			solidOxideFuelCell.addRecipe([combustible.fuelStackItem, null, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.40/64.0), null, combustible.exhaustFuelCell*100, <fluid:high_pressure_steam>*(combustible.powerDensity*0.40/16.0), combustible.powerDensity*0.70/200.0, 1.0, 0.0]);
 			}
 			if (combustible.fluidFuel) {
-			solidOxideFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.25/64.0), null, combustible.exhaustFuelCell*100, <fluid:high_pressure_steam>*(combustible.powerDensity*0.25/16.0), combustible.powerDensity/200.0, 1.0, 0.0]);
+			solidOxideFuelCell.addRecipe([null, combustible.fuelStackFluid, <fluid:oxygen>*100, <fluid:water>*Math.floor(combustible.powerDensity*0.40/64.0), null, combustible.exhaustFuelCell*100, <fluid:high_pressure_steam>*(combustible.powerDensity*0.40/16.0), combustible.powerDensity*0.70/200.0, 1.0, 0.0]);
 			}
 		}
 	}
 }
 
 createRecipes(FuelList);
+
 var turbineMachine = BasicRecipeHandler.get("turbine_machine");
 var heatExchangerMachine = BasicRecipeHandler.get("heat_exchanger_machine");
+var fluidPressurizer = BasicRecipeHandler.get("fluid_pressurizer");
+
 turbineMachine.addRecipe([<fluid:flue_gas>*10, <fluid:cold_flue_gas>*20, 1.0, 16.0, 0.0]);
 turbineMachine.addRecipe([<fluid:low_pressure_steam>*10, <fluid:low_quality_steam>*20, 1.0, 32.0, 0.0]);
-
 heatExchangerMachine.addRecipe([<fluid:flue_gas>*20, <fluid:water>*5, <fluid:cold_flue_gas>*20, <fluid:low_pressure_steam>*10]);
+fluidPressurizer.addRecipe([<fluid:compressed_air>*50, <fluid:super_compressed_air>*5, 1.0, 5.0, 0.0]);
 Turbine.addRecipe(<fluid:flue_gas>, <fluid:cold_flue_gas>*2, 2.0, 2.0, 1.0);
+Turbine.addRecipe(<fluid:super_compressed_air>, <fluid:compressed_air>*10, 45.0, 10.0, 8.0);
 
 <nuclearcraft:solid_fuel_generator>.addTooltip(format.aqua("Power Production: 20 RF/t\nValid Fuels: Furnace Fuels\nExtra: 2 mB/t Flue Gas"));
 <nuclearcraft:fluid_fuel_generator>.addTooltip(format.aqua("Power Production: 40 RF/t\nValid Fuels: Hot/Combustible Fluids\nExtra: 2.5 mB/t Flue Gas"));
 <nuclearcraft:alkaline_fuel_cell>.addTooltip(format.aqua("Power Production: 50 RF/t\nValid Fuels: Hydrogen\nValid Electrolytes: NaOH, KOH"));
-<nuclearcraft:pem_fuel_cell>.addTooltip(format.aqua("Power Production: 75 RF/t\nValid Fuels: Hydrogen\nExtra: 0.46875 mB/t Preheated Water"));
-<nuclearcraft:molten_carbonate_fuel_cell>.addTooltip(format.aqua("Power Production: 100 RF/t\nValid Fuels: Hydrogen, Carbon-based solids and fluids.\nExtra: 5 mB/t of LPS."));
-<nuclearcraft:solid_oxide_fuel_cell>.addTooltip(format.aqua("Power Production: 200 RF/t\nValid Fuels: Hydrogen, most furnace fuels and combustible fluids.\nExtra: 3.125 mB/t of HPS."));
+<nuclearcraft:pem_fuel_cell>.addTooltip(format.aqua("Power Production: 100 RF/t\nValid Fuels: Hydrogen\nExtra: 0.5 mB/t Preheated Water"));
+<nuclearcraft:molten_carbonate_fuel_cell>.addTooltip(format.aqua("Power Production: 150 RF/t\nValid Fuels: Hydrogen, Carbon-based solids and fluids.\nExtra: 12.5 mB/t of LPS."));
+<nuclearcraft:solid_oxide_fuel_cell>.addTooltip(format.aqua("Power Production: 200 RF/t\nValid Fuels: Hydrogen, most furnace fuels and combustible fluids.\nExtra: 7 1/7 mB/t of HPS."));
 <nuclearcraft:turbine_machine>.addTooltip(format.aqua("Produces energy from flue gases and LPS, at 80% efficiency compared to a multiblock turbine."));
+<nuclearcraft:heat_exchanger_machine>.addTooltip(format.aqua("Transfers heat between a cold and a hot fluid."));
+<nuclearcraft:fluid_pressurizer>.addTooltip(format.aqua("Compresses various fluids."));
 
