@@ -19,18 +19,18 @@ Registration.registerFissionSink("pumpkin_pie", 300, "one egg sink && one sugar 
 
 // MSR Heaters
 Registration.registerFissionHeater("cracker", "cracker_nak", 1, "cracker_nak_hot", 1, 75, "one standard heater || one iron heater");
-Registration.registerFissionHeater("marshmallow", "marshmallow_nak", 1, "marshmallow_nak_hot", 1, 105, "one cell && one standard heater");
+Registration.registerFissionHeater("marshmallow", "marshmallow_nak", 1, "marshmallow_nak_hot", 1, 105, "one vessel && one standard heater");
 Registration.registerFissionHeater("chocolate", "chocolate_nak", 1, "chocolate_nak_hot", 1, 85, "one reflector && one casing");
 Registration.registerFissionHeater("gold_smore", "gold_smore_nak", 1, "gold_smore_nak_hot", 1, 350, "exactly two gold heaters && exactly one marshmallow heater && exactly one chocolate heater");
 Registration.registerFissionHeater("pancake", "pancake_nak", 1, "pancake_nak_hot", 1, 140, "exactly one reflector && exactly one moderator");
-Registration.registerFissionHeater("caramel", "caramel_nak", 1, "caramel_nak_hot", 1, 165, "two axial cells");
+Registration.registerFissionHeater("caramel", "caramel_nak", 1, "caramel_nak_hot", 1, 165, "two axial vessels");
 Registration.registerFissionHeater("buttermilk", "buttermilk_nak", 1, "buttermilk_nak_hot", 1, 75, "one irradiator");
 Registration.registerFissionHeater("wheat", "wheat_nak", 1, "wheat_nak_hot", 1, 55, "exactly one gold heater");
 Registration.registerFissionHeater("egg", "egg_nak", 1, "egg_nak_hot", 1, 65, "exactly two lead heaters");
 Registration.registerFissionHeater("sugar", "sugar_nak", 1, "sugar_nak_hot", 1, 80, "one shield");
 Registration.registerFissionHeater("cake", "cake_nak", 1, "cake_nak_hot", 1, 250, "one buttermilk heater && one wheat heater && one egg heater && one sugar heater");
-Registration.registerFissionHeater("pumpkin", "pumpkin_nak", 1, "pumpkin_nak_hot", 1, 80, "exactly one lithium sink");
-Registration.registerFissionHeater("pumpkin_pie", "pumpkin_pie_nak", 1, "pumpkin_pie_nak_hot", 1, 300, "one egg sink && one sugar sink && one pumpkin sink");
+Registration.registerFissionHeater("pumpkin", "pumpkin_nak", 1, "pumpkin_nak_hot", 1, 80, "exactly one lithium heater");
+Registration.registerFissionHeater("pumpkin_pie", "pumpkin_pie_nak", 1, "pumpkin_pie_nak_hot", 1, 300, "one egg heater && one sugar heater && one pumpkin heater");
 
 // Turbine Coils
 Registration.registerTurbineCoil("cracker", 1.08, "two copper coils");
