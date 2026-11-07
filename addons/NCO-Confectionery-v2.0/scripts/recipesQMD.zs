@@ -1,4 +1,5 @@
 #modloaded qmd
+#ignoreBracketErrors
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -19,6 +20,8 @@ import mods.nuclearcraft.Electrolyzer;
 import mods.nuclearcraft.Melter;
 import mods.nuclearcraft.Turbine;
 import mods.nuclearcraft.FissionHeating;
+import mods.nuclearcraft.CTHelper;
+import mods.nuclearcraft.HeatExchanger;
 import mods.qmd.nucleosynthesis_chamber_heater;
 
 // Oredict all Th'moriums
@@ -26,14 +29,16 @@ import mods.qmd.nucleosynthesis_chamber_heater;
 oreDict.ingotThmorium316All;
 oreDict.ingotThmorium317All;
 
-<ore:ingotThmorium316All>.add(<nuclearcraft:thmorium>);
-<ore:ingotThmorium316All>.add(<nuclearcraft:thmorium:1>);
-<ore:ingotThmorium316All>.add(<nuclearcraft:thmorium:2>);
-<ore:ingotThmorium316All>.add(<nuclearcraft:thmorium:3>);
-<ore:ingotThmorium317All>.add(<nuclearcraft:thmorium:4>);
-<ore:ingotThmorium317All>.add(<nuclearcraft:thmorium:5>);
-<ore:ingotThmorium317All>.add(<nuclearcraft:thmorium:6>);
-<ore:ingotThmorium317All>.add(<nuclearcraft:thmorium:7>);
+<ore:ingotThmorium316All>.addAll(<ore:ingotThmorium316>);
+<ore:ingotThmorium316All>.addAll(<ore:ingotThmorium316Oxide>);
+<ore:ingotThmorium316All>.addAll(<ore:ingotThmorium316Nitride>);
+<ore:ingotThmorium316All>.addAll(<ore:ingotThmorium316ZA>);
+<ore:ingotThmorium316All>.addAll(<ore:ingotThmorium316Carbide>);
+<ore:ingotThmorium317All>.addAll(<ore:ingotThmorium317>);
+<ore:ingotThmorium317All>.addAll(<ore:ingotThmorium317Oxide>);
+<ore:ingotThmorium317All>.addAll(<ore:ingotThmorium317Nitride>);
+<ore:ingotThmorium317All>.addAll(<ore:ingotThmorium317ZA>);
+<ore:ingotThmorium317All>.addAll(<ore:ingotThmorium317Carbide>);
 
 // Th'morium RTG & Neutron Source
 recipes.addShaped("ncoconfrtgthmorium", <nuclearcraft:rtg_thmorium>, [
@@ -77,7 +82,46 @@ for name, material in materialdict {
 	}
 }
 
-// Golden S'more SFR and NSC coolant
-nucleosynthesis_chamber_heater.addRecipe(<fluid:gold_smore>*6, <fluid:hot_gold_smore>, 1);
-Turbine.addRecipe(<fluid:hot_gold_smore>, <fluid:gold_smore>*6, 7065.6, 6.0, 1.0);
-FissionHeating.addRecipe(<fluid:gold_smore>*6, <fluid:hot_gold_smore>, 942);
+// Golden S'more as NSC coolant
+nucleosynthesis_chamber_heater.addRecipe(<fluid:gold_smore>, <fluid:hot_gold_smore>, 32);
+
+// BaNa2 Stuff
+AlloyFurnace.addRecipe(<ore:ingotBarium>, <ore:ingotSodium>*2, <ore:ingotBariumDisodide>*3);
+if (CTHelper.isScriptAddonLoaded("NCEIB-Overhaul")) {
+	Extractor.addRecipe(<ore:blockCalciumArgon>, <ore:blockCalcium>, <fluid:argon>*25);
+	AlloyFurnace.addRecipe(<ore:blockBarium>, <ore:blockSodium>*2, <ore:blockBariumDisodide>*3, 8.0, 1.0, 0.0);
+} else {
+	Extractor.addRecipe(<ore:blockCalciumArgon>, <ore:dustCalcium>*9, <fluid:argon>*25);
+}
+
+// PbBi Heaters (MRF Integration)
+if (loadedMods has "moarreactorfunctionality") {
+
+	val fluiddict = {<fluid:cracker>: [<fluid:cracker_pbbi>, <fluid:cracker_pbbi_hot>], <fluid:milk_chocolate>: [<fluid:chocolate_pbbi>, <fluid:chocolate_pbbi_hot>], <fluid:gold_smore>: [<fluid:gold_smore_pbbi>, <fluid:gold_smore_pbbi_hot>],
+	<fluid:marshmallow>: [<fluid:marshmallow_pbbi>, <fluid:marshmallow_pbbi_hot>], <fluid:pancake>: [<fluid:pancake_pbbi>, <fluid:pancake_pbbi_hot>], <fluid:caramel>: [<fluid:caramel_pbbi>, <fluid:caramel_pbbi_hot>], 
+	<fluid:buttermilk>: [<fluid:buttermilk_pbbi>, <fluid:buttermilk_pbbi_hot>], <fluid:sugar>: [<fluid:sugar_pbbi>, <fluid:sugar_pbbi_hot>], <fluid:egg>: [<fluid:egg_pbbi>, <fluid:egg_pbbi_hot>], 
+	<fluid:wheat>: [<fluid:wheat_pbbi>, <fluid:wheat_pbbi_hot>], <fluid:cake>: [<fluid:cake_pbbi>, <fluid:cake_pbbi_hot>], <fluid:pumpkin>: [<fluid:pumpkin_pbbi>, <fluid:pumpkin_pbbi_hot>], 
+	<fluid:pumpkin_pie>: [<fluid:pumpkin_pie_pbbi>, <fluid:pumpkin_pie_pbbi_hot>]} as IIngredient[][IIngredient];
+	
+	val materialdict = {cracker: <ore:foodCrackers>, chocolate: <ore:foodChocolatebar>, gold_smore: <contenttweaker:smore_gold>,
+	marshmallow: <ore:foodMarshmellows>, pancake: <ore:foodPancakes>, caramel: <ore:foodCaramel>, buttermilk: <contenttweaker:buttermilk>,
+	egg: <ore:listAllegg>, wheat: <minecraft:wheat>, sugar: <minecraft:sugar>, cake: <minecraft:cake>, pumpkin: <minecraft:pumpkin>,
+	pumpkin_pie: <minecraft:pumpkin_pie>} as IIngredient[string];
+
+	for fluidname, fluidpbbi in fluiddict {
+		SaltMixer.addRecipe(fluidname*144, <fluid:pbbi>*144, fluidpbbi[0]*144);
+		HeatExchanger.addRecipe(fluidpbbi[1], fluidpbbi[0], 256.0, 800, 400);
+	}
+		
+	for name, material in materialdict {	
+		recipes.addShaped("ncoconf" ~ name ~ "pbbiheater", itemUtils.getItem("nuclearcraft:salt_fission_heater_" ~ name ~ "_pbbi"),
+		[[null, material, null],
+		[material, <nuclearcraft:salt_fission_heater_standard_pbbi>, material],
+		[null, material, null]]);
+
+		recipes.addShaped("ncoconf" ~ name ~ "pbbiport", itemUtils.getItem("nuclearcraft:fission_heater_port_" ~ name ~ "_pbbi"),
+		[[null, material, null],
+		[material, <nuclearcraft:fission_heater_port_standard_pbbi>, material],
+		[null, material, null]]);
+	}
+}
