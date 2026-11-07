@@ -12,7 +12,9 @@ import mods.nuclearcraft.Extractor;
 import mods.nuclearcraft.Pressurizer;
 import mods.nuclearcraft.Crystallizer;
 import mods.qmd.ore_leacher;
-import mods.nuclearcraft.Separator;
+import mods.nuclearcraft.FuelReprocessor;
+import mods.nuclearcraft.BasicRecipeHandler;
+import mods.nuclearcraft.ChanceItemIngredient;
 
 // Betavoltaic "RTGs"
 recipes.addShaped("generators_bvc", <contenttweaker:bvc>, [
@@ -45,7 +47,7 @@ Assembler.addRecipe(<contenttweaker:casing_ec>, <contenttweaker:anode_na>, <cont
 // QMD Materials Fuel Cells
 recipes.addShaped("pem_fuel_cell", <nuclearcraft:pem_fuel_cell>, [
 	[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>],
-	[<ore:ingotIridium>, <ore:chassis>, <ore:ingotPlatinum>],
+	[<ore:ingotPlatinum>, <ore:chassis>, <ore:ingotIridiumOxide>],
 	[<ore:plateAdvanced>, <ore:ingotPolytetrafluoroethene>, <ore:plateAdvanced>]
 	]);
 	
@@ -53,6 +55,12 @@ recipes.addShaped("molten_carbonate_fuel_cell", <nuclearcraft:molten_carbonate_f
 	[<ore:plateDU>, <minecraft:bucket>, <ore:plateDU>],
 	[<ore:ingotNickelOxide>, <ore:chassis>, <ore:ingotNichrome>],
 	[<ore:plateDU>, <forge:bucketfilled>.withTag({FluidName: "carbonate_electrolyte", Amount: 1000}), <ore:plateDU>]
+	]);
+
+recipes.addShaped("proton_conducting_fuel_cell", <nuclearcraft:proton_conducting_fuel_cell>, [
+	[<ore:plateElite>, <minecraft:bucket>, <ore:plateElite>],
+	[<ore:dustNiBZC>, <ore:chassis>, <ore:dustPNC>],
+	[<ore:plateElite>, <ore:blockBZC>, <ore:plateElite>]
 	]);
 	
 recipes.addShaped("solid_oxide_fuel_cell", <nuclearcraft:solid_oxide_fuel_cell>, [
@@ -62,12 +70,20 @@ recipes.addShaped("solid_oxide_fuel_cell", <nuclearcraft:solid_oxide_fuel_cell>,
 	]);
 	
 Infuser.addRecipe(<ore:ingotYttrium>|<ore:dustYttrium>, <fluid:oxygen>*500, <ore:dustYttria>);
+Infuser.addRecipe(<ore:dustCerium>, <fluid:oxygen>*500, <ore:dustCeria>);
 AlloyFurnace.addRecipe(<ore:dustYttria>, <ore:dustZirconia>*11, <ore:dustYSZ>*12, 4.0, 2.0, 0.0);
 Assembler.addRecipe(<ore:dustLanthanum>, <ore:dustStrontium>, <ore:dustManganese>, null, <ore:dustLSM>*3);
+Assembler.addRecipe(<ore:dustBarium>, <ore:dustZirconium>, <ore:dustCeria>, null, <ore:dustBZC>*3);
+Assembler.addRecipe(<ore:dustPraseodymium>, <ore:dustNickel>, <ore:dustCobaltOxide>, null, <ore:dustPNC>*3);
 AlloyFurnace.addRecipe(<ore:dustNickel>|<ore:ingotNickel>, <ore:dustYSZ>, <ore:dustNiYSZ>, 3.0, 1.0, 0.0);
+AlloyFurnace.addRecipe(<ore:dustNickel>|<ore:ingotNickel>, <ore:dustBZC>, <ore:dustNiBZC>, 2.0, 1.0, 0.0);
 Pressurizer.addRecipe(<ore:dustYSZ>*9, <ore:blockYSZ>);
+Pressurizer.addRecipe(<ore:dustBZC>*9, <ore:blockBZC>);
 
-ore_leacher.removeRecipeWithInput(<ore:oreThorium>, <fluid:nitric_acid>*16, <fluid:hydrochloric_acid>*16, <fluid:sulfuric_acid>*16);
-ore_leacher.addRecipe(<ore:oreThorium>, <fluid:nitric_acid>*16, <fluid:hydrochloric_acid>*16, <fluid:sulfuric_acid>*16, <ore:dustThorium>*3, <ore:dustTransitionMetals>*2, <ore:dustRareEarths>*2);
-Separator.addRecipe(<ore:dustTransitionMetals>*2, <ore:dustHafnium>, <ore:dustTitanium>);
-Separator.addRecipe(<ore:dustRareEarths>*2, <ore:dustLanthanum>, <ore:dustCerium>);
+if !(loadedMods has "ncomekprocessing") {
+	ore_leacher.removeRecipeWithInput(<ore:oreThorium>, <fluid:nitric_acid>*16, <fluid:hydrochloric_acid>*16, <fluid:sulfuric_acid>*16);
+	ore_leacher.addRecipe(<ore:oreThorium>, <fluid:nitric_acid>*16, <fluid:hydrochloric_acid>*16, <fluid:sulfuric_acid>*16, <ore:dustThorium>*3, ChanceItemIngredient.create(<ore:dustTransitionMetals>*2, 15), ChanceItemIngredient.create(<ore:dustRareEarths>*3, 10));
+}
+
+FuelReprocessor.addRecipe(<ore:dustTransitionMetals>*2, <ore:dustHafnium>, <ore:dustTitanium>, null, null, null, null, null, null);
+FuelReprocessor.addRecipe(<ore:dustRareEarths>*3, <ore:dustPraseodymium>, <ore:dustCerium>, <ore:dustLanthanum>, null, null, null, null, null);

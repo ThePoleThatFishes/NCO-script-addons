@@ -1,3 +1,5 @@
+itemGroup.ncogen=NCO Generators
+
 item.contenttweaker.bvc.name=Betavoltaic Device Casing
 tile.nuclearcraft.rtg_tritium.name=Tritium Betavoltaic Device
 tile.nuclearcraft.rtg_ruthenium.name=Ruthenium Betavoltaic Device
@@ -25,18 +27,26 @@ item.contenttweaker.li4sio4_ingot.name=Lithium Orthosilicate Ingot
 fluid.bred_fluid=Bred Fluid
 
 tile.nuclearcraft.fluid_pressurizer.name=Fluid Pressurizer
-tile.nuclearcraft.heat_exchanger_machine.name=Heat Exchanger Block
-tile.nuclearcraft.solid_fuel_generator.name=Solid Fuel Generator
-tile.nuclearcraft.fluid_fuel_generator.name=Fluid Fuel Generator
+tile.nuclearcraft.heat_exchanger_machine.name=Heat Exchanger Machine
+tile.nuclearcraft.distiller_machine.name=Distiller Machine
+tile.nuclearcraft.condenser_machine.name=Condenser Machine
+tile.nuclearcraft.furnace_generator.name=Furnace Generator
+tile.nuclearcraft.furnace_steam_generator.name=Furnace Steam Generator
+tile.nuclearcraft.combustion_generator.name=Combustion Generator
+tile.nuclearcraft.combustion_steam_generator.name=Combustion Steam Generator
+tile.nuclearcraft.thermoelectric_generator.name=Thermoelectric Generator
+tile.nuclearcraft.thermal_steam_generator.name=Thermal Steam Generator
 tile.nuclearcraft.alkaline_fuel_cell.name=Alkaline Fuel Cell
 tile.nuclearcraft.pem_fuel_cell.name=PEM Fuel Cell
 tile.nuclearcraft.molten_carbonate_fuel_cell.name=Molten Carbonate Fuel Cell
+tile.nuclearcraft.proton_conducting_fuel_cell.name=Proton Conducting Fuel Cell
 tile.nuclearcraft.solid_oxide_fuel_cell.name=Solid Oxide Fuel Cell
-tile.nuclearcraft.turbine_machine.name=Turbine Block
+tile.nuclearcraft.turbine_machine.name=Turbine Machine
 tile.nuclearcraft.atmosphere_collector.name=Atmosphere Collector
 fluid.flue_gas=Flue Gas
 fluid.cold_flue_gas=Cold Flue Gas
 fluid.methane=Methane
+fluid.distilled_water=Distilled Water
 fluid.sodium_carbonate=Molten Sodium Carbonate
 fluid.potassium_carbonate=Molten Potassium Carbonate
 fluid.carbonate_electrolyte=Molten Carbonate Mixture

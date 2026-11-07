@@ -5,6 +5,7 @@ import mods.nuclearcraft.EnergyProcessorBuilder;
 import mods.nuclearcraft.UpgradableEnergyProcessorBuilder;
 import mods.nuclearcraft.ProcessorBuilderHelper.bigSlot;
 import mods.nuclearcraft.ProcessorBuilderHelper.standardSlot;
+import mods.nuclearcraft.CTHelper;
 
 // Batteries
 Registration.registerBattery("sodium", 12000000, 4);
@@ -18,28 +19,30 @@ mods.nuclearcraft.Registration.registerRTG("europium", 8, 23.0e-3);
 mods.nuclearcraft.Registration.registerRTG("promethium", 6, 3.2e-3);
 
 // Machines
-if !(loadedMods has "qmd") {
-UpgradableEnergyProcessorBuilder("atmosphere_collector")
-    .setFluidOutputSlots([bigSlot(112, 31)])
-    .setOutputTankCapacity(32000)
-    .setDefaultProcessTime(20.0)
-    .setDefaultProcessPower(100.0)
-	.setProgressBarGuiXYWHUV(52, 31, 34, 25, 176, 3)
-	.setJeiClickAreaXYWH(52, 33, 34, 22)
-	.setJeiTooltipXYWH(52, 33, 34, 22)
-	.setJeiBackgroundXYWH(50, 28, 89, 30)
-    .buildAndRegister();
+if !(loadedMods has "moarreactorfunctionality") {
+	if !(loadedMods has "qmd") {
+	UpgradableEnergyProcessorBuilder("atmosphere_collector")
+		.setFluidOutputSlots([bigSlot(112, 31)])
+		.setOutputTankCapacity(32000)
+		.setDefaultProcessTime(20.0)
+		.setDefaultProcessPower(100.0)
+		.setProgressBarGuiXYWHUV(52, 31, 34, 25, 176, 3)
+		.setJeiClickAreaXYWH(52, 33, 34, 22)
+		.setJeiTooltipXYWH(52, 33, 34, 22)
+		.setJeiBackgroundXYWH(50, 28, 89, 30)
+		.buildAndRegister();
+	}
+		
+	UpgradableEnergyProcessorBuilder("fluid_pressurizer")
+		.setFluidInputSlots([standardSlot(56, 35)])
+		.setFluidOutputSlots([bigSlot(112, 31)])
+		.setInputTankCapacity(256000)
+		.setOutputTankCapacity(16000)
+		.setDefaultProcessTime(1.0)
+		.setDefaultProcessPower(50.0)
+		.setJeiClickAreaXYWH(73, 34, 38, 18)
+		.buildAndRegister();
 }
-	
-UpgradableEnergyProcessorBuilder("fluid_pressurizer")
-    .setFluidInputSlots([standardSlot(56, 35)])
-    .setFluidOutputSlots([bigSlot(112, 31)])
-    .setInputTankCapacity(256000)
-    .setOutputTankCapacity(16000)
-    .setDefaultProcessTime(1.0)
-    .setDefaultProcessPower(50.0)
-	.setJeiClickAreaXYWH(73, 34, 38, 18)
-    .buildAndRegister();
 
 UpgradableEnergyProcessorBuilder("heat_exchanger_machine")
 	.setRecipeHandlerName("heat_exchanger_machine")
@@ -47,14 +50,26 @@ UpgradableEnergyProcessorBuilder("heat_exchanger_machine")
 	.setFluidOutputSlots([standardSlot(114, 20), standardSlot(114, 42)])
 	.setDefaultProcessPower(0.0)
 	.setDefaultProcessTime(1.0)
-	.setInputTankCapacity(256000)
-	.setOutputTankCapacity(256000)
+	.setInputTankCapacity(512000)
+	.setOutputTankCapacity(512000)
 	.setProgressBarGuiXYWHUV(65, 23, 45, 32, 176, 0)
 	.setJeiClickAreaXYWH(65, 23, 45, 32)
 	.setSpeedUpgradeSlot(133, 64, 16, 16)
 	.buildAndRegister();
+	
+UpgradableEnergyProcessorBuilder("condenser_machine")
+	.setRecipeHandlerName("condenser_machine")
+	.setFluidInputSlots([standardSlot(56, 35)])
+	.setFluidOutputSlots([bigSlot(112, 31)])
+	.setInputTankCapacity(512000)
+	.setOutputTankCapacity(16000)
+	.setDefaultProcessTime(1.0)
+	.setDefaultProcessPower(0.0)
+	.setJeiClickAreaXYWH(73, 34, 38, 16)
+	.setProgressBarGuiXYWHUV(74, 35, 37, 16, 176, 3)
+	.buildAndRegister();
 
-UpgradableEnergyProcessorBuilder("solid_fuel_generator")
+UpgradableEnergyProcessorBuilder("furnace_generator")
 	.setDefaultProcessPower(20.0)
 	.setDefaultProcessTime(1.0)
 	.standardExtend(0, 12)
@@ -64,8 +79,21 @@ UpgradableEnergyProcessorBuilder("solid_fuel_generator")
 	.setProgressBarGuiXYWHUV(43, 22, 69, 25, 176, 3)
 	.setJeiBackgroundXYWH(43, 20, 90, 48)
 	.buildAndRegister();
+
+UpgradableEnergyProcessorBuilder("furnace_steam_generator")
+	.setItemInputSlots([standardSlot(44, 42)])
+	.setFluidInputSlots([standardSlot(44, 20)])
+	.setFluidOutputSlots([standardSlot(114, 20), standardSlot(114, 42)])
+	.setDefaultProcessPower(0.0)
+	.setDefaultProcessTime(1.0)
+	.setInputTankCapacity(32000)
+	.setOutputTankCapacity(512000)
+	.setProgressBarGuiXYWHUV(65, 23, 45, 32, 176, 0)
+	.setJeiClickAreaXYWH(65, 23, 45, 32)
+	.setSpeedUpgradeSlot(133, 64, 16, 16)
+	.buildAndRegister();
 	
-UpgradableEnergyProcessorBuilder("fluid_fuel_generator")
+UpgradableEnergyProcessorBuilder("combustion_generator")
 	.setDefaultProcessPower(40.0)
 	.setDefaultProcessTime(1.0)
 	.standardExtend(0, 12)
@@ -75,12 +103,48 @@ UpgradableEnergyProcessorBuilder("fluid_fuel_generator")
 	.setProgressBarGuiXYWHUV(43, 22, 69, 25, 176, 3)
 	.setJeiBackgroundXYWH(43, 20, 90, 48)
 	.buildAndRegister();
+	
+UpgradableEnergyProcessorBuilder("combustion_steam_generator")
+	.setFluidInputSlots([standardSlot(44, 20), standardSlot(44, 42)])
+	.setFluidOutputSlots([standardSlot(114, 20), standardSlot(114, 42)])
+	.setDefaultProcessPower(0.0)
+	.setDefaultProcessTime(1.0)
+	.setInputTankCapacity(32000)
+	.setOutputTankCapacity(512000)
+	.setProgressBarGuiXYWHUV(65, 23, 45, 32, 176, 0)
+	.setJeiClickAreaXYWH(65, 23, 45, 32)
+	.setSpeedUpgradeSlot(133, 64, 16, 16)
+	.buildAndRegister();
+	
+UpgradableEnergyProcessorBuilder("thermoelectric_generator")
+	.setDefaultProcessPower(40.0)
+	.setDefaultProcessTime(1.0)
+	.setFluidInputSlots([standardSlot(56, 35)])
+	.setFluidOutputSlots([bigSlot(112, 31)])
+	.setInputTankCapacity(16000)
+	.setOutputTankCapacity(128000)
+	.setIsGenerator(true)
+	.setJeiClickAreaXYWH(73, 34, 38, 16)
+	.setProgressBarGuiXYWHUV(74, 35, 37, 16, 176, 3)
+	.buildAndRegister();
+	
+UpgradableEnergyProcessorBuilder("thermal_steam_generator")
+	.setFluidInputSlots([standardSlot(44, 20), standardSlot(44, 42)])
+	.setFluidOutputSlots([standardSlot(114, 20), standardSlot(114, 42)])
+	.setDefaultProcessPower(0.0)
+	.setDefaultProcessTime(1.0)
+	.setInputTankCapacity(32000)
+	.setOutputTankCapacity(512000)
+	.setProgressBarGuiXYWHUV(65, 23, 45, 32, 176, 0)
+	.setJeiClickAreaXYWH(65, 23, 45, 32)
+	.setSpeedUpgradeSlot(133, 64, 16, 16)
+	.buildAndRegister();
 
 UpgradableEnergyProcessorBuilder("turbine_machine")
 	.setFluidInputSlots([standardSlot(56, 35)])
 	.setFluidOutputSlots([bigSlot(112, 31)])
-	.setInputTankCapacity(64000)
-    .setOutputTankCapacity(128000)
+	.setInputTankCapacity(512000)
+    .setOutputTankCapacity(1024000)
     .setDefaultProcessTime(1.0)
     .setDefaultProcessPower(1.0)
 	.setIsGenerator(true)
@@ -119,7 +183,7 @@ UpgradableEnergyProcessorBuilder("pem_fuel_cell")
 	.setMachineConfigGuiXY(170, 141)
 	.setRedstoneControlGuiXY(170, 160)
 	.setJeiBackgroundXYWH(43, 17, 126, 66)
-	.setDefaultProcessPower(100.0)
+	.setDefaultProcessPower(60.0)
 	.setDefaultProcessTime(1.0)
 	.setIsGenerator(true)
 	.setInputTankCapacity(16000)
@@ -141,7 +205,7 @@ UpgradableEnergyProcessorBuilder("molten_carbonate_fuel_cell")
 	.setMachineConfigGuiXY(170, 143)
 	.setRedstoneControlGuiXY(170, 163)
 	.setJeiBackgroundXYWH(43, 17, 126, 84)
-	.setDefaultProcessPower(150.0)
+	.setDefaultProcessPower(140.0)
 	.setDefaultProcessTime(1.0)
 	.setIsGenerator(true)
 	.setInputTankCapacity(16000)
@@ -150,9 +214,9 @@ UpgradableEnergyProcessorBuilder("molten_carbonate_fuel_cell")
 	.setEnergyUpgradeSlot(171, 125, 16, 16)
 	.buildAndRegister();
 	
-UpgradableEnergyProcessorBuilder("solid_oxide_fuel_cell")
+UpgradableEnergyProcessorBuilder("proton_conducting_fuel_cell")
 	.setGuiWH(194, 188)
-	.setFluidInputSlots([standardSlot(44, 36), standardSlot(152, 36), standardSlot(57, 60)]) // Fuel, Oxidant, Electrolyte, Coolant
+	.setFluidInputSlots([standardSlot(44, 36), standardSlot(152, 36), standardSlot(57, 60)]) // Fuel, Oxidant, Coolant
 	.setFluidOutputSlots([standardSlot(44, 84), standardSlot(152, 84), standardSlot(139, 60)]) // Fuel, Oxidant, Coolant
 	.setItemInputSlots([standardSlot(62, 18)]) // Solid Fuel
 	.setPlayerGuiXY(8, 106)
@@ -161,11 +225,31 @@ UpgradableEnergyProcessorBuilder("solid_oxide_fuel_cell")
 	.setMachineConfigGuiXY(170, 143)
 	.setRedstoneControlGuiXY(170, 163)
 	.setJeiBackgroundXYWH(43, 17, 126, 84)
-	.setDefaultProcessPower(200.0)
+	.setDefaultProcessPower(240.0)
 	.setDefaultProcessTime(1.0)
 	.setIsGenerator(true)
 	.setInputTankCapacity(16000)
-	.setOutputTankCapacity(64000)
+	.setOutputTankCapacity(128000)
+	.setSpeedUpgradeSlot(171, 106, 16, 16)
+	.setEnergyUpgradeSlot(171, 125, 16, 16)
+	.buildAndRegister();
+
+UpgradableEnergyProcessorBuilder("solid_oxide_fuel_cell")
+	.setGuiWH(194, 188)
+	.setFluidInputSlots([standardSlot(44, 36), standardSlot(152, 36), standardSlot(57, 60)]) // Fuel, Oxidant, Coolant
+	.setFluidOutputSlots([standardSlot(44, 84), standardSlot(152, 84), standardSlot(139, 60)]) // Fuel, Oxidant, Coolant
+	.setItemInputSlots([standardSlot(62, 18)]) // Solid Fuel
+	.setPlayerGuiXY(8, 106)
+	.setProgressBarGuiXYWHUV(98, 41, 18, 54, 194, 3)
+	.setEnergyBarGuiXYWHUV(8, 6, 16, 96, 194, 90)
+	.setMachineConfigGuiXY(170, 143)
+	.setRedstoneControlGuiXY(170, 163)
+	.setJeiBackgroundXYWH(43, 17, 126, 84)
+	.setDefaultProcessPower(400.0)
+	.setDefaultProcessTime(1.0)
+	.setIsGenerator(true)
+	.setInputTankCapacity(16000)
+	.setOutputTankCapacity(128000)
 	.setSpeedUpgradeSlot(171, 106, 16, 16)
 	.setEnergyUpgradeSlot(171, 125, 16, 16)
 	.buildAndRegister();

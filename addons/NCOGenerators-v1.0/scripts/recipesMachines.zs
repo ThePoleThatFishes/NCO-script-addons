@@ -10,6 +10,7 @@ import mods.nuclearcraft.Extractor;
 import mods.nuclearcraft.Pressurizer;
 import mods.nuclearcraft.Crystallizer;
 import mods.nuclearcraft.Separator;
+import mods.nuclearcraft.MultiblockElectrolyzer;
 
 
 // Tritium Breeding Recipes
@@ -37,16 +38,40 @@ Infuser.addRecipe(<contenttweaker:casing_k>, <liquid:sulfur>*5994, <contenttweak
 Assembler.addRecipe(<contenttweaker:casing_k_s>, <ore:dustMolybdenum>*3, <contenttweaker:beta_alumina>, null, <nuclearcraft:battery_potassium>);
 
 // Generator Crafting Recipes
-recipes.addShaped("solid_fuel_generator", <nuclearcraft:solid_fuel_generator>, [
+recipes.addShaped("furnace_generator", <nuclearcraft:furnace_generator>, [
 	[<ore:ingotLead>, <ore:dustRedstone>, <ore:ingotLead>],
 	[<ore:ingotCopper>, <minecraft:furnace>, <ore:ingotCopper>],
 	[<ore:ingotLead>, <ore:dustRedstone>, <ore:ingotLead>]
 	]);
+	
+recipes.addShaped("furnace_steam_generator", <nuclearcraft:furnace_steam_generator>, [
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>],
+	[<ore:servo>, <nuclearcraft:furnace_generator>, <ore:servo>],
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>]
+	]);
 
-recipes.addShaped("fluid_fuel_generator", <nuclearcraft:fluid_fuel_generator>, [
+recipes.addShaped("combustion_generator", <nuclearcraft:combustion_generator>, [
 	[<ore:plateBasic>, <ore:dustRedstone>, <ore:plateBasic>],
 	[<minecraft:furnace>, <ore:steelFrame>, <minecraft:furnace>],
 	[<ore:plateBasic>, <minecraft:bucket>, <ore:plateBasic>]
+	]);
+	
+recipes.addShaped("combustion_steam_generator", <nuclearcraft:combustion_steam_generator>, [
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>],
+	[<ore:servo>, <nuclearcraft:combustion_generator>, <ore:servo>],
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>]
+	]);
+
+recipes.addShaped("thermoelectric_generator", <nuclearcraft:thermoelectric_generator>, [
+	[<ore:plateBasic>, <ore:ingotIron>, <ore:plateBasic>],
+	[<minecraft:nether_brick>, <ore:steelFrame>, <minecraft:nether_brick>],
+	[<ore:plateBasic>, <ore:ingotCopper>, <ore:plateBasic>]
+	]);
+
+recipes.addShaped("thermal_steam_generator", <nuclearcraft:thermal_steam_generator>, [
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>],
+	[<ore:servo>, <nuclearcraft:thermoelectric_generator>, <ore:servo>],
+	[<ore:plateAdvanced>, <ore:ingotTough>, <ore:plateAdvanced>]
 	]);
 	
 recipes.addShaped("turbine_machine", <nuclearcraft:turbine_machine>, [
@@ -60,12 +85,20 @@ recipes.addShaped("heat_exchanger_machine", <nuclearcraft:heat_exchanger_machine
 	[<minecraft:bucket>, <nuclearcraft:heat_exchanger_tube_copper>, <minecraft:bucket>],
 	[<ore:plateAdvanced>, <ore:ingotCopper>, <ore:plateAdvanced>]
 	]);
-	
-recipes.addShaped("fluid_pressurizer", <nuclearcraft:fluid_pressurizer>, [
-	[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>],
-	[<minecraft:piston>, <ore:chassis>, <minecraft:piston>],
-	[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>]
+
+recipes.addShaped("condenser_machine", <nuclearcraft:condenser_machine>, [
+	[<ore:plateAdvanced>, <ore:blockIce>, <ore:plateAdvanced>],
+	[<minecraft:bucket>, <nuclearcraft:heat_exchanger_tube_copper>, <minecraft:bucket>],
+	[<ore:plateAdvanced>, <ore:blockIce>, <ore:plateAdvanced>]
 	]);
+
+if !(loadedMods has "moarreactorfunctionality") {
+	recipes.addShaped("fluid_pressurizer", <nuclearcraft:fluid_pressurizer>, [
+		[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>],
+		[<minecraft:piston>, <ore:chassis>, <minecraft:piston>],
+		[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>]
+		]);
+}
 
 recipes.addShaped("alkaline_fuel_cell", <nuclearcraft:alkaline_fuel_cell>, [
 	[<ore:plateAdvanced>, <minecraft:bucket>, <ore:plateAdvanced>],
@@ -75,6 +108,9 @@ recipes.addShaped("alkaline_fuel_cell", <nuclearcraft:alkaline_fuel_cell>, [
 
 	
 // AFC Component Recipes
-ChemicalReactor.addRecipe(<fluid:naoh>*144, <fluid:carbon_dioxide>*1000, <fluid:sodium_carbonate>*1000, null);
-ChemicalReactor.addRecipe(<fluid:koh>*144, <fluid:carbon_dioxide>*1000, <fluid:potassium_carbonate>*1000, null);
+ChemicalReactor.addRecipe(<fluid:naoh>*666, <fluid:carbon_dioxide>*500, <fluid:sodium_carbonate>*500, <fluid:water>*500);
+ChemicalReactor.addRecipe(<fluid:koh>*666, <fluid:carbon_dioxide>*500, <fluid:potassium_carbonate>*500, <fluid:water>*500);
 SaltMixer.addRecipe(<fluid:sodium_carbonate>*500, <fluid:potassium_carbonate>*500, <fluid:carbonate_electrolyte>*1000);
+
+// Test Multiblock Fuel Cell Recipes
+MultiblockElectrolyzer.addRecipe(null, null, <fluid:hydrogen>*500, <fluid:oxygen>*250, null, null, null, null, <fluid:water>*500, null, null, null, 1.0, -1.0, 0.0, "hydroxide_solution");
