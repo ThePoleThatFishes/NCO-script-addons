@@ -1,4 +1,4 @@
-#modloaded materialpart qmd
+#modloaded qmd
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -26,7 +26,7 @@ ti: [<materialpart:titanium:block>, <ore:ingotTitanium>, <ore:blockTitanium>], w
 zn: [<materialpart:zinc:block>, <ore:ingotZinc>, <ore:blockZinc>], nicr: [<materialpart:nichrome:block>, <ore:ingotNichrome>, <ore:blockNichrome>], 
 superalloy: [<materialpart:super_alloy:block>, <ore:ingotSuperAlloy>, <ore:blockSuperAlloy>], er: [<materialpart:erbium:block>, <materialpart:erbium:ingot>, <ore:blockErbium>],
 i: [<materialpart:iodine:block>, <materialpart:iodine:ingot>, <ore:blockIodine>], sm: [<materialpart:samarium:block>, <materialpart:samarium:ingot>, <ore:blockSamarium>],
-tb: [<materialpart:terbium:block>, <materialpart:terbium:ingot>, <ore:blockTerbium>], yb: [<materialpart:ytterbium:block>, <materialpart:ytterbium:ingot>, <ore:blockYtterbium>]} as IIngredient[][string];
+yb: [<materialpart:ytterbium:block>, <materialpart:ytterbium:ingot>, <ore:blockYtterbium>]} as IIngredient[][string];
 
 for name, ingredients in blocks {
 	recipes.addShaped(name ~ "_to_block", ingredients[0].items[0], [
@@ -44,7 +44,6 @@ Melter.addRecipe(<ore:blockSilicon>, <liquid:silicon>*1296, 8.0, 1.5, 0.0);
 var everything = {<liquid:erbium>: [<materialpart:erbium:ingot>, <materialpart:erbium:block>, <ore:dustErbium>], 
 <liquid:iodine>: [<materialpart:iodine:ingot>, <materialpart:iodine:block>, <ore:dustIodine>], 
 <liquid:samarium>: [<materialpart:samarium:ingot>, <materialpart:samarium:block>, <ore:dustSamarium>], 
-<liquid:terbium>: [<materialpart:terbium:ingot>, <materialpart:terbium:block>, <ore:dustTerbium>],
 <liquid:ytterbium>: [<materialpart:ytterbium:ingot>, <materialpart:ytterbium:block>, <ore:dustYtterbium>]} as IIngredient[][ILiquidStack];
 
 for fluid, itms in everything {

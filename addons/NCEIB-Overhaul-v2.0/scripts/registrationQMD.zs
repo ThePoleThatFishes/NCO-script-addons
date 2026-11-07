@@ -21,6 +21,7 @@ var calcium = MaterialSystem.getMaterialBuilder().setName("Calcium").setColor(0x
 var yttrium = MaterialSystem.getMaterialBuilder().setName("Yttrium").setColor(0xA89E5E).build() as Material;
 var neodymium = MaterialSystem.getMaterialBuilder().setName("Neodymium").setColor(0x858B98).build() as Material;
 var strontium = MaterialSystem.getMaterialBuilder().setName("Strontium").setColor(0xC4CB97).build() as Material;
+var barium = MaterialSystem.getMaterialBuilder().setName("Barium").setColor(0x101014).build() as Material;
 
 
 // Alloy Blocks
@@ -36,13 +37,12 @@ var superalloy = MaterialSystem.getMaterialBuilder().setName("Super Alloy").setC
 var erbium = MaterialSystem.getMaterialBuilder().setName("Erbium").setColor(0x88A973).build() as Material;
 var iodine = MaterialSystem.getMaterialBuilder().setName("Iodine").setColor(0x7B00BA).build() as Material;
 var samarium = MaterialSystem.getMaterialBuilder().setName("Samarium").setColor(0x7EA64A).build() as Material;
-var terbium = MaterialSystem.getMaterialBuilder().setName("Terbium").setColor(0x80BAAC).build() as Material;
 var ytterbium = MaterialSystem.getMaterialBuilder().setName("Ytterbium").setColor(0x73414D).build() as Material;
 
 var materials_blocks = [tungsten, niobium, chromium, titanium, hafnium, zinc, osmium, iridium, sodium, potassium, calcium, yttrium, neodymium, strontium, tungsten_carbide, niobium_tin, stainless_steel,
-niobium_titanium, osmiridium, nichrome, superalloy] as Material[];
+niobium_titanium, osmiridium, nichrome, superalloy, barium] as Material[];
 
-var materials_blocks_ingots = [erbium, iodine, samarium, terbium, ytterbium] as Material[];
+var materials_blocks_ingots = [erbium, iodine, samarium, ytterbium] as Material[];
 
 var parts = ["block", "ingot"] as string[];
 

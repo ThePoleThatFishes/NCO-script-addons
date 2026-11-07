@@ -1,4 +1,3 @@
-#debug
 #modloaded thermalexpansion modtweaker
 
 import crafttweaker.item.IItemStack;
